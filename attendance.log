@@ -80,3 +80,6 @@
 2026-02-22 11:47:04 [ERROR] Fingerprint SDK Init Error: Failed to initialize the algorithm library
 2026-02-22 14:37:11 [INFO] Zoho token refreshed OK
 2026-02-22 14:41:22 [INFO] CSV exported: attendance_2026-02-22.csv (62 rows)
+2026-02-22 14:41:24 [INFO] CSV exported: attendance_2026-02-22.csv (62 rows)
+2026-02-22 14:43:45 [INFO] Zoho token refreshed OK
+2026-02-22 14:44:14 [INFO] CHECKOUT OK: Hesbon Angwenyi hours=7.69
