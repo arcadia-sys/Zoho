@@ -83,3 +83,6 @@
 2026-02-22 14:41:24 [INFO] CSV exported: attendance_2026-02-22.csv (62 rows)
 2026-02-22 14:43:45 [INFO] Zoho token refreshed OK
 2026-02-22 14:44:14 [INFO] CHECKOUT OK: Hesbon Angwenyi hours=7.69
+2026-02-22 14:55:51 [INFO] Zoho token refreshed OK
+2026-02-22 14:57:28 [INFO] CHECKOUT OK: FINLANZA TEAM hours=7.4
+2026-02-22 15:00:47 [INFO] CHECKIN OK: JOYCE KEMUNTO late=True
