@@ -60,3 +60,23 @@
 2026-02-22 07:29:27 [INFO] CHECKIN OK: PURITY ONGERI late=True
 2026-02-22 07:31:11 [INFO] CHECKIN OK: GEORGE IKUENI late=True
 2026-02-22 07:33:45 [INFO] CHECKIN OK: FINLANZA TEAM late=True
+2026-02-22 07:37:07 [INFO] Zoho token refreshed OK
+2026-02-22 07:37:13 [INFO] CHECKIN OK: JAMES MAOSA late=False
+2026-02-22 07:41:51 [INFO] CSV exported: attendance_2026-02-22.csv (61 rows)
+2026-02-22 07:41:52 [INFO] CSV exported: attendance_2026-02-22.csv (61 rows)
+2026-02-22 07:41:53 [INFO] CSV exported: attendance_2026-02-22.csv (61 rows)
+2026-02-22 07:41:53 [INFO] CSV exported: attendance_2026-02-22.csv (61 rows)
+2026-02-22 07:41:54 [INFO] CSV exported: attendance_2026-02-22.csv (61 rows)
+2026-02-22 07:41:54 [INFO] CSV exported: attendance_2026-02-22.csv (61 rows)
+2026-02-22 07:41:54 [INFO] CSV exported: attendance_2026-02-22.csv (61 rows)
+2026-02-22 07:41:55 [INFO] CSV exported: attendance_2026-02-22.csv (61 rows)
+2026-02-22 07:41:55 [INFO] CSV exported: attendance_2026-02-22.csv (61 rows)
+2026-02-22 07:41:55 [INFO] CSV exported: attendance_2026-02-22.csv (61 rows)
+2026-02-22 07:41:55 [INFO] CSV exported: attendance_2026-02-22.csv (61 rows)
+2026-02-22 07:41:56 [INFO] CSV exported: attendance_2026-02-22.csv (61 rows)
+2026-02-22 11:17:25 [INFO] Zoho token refreshed OK
+2026-02-22 11:17:31 [INFO] CHECKIN OK: SIMONI NGANGA late=True
+2026-02-22 11:18:44 [INFO] CHECKOUT OK: Kennedy Onderi hours=4.36
+2026-02-22 11:47:04 [ERROR] Fingerprint SDK Init Error: Failed to initialize the algorithm library
+2026-02-22 14:37:11 [INFO] Zoho token refreshed OK
+2026-02-22 14:41:22 [INFO] CSV exported: attendance_2026-02-22.csv (62 rows)
