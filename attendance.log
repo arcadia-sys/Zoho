@@ -88,3 +88,5 @@
 2026-02-22 15:00:47 [INFO] CHECKIN OK: JOYCE KEMUNTO late=True
 2026-02-22 15:25:06 [INFO] Zoho token refreshed OK
 2026-02-22 15:25:38 [INFO] CHECKOUT OK: Jane Odoo hours=8.43
+2026-02-22 15:32:23 [INFO] Zoho token refreshed OK
+2026-02-22 15:34:41 [INFO] CSV exported: attendance_2026-02-22.csv (63 rows)
