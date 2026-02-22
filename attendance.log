@@ -90,3 +90,133 @@
 2026-02-22 15:25:38 [INFO] CHECKOUT OK: Jane Odoo hours=8.43
 2026-02-22 15:32:23 [INFO] Zoho token refreshed OK
 2026-02-22 15:34:41 [INFO] CSV exported: attendance_2026-02-22.csv (63 rows)
+2026-02-22 23:55:40 [INFO] AUTO-CHECKOUT: 56 worker(s) at 23:55
+2026-02-22 23:55:41 [INFO] Zoho token refreshed OK
+2026-02-22 23:55:41 [INFO] Zoho token refreshed OK
+2026-02-22 23:55:42 [INFO] Zoho token refreshed OK
+2026-02-22 23:55:42 [INFO] Zoho token refreshed OK
+2026-02-22 23:55:42 [INFO] Zoho token refreshed OK
+2026-02-22 23:55:43 [INFO] Zoho token refreshed OK
+2026-02-22 23:55:43 [INFO] Zoho token refreshed OK
+2026-02-22 23:55:43 [INFO] Zoho token refreshed OK
+2026-02-22 23:55:45 [INFO]   SKIP Dennis Koech: no Zoho record
+2026-02-22 23:55:45 [INFO] Zoho token refreshed OK
+2026-02-22 23:55:45 [INFO]   SKIP Abbygael Chibweso: no Zoho record
+2026-02-22 23:55:46 [INFO] Zoho token refreshed OK
+2026-02-22 23:55:46 [INFO]   SKIP Shairo Ongwae: no Zoho record
+2026-02-22 23:55:46 [INFO]   SKIP Edwin Sifuna: no Zoho record
+2026-02-22 23:55:46 [INFO]   SKIP Bivon Kipkoech: no Zoho record
+2026-02-22 23:55:46 [INFO] Zoho token refreshed OK
+2026-02-22 23:55:46 [INFO]   SKIP HENRY KURIA: no Zoho record
+2026-02-22 23:55:47 [INFO] Zoho token refreshed OK
+2026-02-22 23:55:47 [INFO]   SKIP MARTHER KARUA: no Zoho record
+2026-02-22 23:55:47 [INFO] Zoho token refreshed OK
+2026-02-22 23:55:47 [INFO]   SKIP kIMTAI DENNIS: no Zoho record
+2026-02-22 23:55:47 [INFO] Zoho token refreshed OK
+2026-02-22 23:55:48 [INFO] Zoho token refreshed OK
+2026-02-22 23:55:48 [INFO] Zoho token refreshed OK
+2026-02-22 23:55:48 [INFO]   SKIP KIPCHUMA KM: no Zoho record
+2026-02-22 23:55:48 [INFO] Zoho token refreshed OK
+2026-02-22 23:55:48 [INFO]   SKIP Kevin Musyoki: no Zoho record
+2026-02-22 23:55:49 [INFO] Zoho token refreshed OK
+2026-02-22 23:55:49 [INFO]   SKIP Geoffrey Nyanyuki: no Zoho record
+2026-02-22 23:55:49 [INFO] Zoho token refreshed OK
+2026-02-22 23:55:49 [INFO]   SKIP Tessy: no Zoho record
+2026-02-22 23:55:50 [INFO]   SKIP Charles Macharia: no Zoho record
+2026-02-22 23:55:50 [INFO] Zoho token refreshed OK
+2026-02-22 23:55:50 [INFO] Zoho token refreshed OK
+2026-02-22 23:55:50 [INFO]   SKIP jk: no Zoho record
+2026-02-22 23:55:50 [INFO]   SKIP Brian Omusebe: no Zoho record
+2026-02-22 23:55:50 [INFO] Zoho token refreshed OK
+2026-02-22 23:55:50 [INFO]   SKIP Musyoki: no Zoho record
+2026-02-22 23:55:51 [INFO] Zoho token refreshed OK
+2026-02-22 23:55:51 [INFO] Zoho token refreshed OK
+2026-02-22 23:55:51 [INFO]   SKIP Rose Angwenyi: no Zoho record
+2026-02-22 23:55:51 [INFO] Zoho token refreshed OK
+2026-02-22 23:55:52 [INFO]   SKIP hesbon223: no Zoho record
+2026-02-22 23:55:52 [INFO] Zoho token refreshed OK
+2026-02-22 23:55:52 [INFO]   SKIP wages system: no Zoho record
+2026-02-22 23:55:52 [INFO]   SKIP catherine kemunto: no Zoho record
+2026-02-22 23:55:52 [INFO] Zoho token refreshed OK
+2026-02-22 23:55:53 [INFO] Zoho token refreshed OK
+2026-02-22 23:55:53 [INFO]   SKIP George Okonu: no Zoho record
+2026-02-22 23:55:53 [INFO] Zoho token refreshed OK
+2026-02-22 23:55:53 [INFO]   SKIP Amos Kiplangat: no Zoho record
+2026-02-22 23:55:53 [INFO] Zoho token refreshed OK
+2026-02-22 23:55:53 [INFO]   SKIP G Nyanyuki: no Zoho record
+2026-02-22 23:55:54 [INFO] Zoho token refreshed OK
+2026-02-22 23:55:54 [INFO]   SKIP Hesbon Adhiambo: no Zoho record
+2026-02-22 23:55:54 [INFO]   SKIP William Mtai: no Zoho record
+2026-02-22 23:55:54 [INFO] Zoho token refreshed OK
+2026-02-22 23:55:54 [INFO] Zoho token refreshed OK
+2026-02-22 23:55:55 [INFO]   SKIP Marion Wamalwa: no Zoho record
+2026-02-22 23:55:55 [INFO] Zoho token refreshed OK
+2026-02-22 23:55:55 [INFO]   SKIP Moses Kibet: no Zoho record
+2026-02-22 23:55:56 [INFO]   SKIP brian Mbeumo: no Zoho record
+2026-02-22 23:55:56 [INFO] Zoho token refreshed OK
+2026-02-22 23:55:56 [INFO]   SKIP Charles Ogechi: no Zoho record
+2026-02-22 23:55:56 [INFO] Zoho token refreshed OK
+2026-02-22 23:55:56 [INFO] Zoho token refreshed OK
+2026-02-22 23:55:56 [INFO]   SKIP Julias Ogamba: no Zoho record
+2026-02-22 23:55:57 [INFO] Zoho token refreshed OK
+2026-02-22 23:55:57 [INFO]   SKIP James Achuta: no Zoho record
+2026-02-22 23:55:57 [INFO]   SKIP Diana Marura: no Zoho record
+2026-02-22 23:55:57 [INFO] Zoho token refreshed OK
+2026-02-22 23:55:57 [INFO]   SKIP Joshua Wainaina: no Zoho record
+2026-02-22 23:55:57 [INFO] Zoho token refreshed OK
+2026-02-22 23:55:57 [INFO]   SKIP samuel Mbogo: no Zoho record
+2026-02-22 23:55:58 [INFO] Zoho token refreshed OK
+2026-02-22 23:55:58 [INFO] Zoho token refreshed OK
+2026-02-22 23:55:58 [INFO]   SKIP Misoi wamynoro: no Zoho record
+2026-02-22 23:55:59 [INFO] Zoho token refreshed OK
+2026-02-22 23:55:59 [INFO]   SKIP Keith Oira: no Zoho record
+2026-02-22 23:55:59 [INFO] Zoho token refreshed OK
+2026-02-22 23:55:59 [INFO]   SKIP Thomas Agwambo: no Zoho record
+2026-02-22 23:55:59 [INFO]   SKIP HENRY WAINAINA: no Zoho record
+2026-02-22 23:55:59 [INFO] Zoho token refreshed OK
+2026-02-22 23:56:00 [INFO] Zoho token refreshed OK
+2026-02-22 23:56:00 [INFO]   SKIP Stevo kariuki: no Zoho record
+2026-02-22 23:56:00 [INFO]   SKIP Annah Kagwe: no Zoho record
+2026-02-22 23:56:00 [INFO] Zoho token refreshed OK
+2026-02-22 23:56:00 [INFO]   SKIP HASSAN HUSSEIN: no Zoho record
+2026-02-22 23:56:01 [INFO] Zoho token refreshed OK
+2026-02-22 23:56:01 [INFO]   SKIP WILL RUSIGE: no Zoho record
+2026-02-22 23:56:01 [INFO] Zoho token refreshed OK
+2026-02-22 23:56:01 [INFO] Zoho token refreshed OK
+2026-02-22 23:56:01 [INFO]   SKIP JAMTAI KIPRONO: no Zoho record
+2026-02-22 23:56:02 [INFO] Zoho token refreshed OK
+2026-02-22 23:56:02 [INFO]   SKIP JOHN DOE: no Zoho record
+2026-02-22 23:56:02 [INFO]   SKIP HASSAN ALI: no Zoho record
+2026-02-22 23:56:02 [INFO] Zoho token refreshed OK
+2026-02-22 23:56:03 [INFO] Zoho token refreshed OK
+2026-02-22 23:56:03 [INFO]   SKIP RIGATHI WAMSOO: no Zoho record
+2026-02-22 23:56:03 [INFO]   SKIP JAVICE OCHIENG: no Zoho record
+2026-02-22 23:56:03 [INFO] Zoho token refreshed OK
+2026-02-22 23:56:03 [INFO]   SKIP RAJ ARJUN: no Zoho record
+2026-02-22 23:56:03 [INFO] Zoho token refreshed OK
+2026-02-22 23:56:04 [INFO] Zoho token refreshed OK
+2026-02-22 23:56:04 [INFO]   SKIP KEVIN AGESA: no Zoho record
+2026-02-22 23:56:04 [INFO]   SKIP SAMUEL MTQ: no Zoho record
+2026-02-22 23:56:04 [INFO]   SKIP PIUSI OKARI: no Zoho record
+2026-02-22 23:56:05 [INFO]   SKIP PURITY ONGERI: no Zoho record
+2026-02-22 23:56:05 [INFO]   SKIP GEORGE IKUENI: no Zoho record
+2026-02-22 23:56:06 [INFO]   SKIP JAMES MAOSA: no Zoho record
+2026-02-22 23:56:06 [INFO]   SKIP SIMONI NGANGA: no Zoho record
+2026-02-22 23:56:06 [INFO]   SKIP JOYCE KEMUNTO: no Zoho record
+2026-02-22 23:56:06 [INFO] AUTO-CHECKOUT done: 0 OK, 56 failed
+2026-02-22 23:59:16 [INFO] Zoho token refreshed OK
+2026-02-22 23:59:29 [INFO] Zoho token refreshed OK
+2026-02-22 23:59:37 [INFO] Zoho token refreshed OK
+2026-02-22 23:59:49 [INFO] Zoho token refreshed OK
+2026-02-22 23:59:59 [INFO] Zoho token refreshed OK
+2026-02-23 00:00:01 [INFO] Zoho token refreshed OK
+2026-02-23 00:00:08 [INFO] Zoho token refreshed OK
+2026-02-23 00:00:11 [INFO] Zoho token refreshed OK
+2026-02-23 00:03:24 [INFO] Zoho token refreshed OK
+2026-02-23 00:03:24 [INFO] Zoho token refreshed OK
+2026-02-23 00:03:54 [INFO] Zoho token refreshed OK
+2026-02-23 00:03:58 [INFO] Zoho token refreshed OK
+2026-02-23 00:05:08 [INFO] Zoho token refreshed OK
+2026-02-23 00:07:10 [INFO] Zoho token refreshed OK
+2026-02-23 00:07:11 [INFO] Zoho token refreshed OK
+2026-02-23 00:07:19 [INFO] Zoho token refreshed OK
