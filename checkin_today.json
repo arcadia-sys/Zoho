@@ -1,86 +1,424 @@
 {
-  "date": "2026-02-21",
+  "date": "2026-02-22",
   "checked_in": {
+    "7": {
+      "time": "22-Feb-2026 06:56:08",
+      "zoho_id": "4838902000000545007",
+      "worker_id": "4838902000000514023",
+      "name": "ian lagat",
+      "is_late": false,
+      "late_note": "on time"
+    },
+    "8": {
+      "time": "22-Feb-2026 06:56:17",
+      "zoho_id": "4838902000000545011",
+      "worker_id": "4838902000000542015",
+      "name": "Dennis Koech",
+      "is_late": false,
+      "late_note": "on time"
+    },
+    "9": {
+      "time": "22-Feb-2026 06:56:26",
+      "zoho_id": "4838902000000545015",
+      "worker_id": "4838902000000543031",
+      "name": "Abbygael Chibweso",
+      "is_late": false,
+      "late_note": "on time"
+    },
+    "11": {
+      "time": "22-Feb-2026 06:56:39",
+      "zoho_id": "4838902000000545019",
+      "worker_id": "4838902000000543075",
+      "name": "Edwin Sifuna",
+      "is_late": false,
+      "late_note": "on time"
+    },
+    "12": {
+      "time": "22-Feb-2026 06:56:47",
+      "zoho_id": "4838902000000545023",
+      "worker_id": "4838902000000543079",
+      "name": "Shairo Ongwae",
+      "is_late": false,
+      "late_note": "on time"
+    },
+    "13": {
+      "time": "22-Feb-2026 06:56:55",
+      "zoho_id": "4838902000000545027",
+      "worker_id": "4838902000000543083",
+      "name": "Bivon Kipkoech",
+      "is_late": false,
+      "late_note": "on time"
+    },
+    "14": {
+      "time": "22-Feb-2026 06:57:07",
+      "zoho_id": "4838902000000545031",
+      "worker_id": "4838902000000543087",
+      "name": "Kennedy Onderi",
+      "is_late": false,
+      "late_note": "on time"
+    },
+    "16": {
+      "time": "22-Feb-2026 06:57:16",
+      "zoho_id": "4838902000000545035",
+      "worker_id": "4838902000000543095",
+      "name": "HENRY KURIA",
+      "is_late": false,
+      "late_note": "on time"
+    },
+    "17": {
+      "time": "22-Feb-2026 06:57:26",
+      "zoho_id": "4838902000000545039",
+      "worker_id": "4838902000000543099",
+      "name": "MARTHER KARUA",
+      "is_late": false,
+      "late_note": "on time"
+    },
+    "18": {
+      "time": "22-Feb-2026 06:57:38",
+      "zoho_id": "4838902000000545043",
+      "worker_id": "4838902000000543103",
+      "name": "kIMTAI DENNIS",
+      "is_late": false,
+      "late_note": "on time"
+    },
+    "19": {
+      "time": "22-Feb-2026 06:57:47",
+      "zoho_id": "4838902000000545047",
+      "worker_id": "4838902000000543107",
+      "name": "KIPCHUMA KM",
+      "is_late": false,
+      "late_note": "on time"
+    },
+    "55": {
+      "time": "22-Feb-2026 06:59:33",
+      "zoho_id": "4838902000000545051",
+      "worker_id": "4838902000000496043",
+      "name": "Jane Odoo",
+      "is_late": false,
+      "late_note": "on time"
+    },
+    "58": {
+      "time": "22-Feb-2026 06:59:49",
+      "zoho_id": "4838902000000545055",
+      "worker_id": "4838902000000511011",
+      "name": "Kevin Musyoki",
+      "is_late": false,
+      "late_note": "on time"
+    },
+    "62": {
+      "time": "22-Feb-2026 07:00:10",
+      "zoho_id": "4838902000000545059",
+      "worker_id": "4838902000000514003",
+      "name": "Geoffrey Nyanyuki",
+      "is_late": false,
+      "late_note": "on time"
+    },
     "63": {
-      "time": "21-Feb-2026 09:37:50",
-      "zoho_id": "4838902000000539003"
+      "time": "22-Feb-2026 07:00:21",
+      "zoho_id": "4838902000000545063",
+      "worker_id": "4838902000000514007",
+      "name": "Tessy",
+      "is_late": false,
+      "late_note": "on time"
     },
-    "69": {
-      "time": "21-Feb-2026 09:41:26",
-      "zoho_id": "4838902000000529007"
+    "64": {
+      "time": "22-Feb-2026 07:00:30",
+      "zoho_id": "4838902000000545067",
+      "worker_id": "4838902000000511055",
+      "name": "Charles Macharia",
+      "is_late": false,
+      "late_note": "on time"
     },
-    "74": {
-      "time": "21-Feb-2026 10:11:07",
-      "zoho_id": "4838902000000539007"
+    "65": {
+      "time": "22-Feb-2026 07:00:38",
+      "zoho_id": "4838902000000545071",
+      "worker_id": "4838902000000514011",
+      "name": "jk",
+      "is_late": false,
+      "late_note": "on time"
+    },
+    "66": {
+      "time": "22-Feb-2026 07:00:46",
+      "zoho_id": "4838902000000545075",
+      "worker_id": "4838902000000511063",
+      "name": "Brian Omusebe",
+      "is_late": false,
+      "late_note": "on time"
+    },
+    "67": {
+      "time": "22-Feb-2026 07:00:59",
+      "zoho_id": "4838902000000545079",
+      "worker_id": "4838902000000511067",
+      "name": "Musyoki",
+      "is_late": false,
+      "late_note": "on time"
     },
     "68": {
-      "time": "21-Feb-2026 10:55:58",
-      "zoho_id": "4838902000000529015"
+      "time": "22-Feb-2026 07:01:09",
+      "zoho_id": "4838902000000545083",
+      "worker_id": "4838902000000514015",
+      "name": "JOHN DOE",
+      "is_late": false,
+      "late_note": "1 min late"
+    },
+    "69": {
+      "time": "22-Feb-2026 07:01:18",
+      "zoho_id": "4838902000000545087",
+      "worker_id": "4838902000000514019",
+      "name": "Rose Angwenyi",
+      "is_late": false,
+      "late_note": "1 min late"
+    },
+    "71": {
+      "time": "22-Feb-2026 07:01:29",
+      "zoho_id": "4838902000000545091",
+      "worker_id": "4838902000000526003",
+      "name": "hesbon223",
+      "is_late": false,
+      "late_note": "1 min late"
+    },
+    "72": {
+      "time": "22-Feb-2026 07:01:38",
+      "zoho_id": "4838902000000545095",
+      "worker_id": "4838902000000526007",
+      "name": "wages system",
+      "is_late": false,
+      "late_note": "1 min late"
+    },
+    "74": {
+      "time": "22-Feb-2026 07:01:47",
+      "zoho_id": "4838902000000545099",
+      "worker_id": "4838902000000526015",
+      "name": "catherine kemunto",
+      "is_late": false,
+      "late_note": "1 min late"
+    },
+    "75": {
+      "time": "22-Feb-2026 07:01:55",
+      "zoho_id": "4838902000000545103",
+      "worker_id": "4838902000000526019",
+      "name": "George Okonu",
+      "is_late": false,
+      "late_note": "1 min late"
+    },
+    "76": {
+      "time": "22-Feb-2026 07:02:05",
+      "zoho_id": "4838902000000545107",
+      "worker_id": "4838902000000526023",
+      "name": "Amos Kiplangat",
+      "is_late": false,
+      "late_note": "2 min late"
+    },
+    "77": {
+      "time": "22-Feb-2026 07:02:12",
+      "zoho_id": "4838902000000545111",
+      "worker_id": "4838902000000526027",
+      "name": "G Nyanyuki",
+      "is_late": false,
+      "late_note": "2 min late"
+    },
+    "78": {
+      "time": "22-Feb-2026 07:02:23",
+      "zoho_id": "4838902000000545115",
+      "worker_id": "4838902000000526031",
+      "name": "Hesbon Adhiambo",
+      "is_late": false,
+      "late_note": "2 min late"
+    },
+    "79": {
+      "time": "22-Feb-2026 07:02:33",
+      "zoho_id": "4838902000000545119",
+      "worker_id": "4838902000000542003",
+      "name": "Hesbon Angwenyi",
+      "is_late": false,
+      "late_note": "2 min late"
+    },
+    "81": {
+      "time": "22-Feb-2026 07:02:54",
+      "zoho_id": "4838902000000545123",
+      "worker_id": "4838902000000542019",
+      "name": "William Mtai",
+      "is_late": false,
+      "late_note": "2 min late"
+    },
+    "82": {
+      "time": "22-Feb-2026 07:03:02",
+      "zoho_id": "4838902000000545127",
+      "worker_id": "4838902000000542023",
+      "name": "Marion Wamalwa",
+      "is_late": false,
+      "late_note": "3 min late"
+    },
+    "83": {
+      "time": "22-Feb-2026 07:03:12",
+      "zoho_id": "4838902000000545131",
+      "worker_id": "4838902000000543003",
+      "name": "Moses Kibet",
+      "is_late": false,
+      "late_note": "3 min late"
+    },
+    "84": {
+      "time": "22-Feb-2026 07:03:22",
+      "zoho_id": "4838902000000545135",
+      "worker_id": "4838902000000543007",
+      "name": "brian Mbeumo",
+      "is_late": false,
+      "late_note": "3 min late"
+    },
+    "85": {
+      "time": "22-Feb-2026 07:03:32",
+      "zoho_id": "4838902000000545139",
+      "worker_id": "4838902000000543011",
+      "name": "Charles Ogechi",
+      "is_late": false,
+      "late_note": "3 min late"
+    },
+    "86": {
+      "time": "22-Feb-2026 07:03:40",
+      "zoho_id": "4838902000000545143",
+      "worker_id": "4838902000000543015",
+      "name": "Diana Marura",
+      "is_late": false,
+      "late_note": "3 min late"
+    },
+    "89": {
+      "time": "22-Feb-2026 07:03:49",
+      "zoho_id": "4838902000000545147",
+      "worker_id": "4838902000000543027",
+      "name": "Julias Ogamba",
+      "is_late": false,
+      "late_note": "3 min late"
+    },
+    "91": {
+      "time": "22-Feb-2026 07:04:04",
+      "zoho_id": "4838902000000545151",
+      "worker_id": "4838902000000543035",
+      "name": "James Achuta",
+      "is_late": false,
+      "late_note": "4 min late"
+    },
+    "92": {
+      "time": "22-Feb-2026 07:04:15",
+      "zoho_id": "4838902000000545155",
+      "worker_id": "4838902000000543039",
+      "name": "Joshua Wainaina",
+      "is_late": false,
+      "late_note": "4 min late"
+    },
+    "93": {
+      "time": "22-Feb-2026 07:04:23",
+      "zoho_id": "4838902000000545159",
+      "worker_id": "4838902000000543043",
+      "name": "samuel Mbogo",
+      "is_late": false,
+      "late_note": "4 min late"
+    },
+    "94": {
+      "time": "22-Feb-2026 07:04:38",
+      "zoho_id": "4838902000000545163",
+      "worker_id": "4838902000000543047",
+      "name": "Misoi wamynoro",
+      "is_late": false,
+      "late_note": "4 min late"
+    },
+    "95": {
+      "time": "22-Feb-2026 07:04:56",
+      "zoho_id": "4838902000000545167",
+      "worker_id": "4838902000000543051",
+      "name": "Keith Oira",
+      "is_late": false,
+      "late_note": "4 min late"
+    },
+    "96": {
+      "time": "22-Feb-2026 07:05:06",
+      "zoho_id": "4838902000000545171",
+      "worker_id": "4838902000000543055",
+      "name": "Thomas Agwambo",
+      "is_late": false,
+      "late_note": "5 min late"
+    },
+    "97": {
+      "time": "22-Feb-2026 07:05:14",
+      "zoho_id": "4838902000000545175",
+      "worker_id": "4838902000000543059",
+      "name": "HENRY WAINAINA",
+      "is_late": false,
+      "late_note": "5 min late"
+    },
+    "98": {
+      "time": "22-Feb-2026 07:05:23",
+      "zoho_id": "4838902000000545179",
+      "worker_id": "4838902000000543063",
+      "name": "Stevo kariuki",
+      "is_late": false,
+      "late_note": "5 min late"
+    },
+    "99": {
+      "time": "22-Feb-2026 07:05:31",
+      "zoho_id": "4838902000000545183",
+      "worker_id": "4838902000000543067",
+      "name": "Annah Kagwe",
+      "is_late": false,
+      "late_note": "5 min late"
+    },
+    "111": {
+      "time": "22-Feb-2026 07:06:13",
+      "zoho_id": "4838902000000545187",
+      "worker_id": "4838902000000543115",
+      "name": "HASSAN HUSSEIN",
+      "is_late": false,
+      "late_note": "6 min late"
+    },
+    "112": {
+      "time": "22-Feb-2026 07:06:28",
+      "zoho_id": "4838902000000545191",
+      "worker_id": "4838902000000543119",
+      "name": "WILL RUSIGE",
+      "is_late": false,
+      "late_note": "6 min late"
+    },
+    "113": {
+      "time": "22-Feb-2026 07:06:36",
+      "zoho_id": "4838902000000545195",
+      "worker_id": "4838902000000543123",
+      "name": "JAMTAI KIPRONO",
+      "is_late": false,
+      "late_note": "6 min late"
+    },
+    "114": {
+      "time": "22-Feb-2026 07:06:44",
+      "zoho_id": "4838902000000545199",
+      "worker_id": "4838902000000543127",
+      "name": "JOHN DOE",
+      "is_late": false,
+      "late_note": "6 min late"
+    },
+    "116": {
+      "time": "22-Feb-2026 07:06:54",
+      "zoho_id": "4838902000000545203",
+      "worker_id": "4838902000000543135",
+      "name": "HASSAN ALI",
+      "is_late": false,
+      "late_note": "6 min late"
+    },
+    "115": {
+      "time": "22-Feb-2026 07:07:19",
+      "zoho_id": "4838902000000545207",
+      "worker_id": "4838902000000543131",
+      "name": "RIGATHI WAMSOO",
+      "is_late": false,
+      "late_note": "7 min late"
     }
   },
   "checked_out": {
-    "67": {
-      "time": "16:17:25",
-      "name": "Musyoki",
-      "total_hours": 0.74,
+    "1": {
+      "time": "06:44:36",
+      "name": "Baminus Michael",
+      "total_hours": 0.15,
       "overtime_hours": 0,
       "is_late": false,
-      "late_note": "",
-      "checkin_time": "21-Feb-2026 15:32:54"
-    },
-    "75": {
-      "time": "16:18:36",
-      "name": "George Okonu",
-      "total_hours": 0.74,
-      "overtime_hours": 0,
-      "is_late": false,
-      "late_note": "",
-      "checkin_time": "21-Feb-2026 15:34:20"
-    },
-    "76": {
-      "time": "16:20:47",
-      "name": "Amos Kiplangat",
-      "total_hours": 0.75,
-      "overtime_hours": 0,
-      "is_late": false,
-      "late_note": "",
-      "checkin_time": "21-Feb-2026 15:35:47"
-    },
-    "8": {
-      "time": "16:55:46",
-      "name": "Dennis Koech",
-      "total_hours": 0.54,
-      "overtime_hours": 0,
-      "is_late": true,
-      "late_note": "563 min late",
-      "checkin_time": "21-Feb-2026 16:23:18"
-    },
-    "82": {
-      "time": "17:02:45",
-      "name": "Marion Wamalwa",
-      "total_hours": 0.01,
-      "overtime_hours": 0,
-      "is_late": true,
-      "late_note": "602 min late",
-      "checkin_time": "21-Feb-2026 17:02:25"
-    },
-    "83": {
-      "time": "17:29:17",
-      "name": "Moses Kibet",
-      "total_hours": 0.01,
-      "overtime_hours": 0,
-      "is_late": true,
-      "late_note": "629 min late",
-      "checkin_time": "21-Feb-2026 17:29:00"
-    },
-    "81": {
-      "time": "17:30:35",
-      "name": "William Mtai",
-      "total_hours": 1.04,
-      "overtime_hours": 0,
-      "is_late": true,
-      "late_note": "567 min late",
-      "checkin_time": "21-Feb-2026 16:27:56"
+      "late_note": "on time",
+      "checkin_time": "22-Feb-2026 06:35:48"
     }
   }
 }
