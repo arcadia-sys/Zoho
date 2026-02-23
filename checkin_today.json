@@ -1,5 +1,24 @@
 {
   "date": "2026-02-23",
   "checked_in": {},
-  "checked_out": {}
+  "checked_out": {
+    "1": {
+      "time": "08:25:34",
+      "name": "Baminus Michael",
+      "total_hours": 0.01,
+      "overtime_hours": 0,
+      "is_late": false,
+      "late_note": "on time",
+      "checkin_time": "23-Feb-2026 08:25:23"
+    },
+    "125": {
+      "time": "08:28:25",
+      "name": "FINLANZA TEAM",
+      "total_hours": 0.01,
+      "overtime_hours": 0,
+      "is_late": false,
+      "late_note": "on time",
+      "checkin_time": "23-Feb-2026 08:28:01"
+    }
+  }
 }

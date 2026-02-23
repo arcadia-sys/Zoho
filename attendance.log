@@ -220,3 +220,129 @@
 2026-02-23 00:07:10 [INFO] Zoho token refreshed OK
 2026-02-23 00:07:11 [INFO] Zoho token refreshed OK
 2026-02-23 00:07:19 [INFO] Zoho token refreshed OK
+2026-02-23 00:09:10 [INFO] Zoho token refreshed OK
+2026-02-23 00:09:10 [INFO] Zoho token refreshed OK
+2026-02-23 00:09:22 [INFO] Zoho token refreshed OK
+2026-02-23 00:09:23 [INFO] Zoho token refreshed OK
+2026-02-23 00:09:23 [INFO] Zoho token refreshed OK
+2026-02-23 00:12:27 [INFO] Zoho token refreshed OK
+2026-02-23 00:12:28 [INFO] Zoho token refreshed OK
+2026-02-23 00:12:29 [INFO] Zoho token refreshed OK
+2026-02-23 00:12:29 [INFO] Zoho token refreshed OK
+2026-02-23 00:12:30 [INFO] Zoho token refreshed OK
+2026-02-23 00:12:30 [INFO] Zoho token refreshed OK
+2026-02-23 00:12:30 [INFO] Zoho token refreshed OK
+2026-02-23 00:12:30 [INFO] Zoho token refreshed OK
+2026-02-23 00:12:31 [INFO] Zoho token refreshed OK
+2026-02-23 00:12:43 [INFO] Zoho token refreshed OK
+2026-02-23 05:41:53 [INFO] Zoho token refreshed OK
+2026-02-23 05:42:09 [INFO] Zoho token refreshed OK
+2026-02-23 05:42:11 [INFO] Zoho token refreshed OK
+2026-02-23 05:43:30 [INFO] Zoho token refreshed OK
+2026-02-23 05:44:38 [INFO] Zoho token refreshed OK
+2026-02-23 05:45:02 [INFO] Zoho token refreshed OK
+2026-02-23 05:50:45 [INFO] Zoho token refreshed OK
+2026-02-23 05:51:02 [INFO] Zoho token refreshed OK
+2026-02-23 05:51:20 [INFO] Zoho token refreshed OK
+2026-02-23 05:51:21 [INFO] Zoho token refreshed OK
+2026-02-23 05:51:22 [INFO] Zoho token refreshed OK
+2026-02-23 05:52:57 [INFO] Zoho token refreshed OK
+2026-02-23 05:52:58 [INFO] Zoho token refreshed OK
+2026-02-23 05:54:33 [INFO] Zoho token refreshed OK
+2026-02-23 05:54:39 [INFO] Zoho token refreshed OK
+2026-02-23 06:00:07 [INFO] Zoho token refreshed OK
+2026-02-23 06:00:07 [INFO] Zoho token refreshed OK
+2026-02-23 06:00:23 [INFO] Zoho token refreshed OK
+2026-02-23 06:00:25 [INFO] Zoho token refreshed OK
+2026-02-23 06:00:25 [WARNING] find_worker: HTTP 401 for criteria: (ZKTeco_User_ID == "1")
+2026-02-23 06:00:25 [WARNING] find_worker: HTTP 401 for criteria: (ZKTeco_User_ID == 1)
+2026-02-23 06:00:25 [WARNING] find_worker: criteria failed for ID '1', trying full fetch…
+2026-02-23 06:00:26 [ERROR] find_worker: worker ID '1' not found in Zoho
+2026-02-23 06:00:26 [WARNING] find_worker: HTTP 401 for criteria: (ZKTeco_User_ID == "128")
+2026-02-23 06:00:26 [WARNING] find_worker: HTTP 401 for criteria: (ZKTeco_User_ID == 128)
+2026-02-23 06:00:26 [WARNING] find_worker: criteria failed for ID '128', trying full fetch…
+2026-02-23 06:00:27 [ERROR] find_worker: worker ID '128' not found in Zoho
+2026-02-23 06:07:35 [INFO] Zoho token refreshed OK
+2026-02-23 06:07:42 [INFO] Zoho token refreshed OK
+2026-02-23 06:07:57 [INFO] Zoho token refreshed OK
+2026-02-23 06:08:03 [INFO] Zoho token refreshed OK
+2026-02-23 06:12:03 [INFO] Zoho token refreshed OK
+2026-02-23 06:17:42 [INFO] Zoho token refreshed OK
+2026-02-23 06:17:44 [WARNING] find_worker: HTTP 401 for criteria: (ZKTeco_User_ID == "7")
+2026-02-23 06:17:44 [WARNING] find_worker: HTTP 401 for criteria: (ZKTeco_User_ID == 7)
+2026-02-23 06:17:44 [WARNING] find_worker: criteria failed for ID '7', trying full fetch…
+2026-02-23 06:17:45 [ERROR] find_worker: worker ID '7' not found in Zoho
+2026-02-23 06:17:52 [INFO] Zoho token refreshed OK
+2026-02-23 06:17:52 [WARNING] find_worker: HTTP 401 for criteria: (ZKTeco_User_ID == "83")
+2026-02-23 06:17:53 [WARNING] find_worker: HTTP 401 for criteria: (ZKTeco_User_ID == 83)
+2026-02-23 06:17:53 [WARNING] find_worker: criteria failed for ID '83', trying full fetch…
+2026-02-23 06:17:53 [ERROR] find_worker: worker ID '83' not found in Zoho
+2026-02-23 06:17:58 [INFO] Zoho token refreshed OK
+2026-02-23 06:17:59 [WARNING] find_worker: HTTP 401 for criteria: (ZKTeco_User_ID == "83")
+2026-02-23 06:17:59 [WARNING] find_worker: HTTP 401 for criteria: (ZKTeco_User_ID == 83)
+2026-02-23 06:17:59 [WARNING] find_worker: criteria failed for ID '83', trying full fetch…
+2026-02-23 06:18:00 [ERROR] find_worker: worker ID '83' not found in Zoho
+2026-02-23 06:18:24 [INFO] Zoho token refreshed OK
+2026-02-23 06:18:25 [WARNING] find_worker: HTTP 401 for criteria: (ZKTeco_User_ID == "7")
+2026-02-23 06:18:25 [WARNING] find_worker: HTTP 401 for criteria: (ZKTeco_User_ID == 7)
+2026-02-23 06:18:25 [WARNING] find_worker: criteria failed for ID '7', trying full fetch…
+2026-02-23 06:18:25 [ERROR] find_worker: worker ID '7' not found in Zoho
+2026-02-23 06:18:30 [INFO] Zoho token refreshed OK
+2026-02-23 06:18:30 [WARNING] find_worker: HTTP 401 for criteria: (ZKTeco_User_ID == "7")
+2026-02-23 06:18:30 [WARNING] find_worker: HTTP 401 for criteria: (ZKTeco_User_ID == 7)
+2026-02-23 06:18:30 [WARNING] find_worker: criteria failed for ID '7', trying full fetch…
+2026-02-23 06:18:31 [ERROR] find_worker: worker ID '7' not found in Zoho
+2026-02-23 06:22:27 [INFO] Zoho token refreshed OK
+2026-02-23 06:22:27 [INFO] Zoho token refreshed OK
+2026-02-23 06:22:29 [WARNING] find_worker: HTTP 401 for criteria: (ZKTeco_User_ID2 == "12")
+2026-02-23 06:22:29 [WARNING] find_worker: HTTP 401 for criteria: (ZKTeco_User_ID2 == 12)
+2026-02-23 06:22:29 [WARNING] find_worker: criteria failed for ID '12', trying full fetch…
+2026-02-23 06:22:29 [WARNING] find_worker: HTTP 401 for criteria: (ZKTeco_User_ID2 == "126")
+2026-02-23 06:22:29 [ERROR] find_worker: worker ID '12' not found in Zoho
+2026-02-23 06:22:29 [WARNING] find_worker: HTTP 401 for criteria: (ZKTeco_User_ID2 == 126)
+2026-02-23 06:22:29 [WARNING] find_worker: criteria failed for ID '126', trying full fetch…
+2026-02-23 06:22:30 [ERROR] find_worker: worker ID '126' not found in Zoho
+2026-02-23 06:22:42 [INFO] Zoho token refreshed OK
+2026-02-23 06:22:42 [WARNING] find_worker: HTTP 401 for criteria: (ZKTeco_User_ID2 == "63")
+2026-02-23 06:22:43 [WARNING] find_worker: HTTP 401 for criteria: (ZKTeco_User_ID2 == 63)
+2026-02-23 06:22:43 [WARNING] find_worker: criteria failed for ID '63', trying full fetch…
+2026-02-23 06:22:43 [ERROR] find_worker: worker ID '63' not found in Zoho
+2026-02-23 06:23:52 [INFO] Zoho token refreshed OK
+2026-02-23 06:23:56 [WARNING] find_worker: HTTP 401 for criteria: (ZKTeco_User_ID2 == "63")
+2026-02-23 06:23:57 [WARNING] find_worker: HTTP 401 for criteria: (ZKTeco_User_ID2 == 63)
+2026-02-23 06:23:57 [WARNING] find_worker: criteria failed for ID '63', trying full fetch…
+2026-02-23 06:23:57 [ERROR] find_worker: worker ID '63' not found in Zoho
+2026-02-23 06:24:01 [INFO] Zoho token refreshed OK
+2026-02-23 06:24:01 [WARNING] find_worker: HTTP 401 for criteria: (ZKTeco_User_ID2 == "63")
+2026-02-23 06:24:02 [WARNING] find_worker: HTTP 401 for criteria: (ZKTeco_User_ID2 == 63)
+2026-02-23 06:24:02 [WARNING] find_worker: criteria failed for ID '63', trying full fetch…
+2026-02-23 06:24:03 [ERROR] find_worker: worker ID '63' not found in Zoho
+2026-02-23 06:45:13 [INFO] Zoho token refreshed OK
+2026-02-23 06:45:35 [INFO] Zoho token refreshed OK
+2026-02-23 06:59:20 [INFO] Zoho token refreshed OK
+2026-02-23 06:59:20 [ERROR] auth_headers: no token available — all Zoho calls will fail
+2026-02-23 06:59:20 [ERROR] find_worker(1): aborting — no valid Zoho token. Check REFRESH_TOKEN / CLIENT_ID / CLIENT_SECRET in .env
+2026-02-23 06:59:35 [INFO] Zoho token refreshed OK
+2026-02-23 06:59:35 [ERROR] auth_headers: no token available — all Zoho calls will fail
+2026-02-23 06:59:35 [ERROR] find_worker(125): aborting — no valid Zoho token. Check REFRESH_TOKEN / CLIENT_ID / CLIENT_SECRET in .env
+2026-02-23 07:16:40 [INFO] Zoho token refreshed OK
+2026-02-23 07:16:40 [ERROR] auth_headers: no token available — all Zoho calls will fail
+2026-02-23 07:16:40 [ERROR] find_worker(125): aborting — no valid Zoho token. Check REFRESH_TOKEN / CLIENT_ID / CLIENT_SECRET in .env
+2026-02-23 07:18:00 [INFO] Zoho token refreshed OK
+2026-02-23 07:18:00 [ERROR] auth_headers: no token available — all Zoho calls will fail
+2026-02-23 07:18:00 [ERROR] find_worker(1): aborting — no valid Zoho token. Check REFRESH_TOKEN / CLIENT_ID / CLIENT_SECRET in .env
+2026-02-23 07:18:09 [INFO] Zoho token refreshed OK
+2026-02-23 07:18:09 [ERROR] auth_headers: no token available — all Zoho calls will fail
+2026-02-23 07:18:09 [ERROR] find_worker(85): aborting — no valid Zoho token. Check REFRESH_TOKEN / CLIENT_ID / CLIENT_SECRET in .env
+2026-02-23 07:18:23 [INFO] Zoho token refreshed OK
+2026-02-23 07:18:23 [ERROR] auth_headers: no token available — all Zoho calls will fail
+2026-02-23 07:18:23 [ERROR] find_worker(85): aborting — no valid Zoho token. Check REFRESH_TOKEN / CLIENT_ID / CLIENT_SECRET in .env
+2026-02-23 07:59:19 [INFO] Zoho token refreshed OK
+2026-02-23 07:59:19 [ERROR] auth_headers: no token available — all Zoho calls will fail
+2026-02-23 07:59:19 [ERROR] find_worker(1): aborting — no valid Zoho token. Check REFRESH_TOKEN / CLIENT_ID / CLIENT_SECRET in .env
+2026-02-23 08:22:05 [ERROR] Token refresh attempt 1 HTTP 200 but error='invalid_client'. Full response: {'error': 'invalid_client'}
+2026-02-23 08:22:05 [ERROR] >>> invalid_client: Your CLIENT_ID or CLIENT_SECRET is wrong, or the OAuth client was deleted/deauthorised in Zoho API Console (https://api-console.zoho.com). Re-generate credentials and update .env.
+2026-02-23 08:22:06 [ERROR] Token refresh attempt 1 HTTP 200 but error='invalid_client'. Full response: {'error': 'invalid_client'}
+2026-02-23 08:22:06 [ERROR] >>> invalid_client: Your CLIENT_ID or CLIENT_SECRET is wrong, or the OAuth client was deleted/deauthorised in Zoho API Console (https://api-console.zoho.com). Re-generate credentials and update .env.
+2026-02-23 08:22:06 [ERROR] auth_headers: no token available — all Zoho calls will fail
+2026-02-23 08:22:06 [ERROR] find_worker(1): aborting — no valid Zoho token. Check REFRESH_TOKEN / CLIENT_ID / CLIENT_SECRET in .env
