@@ -1,6 +1,15 @@
 {
   "date": "2026-02-23",
-  "checked_in": {},
+  "checked_in": {
+    "77": {
+      "time": "23-Feb-2026 08:30:26",
+      "zoho_id": "4838902000000528043",
+      "worker_id": "4838902000000526027",
+      "name": "G Nyanyuki",
+      "is_late": true,
+      "late_note": "on time"
+    }
+  },
   "checked_out": {
     "1": {
       "time": "08:25:34",
@@ -19,6 +28,15 @@
       "is_late": false,
       "late_note": "on time",
       "checkin_time": "23-Feb-2026 08:28:01"
+    },
+    "85": {
+      "time": "08:53:06",
+      "name": "Charles Ogechi",
+      "total_hours": 0.01,
+      "overtime_hours": 0,
+      "is_late": true,
+      "late_note": "22 min late",
+      "checkin_time": "23-Feb-2026 08:52:35"
     }
   }
 }

@@ -346,3 +346,23 @@
 2026-02-23 08:22:06 [ERROR] >>> invalid_client: Your CLIENT_ID or CLIENT_SECRET is wrong, or the OAuth client was deleted/deauthorised in Zoho API Console (https://api-console.zoho.com). Re-generate credentials and update .env.
 2026-02-23 08:22:06 [ERROR] auth_headers: no token available — all Zoho calls will fail
 2026-02-23 08:22:06 [ERROR] find_worker(1): aborting — no valid Zoho token. Check REFRESH_TOKEN / CLIENT_ID / CLIENT_SECRET in .env
+2026-02-23 08:25:05 [INFO] Zoho token refreshed OK
+2026-02-23 08:25:05 [INFO] Zoho token refreshed OK
+2026-02-23 08:25:05 [INFO] find_worker(1): trying criteria='(ZKTeco_User_ID2 == 1)'
+2026-02-23 08:25:07 [INFO] find_worker(1): found via criteria='(ZKTeco_User_ID2 == 1)'
+2026-02-23 08:25:22 [INFO] find_worker(1): trying criteria='(ZKTeco_User_ID2 == 1)'
+2026-02-23 08:25:23 [INFO] find_worker(1): found via criteria='(ZKTeco_User_ID2 == 1)'
+2026-02-23 08:25:24 [INFO] CHECKIN OK: Baminus Michael late=False
+2026-02-23 08:25:34 [INFO] find_worker(1): trying criteria='(ZKTeco_User_ID2 == 1)'
+2026-02-23 08:25:34 [INFO] find_worker(1): found via criteria='(ZKTeco_User_ID2 == 1)'
+2026-02-23 08:25:35 [INFO] CHECKOUT OK: Baminus Michael hours=0.01
+2026-02-23 08:27:53 [INFO] find_worker(125): trying criteria='(ZKTeco_User_ID2 == 125)'
+2026-02-23 08:27:55 [INFO] find_worker(125): found via criteria='(ZKTeco_User_ID2 == 125)'
+2026-02-23 08:28:00 [INFO] find_worker(125): trying criteria='(ZKTeco_User_ID2 == 125)'
+2026-02-23 08:28:01 [INFO] find_worker(125): found via criteria='(ZKTeco_User_ID2 == 125)'
+2026-02-23 08:28:01 [INFO] CHECKIN OK: FINLANZA TEAM late=False
+2026-02-23 08:28:10 [INFO] find_worker(123): trying criteria='(ZKTeco_User_ID2 == 123)'
+2026-02-23 08:28:10 [INFO] find_worker(123): found via criteria='(ZKTeco_User_ID2 == 123)'
+2026-02-23 08:28:24 [INFO] find_worker(125): trying criteria='(ZKTeco_User_ID2 == 125)'
+2026-02-23 08:28:25 [INFO] find_worker(125): found via criteria='(ZKTeco_User_ID2 == 125)'
+2026-02-23 08:28:26 [INFO] CHECKOUT OK: FINLANZA TEAM hours=0.01
