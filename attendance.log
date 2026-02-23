@@ -366,3 +366,370 @@
 2026-02-23 08:28:24 [INFO] find_worker(125): trying criteria='(ZKTeco_User_ID2 == 125)'
 2026-02-23 08:28:25 [INFO] find_worker(125): found via criteria='(ZKTeco_User_ID2 == 125)'
 2026-02-23 08:28:26 [INFO] CHECKOUT OK: FINLANZA TEAM hours=0.01
+2026-02-23 08:30:17 [INFO] find_worker(77): trying criteria='(ZKTeco_User_ID2 == 77)'
+2026-02-23 08:30:18 [INFO] find_worker(77): found via criteria='(ZKTeco_User_ID2 == 77)'
+2026-02-23 08:30:25 [INFO] find_worker(77): trying criteria='(ZKTeco_User_ID2 == 77)'
+2026-02-23 08:30:26 [INFO] find_worker(77): found via criteria='(ZKTeco_User_ID2 == 77)'
+2026-02-23 08:30:26 [INFO] CHECKIN OK: G Nyanyuki late=True
+2026-02-23 08:51:26 [INFO] find_worker(7): trying criteria='(ZKTeco_User_ID2 == 7)'
+2026-02-23 08:51:26 [INFO] find_worker(7): found via criteria='(ZKTeco_User_ID2 == 7)'
+2026-02-23 08:52:20 [INFO] find_worker(85): trying criteria='(ZKTeco_User_ID2 == 85)'
+2026-02-23 08:52:22 [INFO] find_worker(85): found via criteria='(ZKTeco_User_ID2 == 85)'
+2026-02-23 08:52:35 [INFO] find_worker(85): trying criteria='(ZKTeco_User_ID2 == 85)'
+2026-02-23 08:52:35 [INFO] find_worker(85): found via criteria='(ZKTeco_User_ID2 == 85)'
+2026-02-23 08:52:36 [INFO] CHECKIN OK: Charles Ogechi late=True
+2026-02-23 08:53:06 [INFO] find_worker(85): trying criteria='(ZKTeco_User_ID2 == 85)'
+2026-02-23 08:53:06 [INFO] find_worker(85): found via criteria='(ZKTeco_User_ID2 == 85)'
+2026-02-23 08:53:07 [INFO] CHECKOUT OK: Charles Ogechi hours=0.01
+2026-02-23 09:40:47 [INFO] Zoho token refreshed OK
+2026-02-23 09:40:48 [INFO] Zoho token refreshed OK
+2026-02-23 09:40:49 [INFO] Zoho token refreshed OK
+2026-02-23 09:40:57 [INFO] find_worker(126): trying criteria='(ZKTeco_User_ID2 == 126)'
+2026-02-23 09:40:57 [INFO] find_worker(126): found via criteria='(ZKTeco_User_ID2 == 126)'
+2026-02-23 09:42:04 [INFO] find_worker(126): trying criteria='(ZKTeco_User_ID2 == 126)'
+2026-02-23 09:42:06 [INFO] find_worker(126): found via criteria='(ZKTeco_User_ID2 == 126)'
+2026-02-23 09:42:07 [INFO] CHECKIN OK: JAMES MAOSA late=True
+2026-02-23 09:42:34 [INFO] find_worker(126): trying criteria='(ZKTeco_User_ID2 == 126)'
+2026-02-23 09:42:34 [INFO] find_worker(126): found via criteria='(ZKTeco_User_ID2 == 126)'
+2026-02-23 09:42:35 [INFO] CHECKOUT OK: JAMES MAOSA hours=0.01
+2026-02-23 09:56:27 [INFO] Zoho token refreshed OK
+2026-02-23 09:57:18 [INFO] Zoho token refreshed OK
+2026-02-23 09:58:07 [INFO] Zoho token refreshed OK
+2026-02-23 09:58:19 [INFO] find_worker(7): trying criteria='(ZKTeco_User_ID2 == 7)'
+2026-02-23 09:58:22 [INFO] find_worker(7): found via criteria='(ZKTeco_User_ID2 == 7)'
+2026-02-23 09:58:30 [INFO] find_worker(90): trying criteria='(ZKTeco_User_ID2 == 90)'
+2026-02-23 09:58:30 [ERROR] find_worker(90): request timed out on criteria='(ZKTeco_User_ID2 == 90)'
+2026-02-23 09:58:30 [INFO] find_worker(90): trying criteria='(ZKTeco_User_ID2 == "90")'
+2026-02-23 09:58:31 [INFO] find_worker(90): trying criteria='(Worker_ID == 90)'
+2026-02-23 09:58:31 [INFO] find_worker(90): found via criteria='(Worker_ID == 90)'
+2026-02-23 09:58:35 [INFO] find_worker(900): trying criteria='(ZKTeco_User_ID2 == 900)'
+2026-02-23 09:58:35 [ERROR] find_worker(900): request timed out on criteria='(ZKTeco_User_ID2 == 900)'
+2026-02-23 09:58:35 [INFO] find_worker(900): trying criteria='(ZKTeco_User_ID2 == "900")'
+2026-02-23 09:58:36 [INFO] find_worker(900): trying criteria='(Worker_ID == 900)'
+2026-02-23 09:58:36 [ERROR] find_worker(900): request timed out on criteria='(Worker_ID == 900)'
+2026-02-23 09:58:36 [INFO] find_worker(900): trying criteria='(Worker_ID == "900")'
+2026-02-23 09:58:36 [INFO] find_worker(900): trying criteria='(ZKTeco_User_ID2 == "900")'
+2026-02-23 09:58:36 [INFO] find_worker(900): trying criteria='(Worker_ID == "900")'
+2026-02-23 09:58:37 [WARNING] find_worker(900): all criteria failed — attempting full worker scan
+2026-02-23 09:58:37 [INFO] find_worker(900): full scan returned 69 worker(s)
+2026-02-23 09:58:37 [ERROR] find_worker(900): worker NOT found after all attempts. Verify ZKTeco_User_ID2 / Worker_ID field in Zoho for ID=900
+2026-02-23 10:10:28 [INFO] find_worker(71): trying criteria='(ZKTeco_User_ID2 == 71)'
+2026-02-23 10:10:28 [INFO] find_worker(71): found via criteria='(ZKTeco_User_ID2 == 71)'
+2026-02-23 10:10:37 [INFO] find_worker(71): trying criteria='(ZKTeco_User_ID2 == 71)'
+2026-02-23 10:10:37 [INFO] find_worker(71): found via criteria='(ZKTeco_User_ID2 == 71)'
+2026-02-23 10:10:38 [INFO] CHECKIN OK: hesbon223 late=True
+2026-02-23 10:11:35 [INFO] find_worker(5): trying criteria='(ZKTeco_User_ID2 == 5)'
+2026-02-23 10:11:37 [ERROR] find_worker(5): request timed out on criteria='(ZKTeco_User_ID2 == 5)'
+2026-02-23 10:11:37 [INFO] find_worker(5): trying criteria='(ZKTeco_User_ID2 == "5")'
+2026-02-23 10:11:37 [INFO] find_worker(5): trying criteria='(Worker_ID == 5)'
+2026-02-23 10:11:38 [ERROR] find_worker(5): request timed out on criteria='(Worker_ID == 5)'
+2026-02-23 10:11:38 [INFO] find_worker(5): trying criteria='(Worker_ID == "5")'
+2026-02-23 10:11:38 [INFO] find_worker(5): trying criteria='(ZKTeco_User_ID2 == "5")'
+2026-02-23 10:11:38 [INFO] find_worker(5): trying criteria='(Worker_ID == "5")'
+2026-02-23 10:11:39 [WARNING] find_worker(5): all criteria failed — attempting full worker scan
+2026-02-23 10:11:39 [INFO] find_worker(5): full scan returned 69 worker(s)
+2026-02-23 10:11:39 [ERROR] find_worker(5): worker NOT found after all attempts. Verify ZKTeco_User_ID2 / Worker_ID field in Zoho for ID=5
+2026-02-23 15:49:21 [INFO] Zoho token refreshed OK
+2026-02-23 15:49:21 [INFO] find_worker(66): trying criteria='(ZKTeco_User_ID2 == 66)'
+2026-02-23 15:49:24 [INFO] find_worker(66): found via criteria='(ZKTeco_User_ID2 == 66)'
+2026-02-23 15:49:25 [INFO] find_worker(66): trying criteria='(ZKTeco_User_ID2 == 66)'
+2026-02-23 15:49:25 [INFO] find_worker(66): found via criteria='(ZKTeco_User_ID2 == 66)'
+2026-02-23 15:49:26 [INFO] CHECKIN OK: Brian Omusebe late=True
+2026-02-23 15:49:32 [INFO] find_worker(8945): trying criteria='(ZKTeco_User_ID2 == 8945)'
+2026-02-23 15:49:32 [ERROR] find_worker(8945): request timed out on criteria='(ZKTeco_User_ID2 == 8945)'
+2026-02-23 15:49:32 [INFO] find_worker(8945): trying criteria='(ZKTeco_User_ID2 == "8945")'
+2026-02-23 15:49:33 [INFO] find_worker(8945): trying criteria='(Worker_ID == 8945)'
+2026-02-23 15:49:33 [ERROR] find_worker(8945): request timed out on criteria='(Worker_ID == 8945)'
+2026-02-23 15:49:33 [INFO] find_worker(8945): trying criteria='(Worker_ID == "8945")'
+2026-02-23 15:49:33 [INFO] find_worker(89): trying criteria='(ZKTeco_User_ID2 == 89)'
+2026-02-23 15:49:33 [INFO] find_worker(8945): trying criteria='(ZKTeco_User_ID2 == "8945")'
+2026-02-23 15:49:34 [INFO] find_worker(8945): trying criteria='(Worker_ID == "8945")'
+2026-02-23 15:49:34 [WARNING] find_worker(8945): all criteria failed — attempting full worker scan
+2026-02-23 15:49:35 [INFO] find_worker(8945): full scan returned 69 worker(s)
+2026-02-23 15:49:35 [ERROR] find_worker(8945): worker NOT found after all attempts. Verify ZKTeco_User_ID2 / Worker_ID field in Zoho for ID=8945
+2026-02-23 15:49:35 [INFO] find_worker(89): found via criteria='(ZKTeco_User_ID2 == 89)'
+2026-02-23 15:49:39 [INFO] find_worker(89): trying criteria='(ZKTeco_User_ID2 == 89)'
+2026-02-23 15:49:40 [INFO] find_worker(89): found via criteria='(ZKTeco_User_ID2 == 89)'
+2026-02-23 15:49:40 [INFO] CHECKIN OK: Julias Ogamba late=True
+2026-02-23 15:49:47 [INFO] find_worker(55): trying criteria='(ZKTeco_User_ID2 == 55)'
+2026-02-23 15:49:47 [INFO] find_worker(55): found via criteria='(ZKTeco_User_ID2 == 55)'
+2026-02-23 15:49:52 [INFO] find_worker(55): trying criteria='(ZKTeco_User_ID2 == 55)'
+2026-02-23 15:49:52 [INFO] find_worker(55): found via criteria='(ZKTeco_User_ID2 == 55)'
+2026-02-23 15:49:52 [INFO] CHECKIN OK: Jane Odoo late=True
+2026-02-23 15:50:00 [INFO] find_worker(17): trying criteria='(ZKTeco_User_ID2 == 17)'
+2026-02-23 15:50:00 [INFO] find_worker(17): found via criteria='(ZKTeco_User_ID2 == 17)'
+2026-02-23 15:50:04 [INFO] find_worker(17): trying criteria='(ZKTeco_User_ID2 == 17)'
+2026-02-23 15:50:04 [INFO] find_worker(17): found via criteria='(ZKTeco_User_ID2 == 17)'
+2026-02-23 15:50:04 [INFO] CHECKIN OK: MARTHER KARUA late=True
+2026-02-23 15:50:16 [INFO] find_worker(88): trying criteria='(ZKTeco_User_ID2 == 88)'
+2026-02-23 15:50:16 [INFO] find_worker(88): found via criteria='(ZKTeco_User_ID2 == 88)'
+2026-02-23 15:50:20 [INFO] find_worker(88): trying criteria='(ZKTeco_User_ID2 == 88)'
+2026-02-23 15:50:20 [INFO] find_worker(88): found via criteria='(ZKTeco_User_ID2 == 88)'
+2026-02-23 15:50:20 [INFO] CHECKIN OK: Evans Ongeri late=True
+2026-02-23 15:50:32 [INFO] find_worker(80): trying criteria='(ZKTeco_User_ID2 == 80)'
+2026-02-23 15:50:32 [ERROR] find_worker(80): request timed out on criteria='(ZKTeco_User_ID2 == 80)'
+2026-02-23 15:50:32 [INFO] find_worker(80): trying criteria='(ZKTeco_User_ID2 == "80")'
+2026-02-23 15:50:32 [INFO] find_worker(80): trying criteria='(Worker_ID == 80)'
+2026-02-23 15:50:33 [INFO] find_worker(80): found via criteria='(Worker_ID == 80)'
+2026-02-23 15:50:35 [INFO] find_worker(80\): trying criteria='(ZKTeco_User_ID2 == "80\\")'
+2026-02-23 15:50:35 [ERROR] find_worker(80\): request timed out on criteria='(ZKTeco_User_ID2 == "80\\")'
+2026-02-23 15:50:35 [INFO] find_worker(80\): trying criteria='(Worker_ID == "80\\")'
+2026-02-23 15:50:35 [ERROR] find_worker(80\): request timed out on criteria='(Worker_ID == "80\\")'
+2026-02-23 15:50:35 [WARNING] find_worker(80\): all criteria failed — attempting full worker scan
+2026-02-23 15:50:36 [INFO] find_worker(80\): full scan returned 69 worker(s)
+2026-02-23 15:50:36 [ERROR] find_worker(80\): worker NOT found after all attempts. Verify ZKTeco_User_ID2 / Worker_ID field in Zoho for ID=80\
+2026-02-23 15:50:38 [INFO] find_worker(80): trying criteria='(ZKTeco_User_ID2 == 80)'
+2026-02-23 15:50:39 [ERROR] find_worker(80): request timed out on criteria='(ZKTeco_User_ID2 == 80)'
+2026-02-23 15:50:39 [INFO] find_worker(80): trying criteria='(ZKTeco_User_ID2 == "80")'
+2026-02-23 15:50:39 [INFO] find_worker(80): trying criteria='(Worker_ID == 80)'
+2026-02-23 15:50:39 [INFO] find_worker(80): found via criteria='(Worker_ID == 80)'
+2026-02-23 15:50:40 [INFO] CHECKIN OK: Dennis Koech late=True
+2026-02-23 15:50:49 [INFO] find_worker(78): trying criteria='(ZKTeco_User_ID2 == 78)'
+2026-02-23 15:50:49 [INFO] find_worker(78): found via criteria='(ZKTeco_User_ID2 == 78)'
+2026-02-23 15:50:54 [INFO] find_worker(78): trying criteria='(ZKTeco_User_ID2 == 78)'
+2026-02-23 15:50:54 [INFO] find_worker(78): found via criteria='(ZKTeco_User_ID2 == 78)'
+2026-02-23 15:50:55 [INFO] CHECKIN OK: Hesbon Adhiambo late=True
+2026-02-23 15:51:01 [INFO] find_worker(75): trying criteria='(ZKTeco_User_ID2 == 75)'
+2026-02-23 15:51:01 [INFO] find_worker(75): found via criteria='(ZKTeco_User_ID2 == 75)'
+2026-02-23 15:51:06 [INFO] find_worker(75): trying criteria='(ZKTeco_User_ID2 == 75)'
+2026-02-23 15:51:07 [INFO] find_worker(75): found via criteria='(ZKTeco_User_ID2 == 75)'
+2026-02-23 15:51:07 [INFO] CHECKIN OK: George Okonu late=True
+2026-02-23 15:51:16 [INFO] find_worker(18): trying criteria='(ZKTeco_User_ID2 == 18)'
+2026-02-23 15:51:16 [INFO] find_worker(18): found via criteria='(ZKTeco_User_ID2 == 18)'
+2026-02-23 15:51:20 [INFO] find_worker(18): trying criteria='(ZKTeco_User_ID2 == 18)'
+2026-02-23 15:51:20 [INFO] find_worker(18): found via criteria='(ZKTeco_User_ID2 == 18)'
+2026-02-23 15:51:20 [INFO] CHECKIN OK: kIMTAI DENNIS late=True
+2026-02-23 15:51:29 [INFO] find_worker(45): trying criteria='(ZKTeco_User_ID2 == 45)'
+2026-02-23 15:51:29 [ERROR] find_worker(45): request timed out on criteria='(ZKTeco_User_ID2 == 45)'
+2026-02-23 15:51:29 [INFO] find_worker(45): trying criteria='(ZKTeco_User_ID2 == "45")'
+2026-02-23 15:51:30 [INFO] find_worker(45): trying criteria='(Worker_ID == 45)'
+2026-02-23 15:51:30 [ERROR] find_worker(45): request timed out on criteria='(Worker_ID == 45)'
+2026-02-23 15:51:30 [INFO] find_worker(45): trying criteria='(Worker_ID == "45")'
+2026-02-23 15:51:30 [INFO] find_worker(45): trying criteria='(ZKTeco_User_ID2 == "45")'
+2026-02-23 15:51:31 [INFO] find_worker(45): trying criteria='(Worker_ID == "45")'
+2026-02-23 15:51:31 [WARNING] find_worker(45): all criteria failed — attempting full worker scan
+2026-02-23 15:51:31 [INFO] find_worker(45): full scan returned 69 worker(s)
+2026-02-23 15:51:31 [ERROR] find_worker(45): worker NOT found after all attempts. Verify ZKTeco_User_ID2 / Worker_ID field in Zoho for ID=45
+2026-02-23 15:51:33 [INFO] find_worker(45): trying criteria='(ZKTeco_User_ID2 == 45)'
+2026-02-23 15:51:33 [ERROR] find_worker(45): request timed out on criteria='(ZKTeco_User_ID2 == 45)'
+2026-02-23 15:51:33 [INFO] find_worker(45): trying criteria='(ZKTeco_User_ID2 == "45")'
+2026-02-23 15:51:33 [INFO] find_worker(45): trying criteria='(Worker_ID == 45)'
+2026-02-23 15:51:34 [ERROR] find_worker(45): request timed out on criteria='(Worker_ID == 45)'
+2026-02-23 15:51:34 [INFO] find_worker(45): trying criteria='(Worker_ID == "45")'
+2026-02-23 15:51:34 [INFO] find_worker(45): trying criteria='(ZKTeco_User_ID2 == "45")'
+2026-02-23 15:51:34 [INFO] find_worker(45): trying criteria='(Worker_ID == "45")'
+2026-02-23 15:51:35 [WARNING] find_worker(45): all criteria failed — attempting full worker scan
+2026-02-23 15:51:35 [INFO] find_worker(45): full scan returned 69 worker(s)
+2026-02-23 15:51:35 [ERROR] find_worker(45): worker NOT found after all attempts. Verify ZKTeco_User_ID2 / Worker_ID field in Zoho for ID=45
+2026-02-23 15:51:47 [INFO] find_worker(5): trying criteria='(ZKTeco_User_ID2 == 5)'
+2026-02-23 15:51:47 [ERROR] find_worker(5): request timed out on criteria='(ZKTeco_User_ID2 == 5)'
+2026-02-23 15:51:47 [INFO] find_worker(5): trying criteria='(ZKTeco_User_ID2 == "5")'
+2026-02-23 15:51:47 [INFO] find_worker(5): trying criteria='(Worker_ID == 5)'
+2026-02-23 15:51:48 [ERROR] find_worker(5): request timed out on criteria='(Worker_ID == 5)'
+2026-02-23 15:51:48 [INFO] find_worker(5): trying criteria='(Worker_ID == "5")'
+2026-02-23 15:51:48 [INFO] find_worker(56): trying criteria='(ZKTeco_User_ID2 == 56)'
+2026-02-23 15:51:48 [INFO] find_worker(5): trying criteria='(ZKTeco_User_ID2 == "5")'
+2026-02-23 15:51:48 [INFO] find_worker(5): trying criteria='(Worker_ID == "5")'
+2026-02-23 15:51:49 [WARNING] find_worker(5): all criteria failed — attempting full worker scan
+2026-02-23 15:51:49 [INFO] find_worker(5): full scan returned 69 worker(s)
+2026-02-23 15:51:49 [ERROR] find_worker(5): worker NOT found after all attempts. Verify ZKTeco_User_ID2 / Worker_ID field in Zoho for ID=5
+2026-02-23 15:51:49 [ERROR] find_worker(56): request timed out on criteria='(ZKTeco_User_ID2 == 56)'
+2026-02-23 15:51:49 [INFO] find_worker(56): trying criteria='(ZKTeco_User_ID2 == "56")'
+2026-02-23 15:51:49 [INFO] find_worker(56): trying criteria='(Worker_ID == 56)'
+2026-02-23 15:51:50 [ERROR] find_worker(56): request timed out on criteria='(Worker_ID == 56)'
+2026-02-23 15:51:50 [INFO] find_worker(56): trying criteria='(Worker_ID == "56")'
+2026-02-23 15:51:50 [INFO] find_worker(56): trying criteria='(ZKTeco_User_ID2 == "56")'
+2026-02-23 15:51:50 [INFO] find_worker(56): trying criteria='(Worker_ID == "56")'
+2026-02-23 15:51:51 [WARNING] find_worker(56): all criteria failed — attempting full worker scan
+2026-02-23 15:51:51 [INFO] find_worker(56): full scan returned 69 worker(s)
+2026-02-23 15:51:51 [ERROR] find_worker(56): worker NOT found after all attempts. Verify ZKTeco_User_ID2 / Worker_ID field in Zoho for ID=56
+2026-02-23 15:51:52 [INFO] find_worker(56): trying criteria='(ZKTeco_User_ID2 == 56)'
+2026-02-23 15:51:52 [ERROR] find_worker(56): request timed out on criteria='(ZKTeco_User_ID2 == 56)'
+2026-02-23 15:51:52 [INFO] find_worker(56): trying criteria='(ZKTeco_User_ID2 == "56")'
+2026-02-23 15:51:52 [INFO] find_worker(56): trying criteria='(Worker_ID == 56)'
+2026-02-23 15:51:53 [ERROR] find_worker(56): request timed out on criteria='(Worker_ID == 56)'
+2026-02-23 15:51:53 [INFO] find_worker(56): trying criteria='(Worker_ID == "56")'
+2026-02-23 15:51:53 [INFO] find_worker(56): trying criteria='(ZKTeco_User_ID2 == "56")'
+2026-02-23 15:51:53 [INFO] find_worker(56): trying criteria='(Worker_ID == "56")'
+2026-02-23 15:51:54 [WARNING] find_worker(56): all criteria failed — attempting full worker scan
+2026-02-23 15:51:54 [INFO] find_worker(56): full scan returned 69 worker(s)
+2026-02-23 15:51:54 [ERROR] find_worker(56): worker NOT found after all attempts. Verify ZKTeco_User_ID2 / Worker_ID field in Zoho for ID=56
+2026-02-23 15:52:00 [INFO] find_worker(76): trying criteria='(ZKTeco_User_ID2 == 76)'
+2026-02-23 15:52:01 [INFO] find_worker(76): found via criteria='(ZKTeco_User_ID2 == 76)'
+2026-02-23 15:52:05 [INFO] find_worker(76): trying criteria='(ZKTeco_User_ID2 == 76)'
+2026-02-23 15:52:05 [INFO] find_worker(76): found via criteria='(ZKTeco_User_ID2 == 76)'
+2026-02-23 15:52:05 [INFO] CHECKIN OK: Amos Kiplangat late=True
+2026-02-23 15:52:14 [INFO] find_worker(12): trying criteria='(ZKTeco_User_ID2 == 12)'
+2026-02-23 15:52:15 [INFO] find_worker(12): found via criteria='(ZKTeco_User_ID2 == 12)'
+2026-02-23 15:52:18 [INFO] find_worker(12): trying criteria='(ZKTeco_User_ID2 == 12)'
+2026-02-23 15:52:18 [INFO] find_worker(12): found via criteria='(ZKTeco_User_ID2 == 12)'
+2026-02-23 15:52:19 [INFO] CHECKIN OK: Shairo Ongwae late=True
+2026-02-23 15:52:38 [INFO] find_worker(99): trying criteria='(ZKTeco_User_ID2 == 99)'
+2026-02-23 15:52:39 [INFO] find_worker(99): found via criteria='(ZKTeco_User_ID2 == 99)'
+2026-02-23 15:52:43 [INFO] find_worker(99): trying criteria='(ZKTeco_User_ID2 == 99)'
+2026-02-23 15:52:43 [INFO] find_worker(99): found via criteria='(ZKTeco_User_ID2 == 99)'
+2026-02-23 15:52:43 [INFO] CHECKIN OK: Annah Kagwe late=True
+2026-02-23 15:52:47 [INFO] find_worker(90): trying criteria='(ZKTeco_User_ID2 == 90)'
+2026-02-23 15:52:48 [ERROR] find_worker(90): request timed out on criteria='(ZKTeco_User_ID2 == 90)'
+2026-02-23 15:52:48 [INFO] find_worker(90): trying criteria='(ZKTeco_User_ID2 == "90")'
+2026-02-23 15:52:48 [INFO] find_worker(90): trying criteria='(Worker_ID == 90)'
+2026-02-23 15:52:48 [INFO] find_worker(90): found via criteria='(Worker_ID == 90)'
+2026-02-23 15:52:51 [INFO] find_worker(90): trying criteria='(ZKTeco_User_ID2 == 90)'
+2026-02-23 15:52:51 [ERROR] find_worker(90): request timed out on criteria='(ZKTeco_User_ID2 == 90)'
+2026-02-23 15:52:51 [INFO] find_worker(90): trying criteria='(ZKTeco_User_ID2 == "90")'
+2026-02-23 15:52:51 [INFO] find_worker(90): trying criteria='(Worker_ID == 90)'
+2026-02-23 15:52:52 [INFO] find_worker(90): found via criteria='(Worker_ID == 90)'
+2026-02-23 15:52:52 [INFO] CHECKIN OK: Abbygael Chibweso late=True
+2026-02-23 15:53:03 [INFO] find_worker(92): trying criteria='(ZKTeco_User_ID2 == 92)'
+2026-02-23 15:53:03 [INFO] find_worker(92): found via criteria='(ZKTeco_User_ID2 == 92)'
+2026-02-23 15:53:06 [INFO] find_worker(92): trying criteria='(ZKTeco_User_ID2 == 92)'
+2026-02-23 15:53:06 [INFO] find_worker(92): found via criteria='(ZKTeco_User_ID2 == 92)'
+2026-02-23 15:53:07 [INFO] CHECKIN OK: Joshua Wainaina late=True
+2026-02-23 15:53:14 [INFO] find_worker(93): trying criteria='(ZKTeco_User_ID2 == 93)'
+2026-02-23 15:53:14 [INFO] find_worker(93): found via criteria='(ZKTeco_User_ID2 == 93)'
+2026-02-23 15:53:15 [INFO] CHECKIN OK: samuel Mbogo late=True
+2026-02-23 15:53:19 [INFO] find_worker(95): trying criteria='(ZKTeco_User_ID2 == 95)'
+2026-02-23 15:53:19 [INFO] find_worker(95): found via criteria='(ZKTeco_User_ID2 == 95)'
+2026-02-23 15:53:22 [INFO] find_worker(95): trying criteria='(ZKTeco_User_ID2 == 95)'
+2026-02-23 15:53:22 [INFO] find_worker(95): found via criteria='(ZKTeco_User_ID2 == 95)'
+2026-02-23 15:53:22 [INFO] CHECKIN OK: Keith Oira late=True
+2026-02-23 15:54:33 [INFO] find_worker(9): trying criteria='(ZKTeco_User_ID2 == 9)'
+2026-02-23 15:54:35 [INFO] find_worker(9): found via criteria='(ZKTeco_User_ID2 == 9)'
+2026-02-23 15:54:43 [INFO] find_worker(96): trying criteria='(ZKTeco_User_ID2 == 96)'
+2026-02-23 15:54:43 [INFO] find_worker(96): found via criteria='(ZKTeco_User_ID2 == 96)'
+2026-02-23 15:54:43 [INFO] CHECKIN OK: Thomas Agwambo late=True
+2026-02-23 15:54:58 [INFO] find_worker(100): trying criteria='(ZKTeco_User_ID2 == 100)'
+2026-02-23 15:54:59 [ERROR] find_worker(100): request timed out on criteria='(ZKTeco_User_ID2 == 100)'
+2026-02-23 15:54:59 [INFO] find_worker(100): trying criteria='(ZKTeco_User_ID2 == "100")'
+2026-02-23 15:54:59 [INFO] find_worker(100): trying criteria='(Worker_ID == 100)'
+2026-02-23 15:54:59 [INFO] find_worker(100): found via criteria='(Worker_ID == 100)'
+2026-02-23 15:55:03 [INFO] find_worker(100): trying criteria='(ZKTeco_User_ID2 == 100)'
+2026-02-23 15:55:03 [ERROR] find_worker(100): request timed out on criteria='(ZKTeco_User_ID2 == 100)'
+2026-02-23 15:55:03 [INFO] find_worker(100): trying criteria='(ZKTeco_User_ID2 == "100")'
+2026-02-23 15:55:04 [INFO] find_worker(100): trying criteria='(Worker_ID == 100)'
+2026-02-23 15:55:04 [INFO] find_worker(100): found via criteria='(Worker_ID == 100)'
+2026-02-23 15:55:04 [INFO] CHECKIN OK: Baminus Michael late=True
+2026-02-23 16:50:17 [INFO] Zoho token refreshed OK
+2026-02-23 16:50:17 [INFO] find_worker(590): trying criteria='(ZKTeco_User_ID2 == 590)'
+2026-02-23 16:50:19 [ERROR] find_worker(590): request timed out on criteria='(ZKTeco_User_ID2 == 590)'
+2026-02-23 16:50:19 [INFO] find_worker(590): trying criteria='(ZKTeco_User_ID2 == "590")'
+2026-02-23 16:50:19 [INFO] find_worker(590): trying criteria='(Worker_ID == 590)'
+2026-02-23 16:50:20 [ERROR] find_worker(590): request timed out on criteria='(Worker_ID == 590)'
+2026-02-23 16:50:20 [INFO] find_worker(590): trying criteria='(Worker_ID == "590")'
+2026-02-23 16:50:20 [INFO] find_worker(590): trying criteria='(ZKTeco_User_ID2 == "590")'
+2026-02-23 16:50:20 [INFO] find_worker(590): trying criteria='(Worker_ID == "590")'
+2026-02-23 16:50:21 [WARNING] find_worker(590): all criteria failed — attempting full worker scan
+2026-02-23 16:50:21 [INFO] find_worker(590): full scan returned 69 worker(s)
+2026-02-23 16:50:21 [ERROR] find_worker(590): worker NOT found after all attempts. Verify ZKTeco_User_ID2 / Worker_ID field in Zoho for ID=590
+2026-02-23 16:50:39 [INFO] find_worker(77): trying criteria='(ZKTeco_User_ID2 == 77)'
+2026-02-23 16:50:39 [INFO] find_worker(77): found via criteria='(ZKTeco_User_ID2 == 77)'
+2026-02-23 16:51:07 [INFO] find_worker(43): trying criteria='(ZKTeco_User_ID2 == 43)'
+2026-02-23 16:51:08 [ERROR] find_worker(43): request timed out on criteria='(ZKTeco_User_ID2 == 43)'
+2026-02-23 16:51:08 [INFO] find_worker(43): trying criteria='(ZKTeco_User_ID2 == "43")'
+2026-02-23 16:51:08 [INFO] find_worker(43): trying criteria='(Worker_ID == 43)'
+2026-02-23 16:51:08 [ERROR] find_worker(43): request timed out on criteria='(Worker_ID == 43)'
+2026-02-23 16:51:08 [INFO] find_worker(43): trying criteria='(Worker_ID == "43")'
+2026-02-23 16:51:09 [INFO] find_worker(43): trying criteria='(ZKTeco_User_ID2 == "43")'
+2026-02-23 16:51:09 [INFO] find_worker(43): trying criteria='(Worker_ID == "43")'
+2026-02-23 16:51:09 [WARNING] find_worker(43): all criteria failed — attempting full worker scan
+2026-02-23 16:51:10 [INFO] find_worker(43): full scan returned 69 worker(s)
+2026-02-23 16:51:10 [ERROR] find_worker(43): worker NOT found after all attempts. Verify ZKTeco_User_ID2 / Worker_ID field in Zoho for ID=43
+2026-02-23 16:51:35 [INFO] find_worker(75): trying criteria='(ZKTeco_User_ID2 == 75)'
+2026-02-23 16:51:36 [INFO] find_worker(75): found via criteria='(ZKTeco_User_ID2 == 75)'
+2026-02-23 16:51:43 [INFO] find_worker(75): trying criteria='(ZKTeco_User_ID2 == 75)'
+2026-02-23 16:51:44 [INFO] find_worker(75): found via criteria='(ZKTeco_User_ID2 == 75)'
+2026-02-23 16:51:45 [INFO] CHECKOUT OK: George Okonu hours=1.01
+2026-02-23 16:51:51 [INFO] find_worker(56): trying criteria='(ZKTeco_User_ID2 == 56)'
+2026-02-23 16:51:51 [ERROR] find_worker(56): request timed out on criteria='(ZKTeco_User_ID2 == 56)'
+2026-02-23 16:51:51 [INFO] find_worker(56): trying criteria='(ZKTeco_User_ID2 == "56")'
+2026-02-23 16:51:51 [INFO] find_worker(56): trying criteria='(Worker_ID == 56)'
+2026-02-23 16:51:52 [ERROR] find_worker(56): request timed out on criteria='(Worker_ID == 56)'
+2026-02-23 16:51:52 [INFO] find_worker(56): trying criteria='(Worker_ID == "56")'
+2026-02-23 16:51:52 [INFO] find_worker(56): trying criteria='(ZKTeco_User_ID2 == "56")'
+2026-02-23 16:51:52 [INFO] find_worker(56): trying criteria='(Worker_ID == "56")'
+2026-02-23 16:51:53 [WARNING] find_worker(56): all criteria failed — attempting full worker scan
+2026-02-23 16:51:53 [INFO] find_worker(56): full scan returned 69 worker(s)
+2026-02-23 16:51:53 [ERROR] find_worker(56): worker NOT found after all attempts. Verify ZKTeco_User_ID2 / Worker_ID field in Zoho for ID=56
+2026-02-23 16:51:57 [INFO] find_worker(84): trying criteria='(ZKTeco_User_ID2 == 84)'
+2026-02-23 16:51:57 [INFO] find_worker(84): found via criteria='(ZKTeco_User_ID2 == 84)'
+2026-02-23 16:52:00 [INFO] find_worker(83): trying criteria='(ZKTeco_User_ID2 == 83)'
+2026-02-23 16:52:00 [INFO] find_worker(83): found via criteria='(ZKTeco_User_ID2 == 83)'
+2026-02-23 16:52:06 [INFO] find_worker(99): trying criteria='(ZKTeco_User_ID2 == 99)'
+2026-02-23 16:52:07 [INFO] find_worker(99): found via criteria='(ZKTeco_User_ID2 == 99)'
+2026-02-23 16:52:07 [INFO] CHECKOUT OK: Annah Kagwe hours=0.99
+2026-02-23 16:54:04 [INFO] CSV exported: attendance_2026-02-23.csv (24 rows)
+2026-02-23 17:13:46 [INFO] find_worker(656): trying criteria='(ZKTeco_User_ID2 == 656)'
+2026-02-23 17:13:47 [INFO] find_worker(65): trying criteria='(ZKTeco_User_ID2 == 65)'
+2026-02-23 17:13:48 [ERROR] find_worker(656): request timed out on criteria='(ZKTeco_User_ID2 == 656)'
+2026-02-23 17:13:48 [INFO] find_worker(656): trying criteria='(ZKTeco_User_ID2 == "656")'
+2026-02-23 17:13:48 [INFO] find_worker(65): found via criteria='(ZKTeco_User_ID2 == 65)'
+2026-02-23 17:13:48 [INFO] find_worker(656): trying criteria='(Worker_ID == 656)'
+2026-02-23 17:13:49 [ERROR] find_worker(656): request timed out on criteria='(Worker_ID == 656)'
+2026-02-23 17:13:49 [INFO] find_worker(656): trying criteria='(Worker_ID == "656")'
+2026-02-23 17:13:49 [INFO] find_worker(656): trying criteria='(ZKTeco_User_ID2 == "656")'
+2026-02-23 17:13:49 [INFO] find_worker(656): trying criteria='(Worker_ID == "656")'
+2026-02-23 17:13:50 [WARNING] find_worker(656): all criteria failed — attempting full worker scan
+2026-02-23 17:13:50 [INFO] find_worker(65): trying criteria='(ZKTeco_User_ID2 == 65)'
+2026-02-23 17:13:50 [INFO] find_worker(656): full scan returned 69 worker(s)
+2026-02-23 17:13:50 [ERROR] find_worker(656): worker NOT found after all attempts. Verify ZKTeco_User_ID2 / Worker_ID field in Zoho for ID=656
+2026-02-23 17:13:50 [INFO] find_worker(65): found via criteria='(ZKTeco_User_ID2 == 65)'
+2026-02-23 17:13:51 [INFO] CHECKIN OK: jk late=True
+2026-02-23 17:13:59 [INFO] find_worker(65): trying criteria='(ZKTeco_User_ID2 == 65)'
+2026-02-23 17:13:59 [INFO] find_worker(65): found via criteria='(ZKTeco_User_ID2 == 65)'
+2026-02-23 17:14:00 [INFO] CHECKOUT OK: jk hours=0.01
+2026-02-23 19:00:29 [INFO] AUTO-CHECKOUT: 18 worker(s) at 19:00
+2026-02-23 19:00:32 [INFO] Zoho token refreshed OK
+2026-02-23 19:00:32 [INFO] Zoho token refreshed OK
+2026-02-23 19:00:32 [INFO] Zoho token refreshed OK
+2026-02-23 19:00:32 [INFO] Zoho token refreshed OK
+2026-02-23 19:00:33 [INFO] Zoho token refreshed OK
+2026-02-23 19:00:33 [INFO] Zoho token refreshed OK
+2026-02-23 19:00:33 [INFO] Zoho token refreshed OK
+2026-02-23 19:00:33 [INFO] Zoho token refreshed OK
+2026-02-23 19:00:36 [INFO]   OK G Nyanyuki -- 10h 30m
+2026-02-23 19:00:36 [INFO]   OK Jane Odoo -- 3h 10m
+2026-02-23 19:00:36 [INFO]   OK MARTHER KARUA -- 3h 10m
+2026-02-23 19:00:36 [INFO]   OK hesbon223 -- 8h 49m
+2026-02-23 19:00:37 [INFO]   OK Brian Omusebe -- 3h 11m
+2026-02-23 19:00:37 [INFO]   OK Evans Ongeri -- 3h 10m
+2026-02-23 19:00:37 [INFO]   OK Dennis Koech -- 3h 9m
+2026-02-23 19:00:37 [INFO]   OK Julias Ogamba -- 3h 10m
+2026-02-23 19:00:37 [INFO]   OK Amos Kiplangat -- 3h 8m
+2026-02-23 19:00:37 [INFO]   OK kIMTAI DENNIS -- 3h 9m
+2026-02-23 19:00:37 [INFO]   OK Hesbon Adhiambo -- 3h 9m
+2026-02-23 19:00:37 [INFO]   OK Shairo Ongwae -- 3h 8m
+2026-02-23 19:00:38 [INFO]   OK Abbygael Chibweso -- 3h 7m
+2026-02-23 19:00:38 [INFO]   OK Joshua Wainaina -- 3h 7m
+2026-02-23 19:00:38 [INFO]   OK samuel Mbogo -- 3h 7m
+2026-02-23 19:00:38 [INFO]   OK Keith Oira -- 3h 7m
+2026-02-23 19:00:38 [INFO]   OK Thomas Agwambo -- 3h 5m
+2026-02-23 19:00:38 [INFO]   FAIL Baminus Michael HTTP 200
+2026-02-23 19:00:38 [INFO] AUTO-CHECKOUT done: 17 OK, 1 failed
+2026-02-23 19:09:13 [INFO] AUTO-CHECKOUT: 1 worker(s) at 19:09
+2026-02-23 19:09:15 [INFO] Zoho token refreshed OK
+2026-02-23 19:09:17 [INFO] Zoho token refreshed OK
+2026-02-23 19:09:18 [INFO]   FAIL Baminus Michael HTTP 200
+2026-02-23 19:09:18 [INFO] AUTO-CHECKOUT done: 0 OK, 1 failed
+2026-02-23 19:44:12 [INFO] AUTO-CHECKOUT: 1 worker(s) at 19:44
+2026-02-23 19:44:14 [INFO] Zoho token refreshed OK
+2026-02-23 19:44:16 [INFO] Zoho token refreshed OK
+2026-02-23 19:44:17 [INFO]   FAIL Baminus Michael HTTP 200
+2026-02-23 19:44:17 [INFO] AUTO-CHECKOUT done: 0 OK, 1 failed
+2026-02-23 19:45:08 [INFO] AUTO-CHECKOUT: 1 worker(s) at 19:45
+2026-02-23 19:45:10 [INFO] Zoho token refreshed OK
+2026-02-23 19:45:12 [INFO] Zoho token refreshed OK
+2026-02-23 19:45:13 [INFO]   FAIL Baminus Michael HTTP 200
+2026-02-23 19:45:13 [INFO] AUTO-CHECKOUT done: 0 OK, 1 failed
+2026-02-23 19:48:09 [INFO] find_worker(79): trying criteria='(ZKTeco_User_ID2 == 79)'
+2026-02-23 19:48:09 [INFO] find_worker(79): found via criteria='(ZKTeco_User_ID2 == 79)'
+2026-02-23 19:48:19 [INFO] find_worker(79): trying criteria='(ZKTeco_User_ID2 == 79)'
+2026-02-23 19:48:19 [INFO] find_worker(79): found via criteria='(ZKTeco_User_ID2 == 79)'
+2026-02-23 19:48:20 [INFO] CHECKIN OK: Hesbon Angwenyi late=True
+2026-02-23 19:48:40 [INFO] find_worker(79): trying criteria='(ZKTeco_User_ID2 == 79)'
+2026-02-23 19:48:41 [INFO] find_worker(79): found via criteria='(ZKTeco_User_ID2 == 79)'
+2026-02-23 19:48:42 [INFO] CHECKOUT OK: Hesbon Angwenyi hours=0.01
+2026-02-23 20:20:53 [INFO] AUTO-CHECKOUT: 1 worker(s) at 20:20
+2026-02-23 20:20:56 [INFO] Zoho token refreshed OK
+2026-02-23 20:20:57 [INFO] Zoho token refreshed OK
+2026-02-23 20:20:59 [INFO]   FAIL Baminus Michael HTTP 200
+2026-02-23 20:20:59 [INFO] AUTO-CHECKOUT done: 0 OK, 1 failed

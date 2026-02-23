@@ -1,0 +1,25 @@
+ZK_ID,Name,Check-In,Check-Out,Total Hours,Overtime Hours,Late?,Late Note,Early Checkout?,Auto Checkout?,Status
+1,Baminus Michael,23-Feb-2026 08:25:23,08:25:34,0.01,0,No,on time,Yes,No,Complete
+125,FINLANZA TEAM,23-Feb-2026 08:28:01,08:28:25,0.01,0,No,on time,Yes,No,Complete
+85,Charles Ogechi,23-Feb-2026 08:52:35,08:53:06,0.01,0,Yes,22 min late,Yes,No,Complete
+126,JAMES MAOSA,23-Feb-2026 09:42:06,09:42:34,0.01,0,Yes,72 min late,Yes,No,Complete
+75,George Okonu,23-Feb-2026 15:51:07,16:51:44,1.01,0,Yes,531 min late,Yes,No,Complete
+99,Annah Kagwe,23-Feb-2026 15:52:43,16:52:07,0.99,0,Yes,532 min late,Yes,No,Complete
+77,G Nyanyuki,23-Feb-2026 08:30:26,---,---,---,Yes,on time,---,---,Still In
+71,hesbon223,23-Feb-2026 10:10:37,---,---,---,Yes,190 min late,---,---,Still In
+66,Brian Omusebe,23-Feb-2026 15:49:25,---,---,---,Yes,529 min late,---,---,Still In
+89,Julias Ogamba,23-Feb-2026 15:49:40,---,---,---,Yes,529 min late,---,---,Still In
+55,Jane Odoo,23-Feb-2026 15:49:52,---,---,---,Yes,529 min late,---,---,Still In
+17,MARTHER KARUA,23-Feb-2026 15:50:04,---,---,---,Yes,530 min late,---,---,Still In
+88,Evans Ongeri,23-Feb-2026 15:50:20,---,---,---,Yes,530 min late,---,---,Still In
+80,Dennis Koech,23-Feb-2026 15:50:39,---,---,---,Yes,530 min late,---,---,Still In
+78,Hesbon Adhiambo,23-Feb-2026 15:50:54,---,---,---,Yes,530 min late,---,---,Still In
+18,kIMTAI DENNIS,23-Feb-2026 15:51:20,---,---,---,Yes,531 min late,---,---,Still In
+76,Amos Kiplangat,23-Feb-2026 15:52:05,---,---,---,Yes,532 min late,---,---,Still In
+12,Shairo Ongwae,23-Feb-2026 15:52:18,---,---,---,Yes,532 min late,---,---,Still In
+90,Abbygael Chibweso,23-Feb-2026 15:52:52,---,---,---,Yes,532 min late,---,---,Still In
+92,Joshua Wainaina,23-Feb-2026 15:53:06,---,---,---,Yes,533 min late,---,---,Still In
+93,samuel Mbogo,23-Feb-2026 15:53:14,---,---,---,Yes,533 min late,---,---,Still In
+95,Keith Oira,23-Feb-2026 15:53:22,---,---,---,Yes,533 min late,---,---,Still In
+96,Thomas Agwambo,23-Feb-2026 15:54:43,---,---,---,Yes,534 min late,---,---,Still In
+100,Baminus Michael,23-Feb-2026 15:55:04,---,---,---,Yes,535 min late,---,---,Still In

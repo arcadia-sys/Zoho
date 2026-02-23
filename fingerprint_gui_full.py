@@ -32844,13 +32844,13 @@ API_DOMAIN   = f"https://creator.zoho.{_ZOHO_TLD}/api/v2"
 CHECKIN_LOCK_FILE = "checkin_today.json"
 
 # ── Shift policy ─────────────────────────────────────────
-SHIFT_START_H   = 8
-SHIFT_START_M   = 30
+SHIFT_START_H   = 7
+SHIFT_START_M   = 00
 SHIFT_HOURS     = 8
-GRACE_MINUTES   = 10
+GRACE_MINUTES   = 60
 EARLY_CHECKOUT_H = 17
 EARLY_CHECKOUT_M = 0
-AUTO_CHECKOUT_H  = 18
+AUTO_CHECKOUT_H  = 19
 AUTO_CHECKOUT_M  = 0
 
 # ── Performance constants ────────────────────────────────
@@ -32902,6 +32902,7 @@ def zoho_request(method, url, retries=3, **kwargs):
             if attempt < retries:
                 time.sleep(min(2 ** attempt, 8))
     return None
+
 
 # ===========================================================
 # AUTHENTICATION — thread-safe token refresh

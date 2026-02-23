@@ -76,7 +76,7 @@ def sync_to_zoho(user_id, worker_name):
         records = r.json().get("data", [])
 
         if records:
-            # Update Last Out and Total Hours
+            # its should Update Last Out and Total Hours
             record_id = records[0].get("ID")
             first_in_str = records[0].get("First_In") or current_time_str
             first_in_dt = datetime.strptime(first_in_str, "%Y-%m-%dT%H:%M:%S")
