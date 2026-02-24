@@ -801,3 +801,5 @@
 2026-02-23 20:55:43 [INFO] AUTO-CHECKOUT done: 2 OK, 1 failed
 2026-02-24 04:11:23 [ERROR] Fingerprint SDK Init Error: Failed to initialize the algorithm library
 2026-02-24 04:11:28 [INFO] Zoho token refreshed OK
+2026-02-24 04:12:50 [ERROR] Fingerprint SDK Init Error: Failed to initialize the algorithm library
+2026-02-24 04:12:55 [INFO] Zoho token refreshed OK

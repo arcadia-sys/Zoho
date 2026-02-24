@@ -300,20 +300,12 @@ Example:
 🕒 Attendance Flow
 
 When finger is scanned:
-
 Template captured
-
 Matched locally
-
 Worker looked up in Zoho
-
 Raw_Attendance_Logs_Form record created
-
 Daily_Attendance updated (if RAW_LOGS_ONLY=0)
 
-📂 Log File Ingestion (Optional)
-
-If device exports .dat logs:
 
 venv\Scripts\python get_refresh_token.py --ingest
 Reads attlog.dat
