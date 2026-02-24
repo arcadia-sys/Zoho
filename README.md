@@ -277,15 +277,11 @@ List Enrolled Users
 Live Log Output Panel
 
 👤 Enrollment Process
-
 Enter ZKTeco User ID.
 
 Click Enroll.
-
 User places finger three times.
-
 Template stored in:
-
 fingerprints.json
 
 Example:
@@ -297,8 +293,8 @@ Example:
     "zoho_worker_id": "4838902000000012345"
   }
 }
-🕒 Attendance Flow
 
+🕒 Attendance Flow
 When finger is scanned:
 Template captured
 Matched locally
