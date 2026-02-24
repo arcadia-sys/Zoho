@@ -1,4 +1,4 @@
-# Zoho Middleware (ZKTeco + Zoho Creator)
+<!-- # Zoho Middleware (ZKTeco + Zoho Creator)
 
 ## Purpose
 This project connects a **ZKTeco ZK9500** fingerprint reader to **Zoho Creator**
@@ -101,4 +101,284 @@ If you fix the API URL/form mapping, set:
 ```
 RAW_LOGS_ONLY=0
 ```
-and Daily Attendance will resume.
+and Daily Attendance will resume. -->
+
+
+
+
+
+Zoho Biometric Middleware
+ZKTeco ZK9500 + Zoho Creator (GUI Edition)
+
+A production-ready desktop middleware that integrates the ZKTeco ZK9500 with Zoho Creator, enabling real-time biometric attendance capture, enrollment management, and automatic attendance processing.
+
+Built for the Wavemark Properties Real Estate Wages System.
+
+📌 Overview
+
+This middleware provides:
+
+Biometric fingerprint capture
+
+GUI-based enrollment & management
+
+Real-time Zoho attendance posting
+
+Raw log ingestion support
+
+Duplicate prevention
+
+Retry queue for failed posts
+
+Production-safe logging
+
+OAuth token automation
+
+The system runs locally on a Windows machine connected to the fingerprint scanner.
+
+🏗 System Architecture
+ZKTeco ZK9500 (USB)
+        │
+        │ 32-bit SDK (libzkfp.dll)
+        ▼
+Fingerprint GUI (Python 32-bit)
+        │
+        │ OAuth2 HTTPS
+        ▼
+Zoho Creator App
+(real-estate-wages-system)
+        │
+        ├── Workers
+        ├── Raw_Attendance_Logs_Form
+        ├── Daily_Attendance
+        └── Devices
+🖥 System Requirements
+Component	Requirement
+OS	Windows 10/11 (64-bit recommended)
+Python	32-bit Python 3.9+ (required for SDK)
+Device	ZKTeco ZK9500
+Internet	Required for Zoho API
+Zoho Account	Active Zoho Creator app
+🧩 ZKTeco SDK Installation
+
+The middleware requires the official ZKTeco SDK.
+
+1️⃣ Install Driver
+
+Plug in ZK9500.
+
+Install driver from SDK package.
+
+Verify in Device Manager → Biometric Devices.
+
+You should see:
+
+ZKTeco Fingerprint Reader
+
+If not visible:
+
+Reinstall driver
+
+Try different USB port
+
+Restart PC
+
+2️⃣ Install libzkfp.dll
+
+Copy:
+
+libzkfp.dll
+
+To:
+
+C:\Windows\SysWOW64\
+
+OR set custom path in .env:
+
+ZKFP_DLL_PATH=C:\path\to\libzkfp.dll
+3️⃣ Install 32-bit Python (Mandatory)
+
+Download from python.org:
+
+Choose:
+
+Windows Installer (32-bit)
+
+Verify installation:
+
+python -c "import struct; print(struct.calcsize('P') * 8)"
+
+Must output:
+
+32
+📦 Installation
+1️⃣ Clone Repository
+git clone https://github.com/your-org/zoho-middleware.git
+cd zoho-middleware
+2️⃣ Create 32-bit Virtual Environment
+C:\Python39-32\python.exe -m venv venv32
+venv32\Scripts\activate
+pip install -r requirements.txt
+⚙ Configuration (.env)
+ZOHO_CLIENT_ID=
+ZOHO_CLIENT_SECRET=
+ZOHO_REFRESH_TOKEN=
+
+ZOHO_APP_OWNER=
+ZOHO_APP_NAME=
+ZOHO_API_BASE=https://www.zohoapis.com
+ZOHO_API_PREFIX=creator/v2
+
+WORKERS_FORM=Workers
+RAW_LOGS_FORM=Raw_Attendance_Logs_Form
+DAILY_ATTENDANCE_FORM=Daily_Attendance
+DEVICES_FORM=Devices
+
+WORKERS_REPORT=All_Workers
+DAILY_ATTENDANCE_REPORT=Daily_Attendance_Report
+RAW_LOGS_REPORT=Raw_Attendance_Logs_Form_Report
+
+ZK_DEVICE_ID=ZK9500_DESKTOP
+FINGERPRINT_DB_FILE=fingerprints.json
+
+RAW_LOGS_ONLY=0
+DUPLICATE_WINDOW_SECS=3600
+🔐 OAuth Setup
+
+Go to https://api-console.zoho.com
+
+Create Self Client
+
+Add scopes:
+
+ZohoCreator.report.READ
+ZohoCreator.report.CREATE
+ZohoCreator.report.UPDATE
+ZohoCreator.form.READ
+ZohoCreator.form.CREATE
+ZohoCreator.form.UPDATE
+
+Generate refresh token using:
+
+python get_refresh_token.py --auth
+▶ Running the GUI
+venv32\Scripts\python fingerprint_gui_full.py
+
+The interface provides:
+
+Start Scanner
+
+Enroll User
+
+Delete User
+
+List Enrolled Users
+
+Live Log Output Panel
+
+👤 Enrollment Process
+
+Enter ZKTeco User ID.
+
+Click Enroll.
+
+User places finger three times.
+
+Template stored in:
+
+fingerprints.json
+
+Example:
+
+{
+  "10": {
+    "template": "base64data...",
+    "enrolled_at": "2026-01-15T08:00:00",
+    "zoho_worker_id": "4838902000000012345"
+  }
+}
+🕒 Attendance Flow
+
+When finger is scanned:
+
+Template captured
+
+Matched locally
+
+Worker looked up in Zoho
+
+Raw_Attendance_Logs_Form record created
+
+Daily_Attendance updated (if RAW_LOGS_ONLY=0)
+
+📂 Log File Ingestion (Optional)
+
+If device exports .dat logs:
+
+venv\Scripts\python get_refresh_token.py --ingest
+Reads attlog.dat
+Posts each record
+Archives processed files
+Retries failed posts
+
+🔁 Duplicate Prevention
+Controlled by:
+DUPLICATE_WINDOW_SECS=3600
+Prevents same user + timestamp from reposting within 1 hour.
+
+📊 Logging
+Log file:
+attendance.log
+
+Tracks:
+Device events
+Zoho responses
+Errors
+OAuth refresh
+
+🛠 Production Deployment
+Task Scheduler
+Trigger at startup:
+
+Program:
+venv32\Scripts\python.exe
+
+Argument:
+fingerprint_gui_full.py
+
+Install NSSM:
+nssm install ZohoFingerprintGUI
+
+Set:
+Path → python.exe (32-bit)
+Arguments → fingerprint_gui_full.py
+Startup type → Automatic
+
+🔒 Security Best Practices
+Never commit .env
+Restrict PC access
+Disable Windows sleep mode
+
+Use UPS
+Backup fingerprints.json
+Rotate OAuth tokens annually
+
+🧯 Troubleshooting
+CAPTURE_FAIL
+Normal — finger lifted too soon.
+WinError 193
+Using 64-bit Python. Switch to 32-bit.
+404 Invalid API URL
+
+Run:
+python test_zoho.py
+Correct form link names.
+No device detected
+Reinstall driver.
+
+📈 Performance
+Metric	Value
+Scan Time	< 1 second
+Zoho POST	200–800ms
+Memory Usage	~100MB
+CPU Usage	Low
