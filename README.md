@@ -107,23 +107,16 @@ and Daily Attendance will resume. -->
 
 
 
-Zoho Biometric Middleware
+### Zoho Biometric Middleware
 ZKTeco ZK9500 + Zoho Creator (GUI Edition)
-
 A production-ready desktop middleware that integrates the ZKTeco ZK9500 with Zoho Creator, enabling real-time biometric attendance capture, enrollment management, and automatic attendance processing.
 
 Built for the Wavemark Properties Real Estate Wages System.
-
 📌 Overview
-
 This middleware provides:
-
 Biometric fingerprint capture
-
 GUI-based enrollment & management
-
 Real-time Zoho attendance posting
-
 Raw log ingestion support
 
 Duplicate prevention
