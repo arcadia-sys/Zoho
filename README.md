@@ -127,13 +127,9 @@ Real-time Zoho attendance posting
 Raw log ingestion support
 
 Duplicate prevention
-
 Retry queue for failed posts
-
 Production-safe logging
-
 OAuth token automation
-
 The system runs locally on a Windows machine connected to the fingerprint scanner.
 
 🏗 System Architecture
@@ -160,26 +156,18 @@ Device	ZKTeco ZK9500
 Internet	Required for Zoho API
 Zoho Account	Active Zoho Creator app
 🧩 ZKTeco SDK Installation
-
 The middleware requires the official ZKTeco SDK.
 
 1️⃣ Install Driver
-
 Plug in ZK9500.
-
 Install driver from SDK package.
 
 Verify in Device Manager → Biometric Devices.
-
 You should see:
-
 ZKTeco Fingerprint Reader
-
 If not visible:
 
 Reinstall driver
-
-
 Try different USB port
 
 Restart PC
