@@ -265,15 +265,10 @@ python get_refresh_token.py --auth
 venv32\Scripts\python fingerprint_gui_full.py
 
 The interface provides:
-
 Start Scanner
-
 Enroll User
-
 Delete User
-
 List Enrolled Users
-
 Live Log Output Panel
 
 👤 Enrollment Process
