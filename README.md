@@ -111,21 +111,20 @@ and Daily Attendance will resume. -->
 ZKTeco ZK9500 + Zoho Creator (GUI Edition)
 A production-ready desktop middleware that integrates the ZKTeco ZK9500 with Zoho Creator, enabling real-time biometric attendance capture, enrollment management, and automatic attendance processing.
 
-Built for the Wavemark Properties Real Estate Wages System.
-📌 Overview
+*Built for the Wavemark Properties Real Estate Wages System.*
+## Overview
 This middleware provides:
 Biometric fingerprint capture
 GUI-based enrollment & management
 Real-time Zoho attendance posting
 Raw log ingestion support
-
 Duplicate prevention
 Retry queue for failed posts
 Production-safe logging
 OAuth token automation
 The system runs locally on a Windows machine connected to the fingerprint scanner.
 
-🏗 System Architecture
+## 🏗 System Architecture
 ZKTeco ZK9500 (USB)
         │
         │ 32-bit SDK (libzkfp.dll)
@@ -141,17 +140,19 @@ Zoho Creator App
         ├── Raw_Attendance_Logs_Form
         ├── Daily_Attendance
         └── Devices
-🖥 System Requirements
+
+## 🖥 System Requirements
 Component	Requirement
 OS	Windows 10/11 (64-bit recommended)
 Python	32-bit Python 3.9+ (required for SDK)
 Device	ZKTeco ZK9500
 Internet	Required for Zoho API
 Zoho Account	Active Zoho Creator app
-🧩 ZKTeco SDK Installation
+
+## 🧩 ZKTeco SDK Installation
 The middleware requires the official ZKTeco SDK.
 
-1️⃣ Install Driver
+## 1️⃣Install Driver
 Plug in ZK9500.
 Install driver from SDK package.
 
@@ -164,7 +165,7 @@ Reinstall driver
 Try different USB port
 
 Restart PC
-2️⃣ Install libzkfp.dll
+## 2️⃣Install libzkfp.dll
 Copy:
 libzkfp.dll
 
@@ -172,7 +173,8 @@ To:
 C:\Windows\SysWOW64\
 OR set custom path in .env:
 ZKFP_DLL_PATH=C:\path\to\libzkfp.dll
-3️⃣ Install 32-bit Python (Mandatory)
+
+## 3️⃣ Install 32-bit Python (Mandatory)
 
 Download from python.org:
 Choose:
