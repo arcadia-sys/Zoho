@@ -179,38 +179,29 @@ If not visible:
 
 Reinstall driver
 
+
 Try different USB port
 
 Restart PC
-
 2️⃣ Install libzkfp.dll
-
 Copy:
-
 libzkfp.dll
 
 To:
-
 C:\Windows\SysWOW64\
-
 OR set custom path in .env:
-
 ZKFP_DLL_PATH=C:\path\to\libzkfp.dll
 3️⃣ Install 32-bit Python (Mandatory)
 
 Download from python.org:
-
 Choose:
-
 Windows Installer (32-bit)
 
 Verify installation:
-
 python -c "import struct; print(struct.calcsize('P') * 8)"
-
 Must output:
-
 32
+
 📦 Installation
 1️⃣ Clone Repository
 git clone https://github.com/your-org/zoho-middleware.git
@@ -246,11 +237,8 @@ DUPLICATE_WINDOW_SECS=3600
 🔐 OAuth Setup
 
 Go to https://api-console.zoho.com
-
 Create Self Client
-
 Add scopes:
-
 ZohoCreator.report.READ
 ZohoCreator.report.CREATE
 ZohoCreator.report.UPDATE
@@ -259,7 +247,6 @@ ZohoCreator.form.CREATE
 ZohoCreator.form.UPDATE
 
 Generate refresh token using:
-
 python get_refresh_token.py --auth
 ▶ Running the GUI
 venv32\Scripts\python fingerprint_gui_full.py
