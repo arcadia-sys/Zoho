@@ -175,21 +175,21 @@ OR set custom path in .env:
 ZKFP_DLL_PATH=C:\path\to\libzkfp.dll
 
 ## 3️⃣ Install 32-bit Python (Mandatory)
-
 Download from python.org:
 Choose:
 Windows Installer (32-bit)
 
-Verify installation:
+## Verify installation:
 python -c "import struct; print(struct.calcsize('P') * 8)"
 Must output:
 32
 
-📦 Installation
-1️⃣ Clone Repository
+## 📦 Installation
+*1️⃣ Clone Repository*
 git clone https://github.com/your-org/zoho-middleware.git
 cd zoho-middleware
-2️⃣ Create 32-bit Virtual Environment
+
+*2️⃣ Create 32-bit Virtual Environment*
 C:\Python39-32\python.exe -m venv venv32
 venv32\Scripts\activate
 pip install -r requirements.txt
@@ -217,8 +217,8 @@ FINGERPRINT_DB_FILE=fingerprints.json
 
 RAW_LOGS_ONLY=0
 DUPLICATE_WINDOW_SECS=3600
-🔐 OAuth Setup
 
+*🔐 OAuth Setup*
 Go to https://api-console.zoho.com
 Create Self Client
 Add scopes:
@@ -231,9 +231,9 @@ ZohoCreator.form.UPDATE
 
 Generate refresh token using:
 python get_refresh_token.py --auth
-▶ Running the GUI
-venv32\Scripts\python fingerprint_gui_full.py
 
+*▶ Running the GUI*
+venv32\Scripts\python fingerprint_gui_full.py
 The interface provides:
 Start Scanner
 Enroll User
@@ -241,7 +241,7 @@ Delete User
 List Enrolled Users
 Live Log Output Panel
 
-👤 Enrollment Process
+*👤 Enrollment Process*
 Enter ZKTeco User ID.
 
 Click Enroll.
@@ -259,7 +259,7 @@ Example:
   }
 }
 
-🕒 Attendance Flow
+*🕒 Attendance Flow*
 When finger is scanned:
 Template captured
 Matched locally
@@ -274,12 +274,12 @@ Posts each record
 Archives processed files
 Retries failed posts
 
-🔁 Duplicate Prevention
+*🔁 Duplicate Prevention*
 Controlled by:
 DUPLICATE_WINDOW_SECS=3600
 Prevents same user + timestamp from reposting within 1 hour.
 
-📊 Logging
+*📊 Logging*
 Log file:
 attendance.log
 
@@ -289,47 +289,47 @@ Zoho responses
 Errors
 OAuth refresh
 
-🛠 Production Deployment
+*🛠 Production Deployment*
 Task Scheduler
 Trigger at startup:
 
-Program:
+*Program:*
 venv32\Scripts\python.exe
 
-Argument:
+*Argument:*
 fingerprint_gui_full.py
 
-Install NSSM:
+*Install NSSM:*
 nssm install ZohoFingerprintGUI
 
-Set:
+*Set:*
 Path → python.exe (32-bit)
 Arguments → fingerprint_gui_full.py
 Startup type → Automatic
 
-🔒 Security Best Practices
+*🔒 Security Best Practices*
 Never commit .env
 Restrict PC access
 Disable Windows sleep mode
 
-Use UPS
+*Use UPS*
 Backup fingerprints.json
 Rotate OAuth tokens annually
 
-🧯 Troubleshooting
+*🧯 Troubleshooting*
 CAPTURE_FAIL
 Normal — finger lifted too soon.
 WinError 193
 Using 64-bit Python. Switch to 32-bit.
 404 Invalid API URL
 
-Run:
+*Run:*
 python test_zoho.py
 Correct form link names.
 No device detected
 Reinstall driver.
 
-📈 Performance
+*📈 Performance*
 Metric	Value
 Scan Time	< 1 second
 Zoho POST	200–800ms
