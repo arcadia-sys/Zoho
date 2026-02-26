@@ -1737,3 +1737,15 @@ pyzkfp._construct.errors_handler.InvalidHandleError: Invalid Handle
 2026-02-26 07:49:00 [INFO] find_worker(141): trying criteria='(ZKTeco_User_ID2 == 141)'
 2026-02-26 07:49:00 [INFO] find_worker(141): found via criteria='(ZKTeco_User_ID2 == 141)'
 2026-02-26 07:49:01 [INFO] CHECKOUT OK: NEWTON MANYISA MOMANYI hours=0.02
+2026-02-26 07:57:15 [INFO] Zoho token refreshed OK
+2026-02-26 08:01:24 [INFO] find_worker(1): trying criteria='(ZKTeco_User_ID2 == 1)'
+2026-02-26 08:01:27 [ERROR] find_worker(1): request timed out on criteria='(ZKTeco_User_ID2 == 1)'
+2026-02-26 08:01:27 [INFO] find_worker(1): trying criteria='(ZKTeco_User_ID2 == "1")'
+2026-02-26 08:01:27 [INFO] find_worker(1): trying criteria='(Worker_ID == 1)'
+2026-02-26 08:01:27 [ERROR] find_worker(1): request timed out on criteria='(Worker_ID == 1)'
+2026-02-26 08:01:27 [INFO] find_worker(1): trying criteria='(Worker_ID == "1")'
+2026-02-26 08:01:28 [INFO] find_worker(1): trying criteria='(ZKTeco_User_ID2 == "1")'
+2026-02-26 08:01:28 [INFO] find_worker(1): trying criteria='(Worker_ID == "1")'
+2026-02-26 08:01:28 [WARNING] find_worker(1): all criteria failed — attempting full worker scan
+2026-02-26 08:01:29 [INFO] find_worker(1): full scan returned 13 worker(s)
+2026-02-26 08:01:29 [ERROR] find_worker(1): worker NOT found after all attempts. Verify ZKTeco_User_ID2 / Worker_ID field in Zoho for ID=1

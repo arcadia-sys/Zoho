@@ -24,6 +24,14 @@
       "name": "Dennis Oluoch",
       "is_late": false,
       "late_note": "36 min late"
+    },
+    "134": {
+      "time": "26-Feb-2026 08:04:07",
+      "zoho_id": "4838902000000568007",
+      "worker_id": "4838902000000554003",
+      "name": "Emilly Akinyi",
+      "is_late": true,
+      "late_note": "64 min late"
     }
   },
   "checked_out": {
