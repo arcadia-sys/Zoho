@@ -1749,3 +1749,17 @@ pyzkfp._construct.errors_handler.InvalidHandleError: Invalid Handle
 2026-02-26 08:01:28 [WARNING] find_worker(1): all criteria failed — attempting full worker scan
 2026-02-26 08:01:29 [INFO] find_worker(1): full scan returned 13 worker(s)
 2026-02-26 08:01:29 [ERROR] find_worker(1): worker NOT found after all attempts. Verify ZKTeco_User_ID2 / Worker_ID field in Zoho for ID=1
+2026-02-26 08:02:59 [INFO] Zoho token refreshed OK
+2026-02-26 08:03:19 [INFO] search_workers_by_name: falling back to full worker scan
+2026-02-26 08:03:19 [INFO] search_workers_by_name: full scan returned 13 workers
+2026-02-26 08:03:20 [INFO] search_workers_by_name: falling back to full worker scan
+2026-02-26 08:03:20 [INFO] search_workers_by_name: full scan returned 13 workers
+2026-02-26 08:03:21 [INFO] find_worker(139): trying criteria='(ZKTeco_User_ID2 == 139)'
+2026-02-26 08:03:21 [INFO] find_worker(139): found via criteria='(ZKTeco_User_ID2 == 139)'
+2026-02-26 08:03:30 [INFO] search_workers_by_name: falling back to full worker scan
+2026-02-26 08:03:31 [INFO] search_workers_by_name: full scan returned 13 workers
+2026-02-26 08:04:01 [INFO] find_worker(134): trying criteria='(ZKTeco_User_ID2 == 134)'
+2026-02-26 08:04:01 [INFO] find_worker(134): found via criteria='(ZKTeco_User_ID2 == 134)'
+2026-02-26 08:04:07 [INFO] find_worker(134): trying criteria='(ZKTeco_User_ID2 == 134)'
+2026-02-26 08:04:07 [INFO] find_worker(134): found via criteria='(ZKTeco_User_ID2 == 134)'
+2026-02-26 08:04:08 [INFO] CHECKIN OK: Emilly Akinyi late=True
