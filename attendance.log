@@ -1778,3 +1778,14 @@ pyzkfp._construct.errors_handler.InvalidHandleError: Invalid Handle
 2026-02-26 08:48:40 [INFO] Zoho token refreshed OK
 2026-02-26 08:55:02 [INFO] Zoho token refreshed OK
 2026-02-26 09:06:25 [INFO] Zoho token refreshed OK
+2026-02-26 09:08:20 [INFO] Zoho token refreshed OK
+2026-02-26 09:15:01 [INFO] CSV exported: attendance_2026-02-26.csv (5 rows)
+2026-02-26 09:22:20 [INFO] Zoho token refreshed OK
+2026-02-26 09:23:48 [INFO] find_worker(131): trying criteria='(ZKTeco_User_ID2 == 131)'
+2026-02-26 09:23:50 [INFO] find_worker(131): found via criteria='(ZKTeco_User_ID2 == 131)'
+2026-02-26 09:23:58 [INFO] find_worker(131): trying criteria='(ZKTeco_User_ID2 == 131)'
+2026-02-26 09:23:58 [INFO] find_worker(131): found via criteria='(ZKTeco_User_ID2 == 131)'
+2026-02-26 09:23:59 [INFO] CHECKIN OK: Kev late=True
+2026-02-26 09:25:43 [INFO] Zoho token refreshed OK
+2026-02-26 09:27:44 [INFO] Zoho token refreshed OK
+2026-02-26 09:28:14 [INFO] Zoho token refreshed OK

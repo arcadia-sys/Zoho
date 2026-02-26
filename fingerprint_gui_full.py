@@ -7344,11 +7344,6 @@
 
 
 
-
-
-
-
-
 import os, time, json, csv, requests, threading, math, queue, logging
 from datetime import datetime, timedelta
 from dotenv import load_dotenv
@@ -9077,6 +9072,7 @@ class FingerprintGUI:
         tk.Frame(hdr, bg=GOLD, height=3).pack(fill=tk.X)
         hi  = tk.Frame(hdr, bg=CARD, padx=28, pady=14); hi.pack(fill=tk.X)
         lf  = tk.Frame(hi, bg=CARD); lf.pack(side=tk.LEFT)
+
         # ── Animated marquee for company name ──────────────────────
         self._marquee_canvas = tk.Canvas(lf, bg=CARD, highlightthickness=0, height=26)
         self._marquee_canvas.pack(anchor="w", fill=tk.X, expand=True)
@@ -9086,9 +9082,28 @@ class FingerprintGUI:
         self._marquee_x = 340
         self._marquee_speed = 2
         self._animate_marquee()
+
         # ── Static subtitle ─────────────────────────────────────────
         tk.Label(lf, text="Biometric Attendance Terminal · v5.3 · 2000-user edition",
                  font=("Courier", 8), bg=CARD, fg=MUTED).pack(anchor="w", pady=(1, 0))
+
+        # ── Powered by Finlanza Team — animated glow canvas ────────
+        self._finlanza_canvas = tk.Canvas(lf, bg=CARD, highlightthickness=0,
+                                          height=28, cursor="hand2")
+        self._finlanza_canvas.pack(anchor="w", pady=(4, 0))
+        self._finlanza_text = self._finlanza_canvas.create_text(
+            0, 14, text="⚡ Powered by Finlanza Team",
+            font=("Courier", 12, "bold"), fill=CYAN2, anchor="w")
+        # size the canvas to the text width after rendering
+        self._finlanza_canvas.update_idletasks()
+        bbox = self._finlanza_canvas.bbox(self._finlanza_text)
+        if bbox:
+            self._finlanza_canvas.config(width=bbox[2] + 4)
+        self._finlanza_canvas.bind(
+            "<Button-1>", lambda e: __import__("webbrowser").open("https://finlanza.com/"))
+        self._finlanza_phase = 0
+        self._animate_finlanza()
+
         rf = tk.Frame(hi, bg=CARD); rf.pack(side=tk.RIGHT)
         btn_row = tk.Frame(rf, bg=CARD); btn_row.pack(anchor="e", pady=(0, 6))
         btn_refresh = tk.Button(btn_row, text="↻ REFRESH",
@@ -9111,10 +9126,7 @@ class FingerprintGUI:
         self.date_lbl.pack(anchor="e")
         self.clock_lbl = tk.Label(rf, text="", font=("Courier", 24, "bold"), bg=CARD, fg=WHITE)
         self.clock_lbl.pack(anchor="e")
-        powered_lbl = tk.Label(rf, text="⚡ Powered by Finlanza Team",
-                               font=("Courier", 7), bg=CARD, fg=CYAN2, cursor="hand2")
-        powered_lbl.pack(anchor="e", pady=(2, 0))
-        powered_lbl.bind("<Button-1>", lambda e: __import__("webbrowser").open("https://finlanza.com/"))
+
         _make_sep(self.root, BORDER2)
         sbar = tk.Frame(self.root, bg=CARD2, padx=28, pady=6); sbar.pack(fill=tk.X)
         tk.Label(sbar, text=(f"SHIFT {SHIFT_START_H:02d}:{SHIFT_START_M:02d} · "
@@ -9196,7 +9208,7 @@ class FingerprintGUI:
                            bg=ACCENT_DIM, fg=ACCENT, anchor="w")
         self.sl.pack(side=tk.LEFT, fill=tk.X)
 
-        # ── action buttons (Daily Report button REMOVED) ──
+        # ── action buttons ──
         br = tk.Frame(parent, bg=BG); br.pack(fill=tk.X, pady=(0, 12))
         self.btn_in = tk.Button(br, text="▶ CHECK IN",
                                 font=("Courier", 12, "bold"), width=13,
@@ -9431,6 +9443,29 @@ class FingerprintGUI:
                     self._marquee_x = 340
             self._marquee_canvas.coords(self._marquee_text, self._marquee_x, 13)
             self.root.after(30, self._animate_marquee)
+        except Exception:
+            pass  # window was destroyed
+
+    def _animate_finlanza(self):
+        try:
+            # Use an ever-increasing counter — no % wrap so colour never jumps
+            self._finlanza_phase += 1
+            p = self._finlanza_phase
+
+            # --- smooth infinite colour cycle via pure sine waves ---
+            # Each channel oscillates independently at slightly different frequencies
+            # so the result loops perfectly and never resets with a visible jump.
+            r = int(127 + 127 * math.sin(math.radians(p * 1.8)))
+            g = int(180 + 70  * math.sin(math.radians(p * 1.8 + 60)))
+            b = int(220 + 35  * math.sin(math.radians(p * 1.8 + 120)))
+
+            r = max(80,  min(r, 255))
+            g = max(140, min(g, 255))
+            b = max(180, min(b, 255))
+
+            color = f"#{r:02x}{g:02x}{b:02x}"
+            self._finlanza_canvas.itemconfig(self._finlanza_text, fill=color)
+            self.root.after(30, self._animate_finlanza)   # ~33 fps, runs forever
         except Exception:
             pass  # window was destroyed
 
