@@ -1763,3 +1763,13 @@ pyzkfp._construct.errors_handler.InvalidHandleError: Invalid Handle
 2026-02-26 08:04:07 [INFO] find_worker(134): trying criteria='(ZKTeco_User_ID2 == 134)'
 2026-02-26 08:04:07 [INFO] find_worker(134): found via criteria='(ZKTeco_User_ID2 == 134)'
 2026-02-26 08:04:08 [INFO] CHECKIN OK: Emilly Akinyi late=True
+2026-02-26 08:17:54 [INFO] Zoho token refreshed OK
+2026-02-26 08:20:02 [INFO] Zoho token refreshed OK
+2026-02-26 08:21:35 [INFO] Zoho token refreshed OK
+2026-02-26 08:23:22 [INFO] Zoho token refreshed OK
+2026-02-26 08:26:28 [INFO] Zoho token refreshed OK
+2026-02-26 08:28:20 [INFO] search_workers_by_name: falling back to full worker scan
+2026-02-26 08:28:20 [INFO] search_workers_by_name: full scan returned 13 workers
+2026-02-26 08:28:21 [INFO] find_worker(135): trying criteria='(ZKTeco_User_ID2 == 135)'
+2026-02-26 08:28:21 [INFO] find_worker(135): found via criteria='(ZKTeco_User_ID2 == 135)'
+2026-02-26 08:32:21 [INFO] Zoho token refreshed OK
