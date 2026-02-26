@@ -1,5 +1,40 @@
 {
-  "date": "2026-02-24",
-  "checked_in": {},
-  "checked_out": {}
+  "date": "2026-02-26",
+  "checked_in": {
+    "135": {
+      "time": "26-Feb-2026 06:29:42",
+      "zoho_id": "4838902000000550087",
+      "worker_id": "4838902000000549055",
+      "name": "Hesbon Musau",
+      "is_late": false,
+      "late_note": "on time"
+    },
+    "139": {
+      "time": "26-Feb-2026 07:23:26",
+      "zoho_id": "4838902000000568003",
+      "worker_id": "4838902000000567003",
+      "name": "Elisha Ongoya",
+      "is_late": false,
+      "late_note": "23 min late"
+    },
+    "14": {
+      "time": "26-Feb-2026 07:36:20",
+      "zoho_id": "4838902000000552043",
+      "worker_id": "4838902000000567007",
+      "name": "Dennis Oluoch",
+      "is_late": false,
+      "late_note": "36 min late"
+    }
+  },
+  "checked_out": {
+    "141": {
+      "time": "07:49:00",
+      "name": "NEWTON MANYISA MOMANYI",
+      "total_hours": 0.02,
+      "overtime_hours": 0,
+      "is_late": false,
+      "late_note": "47 min late",
+      "checkin_time": "26-Feb-2026 07:47:50"
+    }
+  }
 }
