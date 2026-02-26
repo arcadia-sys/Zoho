@@ -1789,3 +1789,5 @@ pyzkfp._construct.errors_handler.InvalidHandleError: Invalid Handle
 2026-02-26 09:25:43 [INFO] Zoho token refreshed OK
 2026-02-26 09:27:44 [INFO] Zoho token refreshed OK
 2026-02-26 09:28:14 [INFO] Zoho token refreshed OK
+2026-02-26 09:40:49 [INFO] Zoho token refreshed OK
+2026-02-26 09:42:11 [INFO] CSV exported: attendance_2026-02-26.csv (6 rows)
