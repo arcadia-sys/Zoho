@@ -11518,8 +11518,10 @@ class FingerprintGUI:
 
     # ------ UI BUILD ------
     def _build_ui(self):
-        self._build_header(); self._build_body()
-        self._build_footer(); self._build_flash()
+        self._build_header()
+        self._build_footer()   # footer must be packed BEFORE the expanding body
+        self._build_body()
+        self._build_flash()
 
     def _build_header(self):
         hdr = tk.Frame(self.root, bg=CARD); hdr.pack(fill=tk.X)

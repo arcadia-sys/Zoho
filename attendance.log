@@ -1773,3 +1773,6 @@ pyzkfp._construct.errors_handler.InvalidHandleError: Invalid Handle
 2026-02-26 08:28:21 [INFO] find_worker(135): trying criteria='(ZKTeco_User_ID2 == 135)'
 2026-02-26 08:28:21 [INFO] find_worker(135): found via criteria='(ZKTeco_User_ID2 == 135)'
 2026-02-26 08:32:21 [INFO] Zoho token refreshed OK
+2026-02-26 08:44:39 [INFO] Zoho token refreshed OK
+2026-02-26 08:47:06 [INFO] Zoho token refreshed OK
+2026-02-26 08:48:40 [INFO] Zoho token refreshed OK
