@@ -1,47 +1,6 @@
 {
   "date": "2026-02-26",
-  "checked_in": {
-    "135": {
-      "time": "26-Feb-2026 06:29:42",
-      "zoho_id": "4838902000000550087",
-      "worker_id": "4838902000000549055",
-      "name": "Hesbon Musau",
-      "is_late": false,
-      "late_note": "on time"
-    },
-    "139": {
-      "time": "26-Feb-2026 07:23:26",
-      "zoho_id": "4838902000000568003",
-      "worker_id": "4838902000000567003",
-      "name": "Elisha Ongoya",
-      "is_late": false,
-      "late_note": "23 min late"
-    },
-    "14": {
-      "time": "26-Feb-2026 07:36:20",
-      "zoho_id": "4838902000000552043",
-      "worker_id": "4838902000000567007",
-      "name": "Dennis Oluoch",
-      "is_late": false,
-      "late_note": "36 min late"
-    },
-    "134": {
-      "time": "26-Feb-2026 08:04:07",
-      "zoho_id": "4838902000000568007",
-      "worker_id": "4838902000000554003",
-      "name": "Emilly Akinyi",
-      "is_late": true,
-      "late_note": "64 min late"
-    },
-    "131": {
-      "time": "26-Feb-2026 09:23:58",
-      "zoho_id": "4838902000000570003",
-      "worker_id": "4838902000000549031",
-      "name": "Kev",
-      "is_late": true,
-      "late_note": "143 min late"
-    }
-  },
+  "checked_in": {},
   "checked_out": {
     "141": {
       "time": "07:49:00",
@@ -51,6 +10,80 @@
       "is_late": false,
       "late_note": "47 min late",
       "checkin_time": "26-Feb-2026 07:47:50"
+    },
+    "142": {
+      "time": "14:56:31",
+      "name": "Beth Kimani",
+      "total_hours": 0.03,
+      "overtime_hours": 0,
+      "is_late": true,
+      "late_note": "474 min late",
+      "checkin_time": "26-Feb-2026 14:54:50"
+    },
+    "135": {
+      "time": "17:28:47",
+      "name": "Hesbon Musau",
+      "total_hours": 10.98,
+      "overtime_hours": 2.98,
+      "is_late": false,
+      "late_note": "on time",
+      "checkin_time": "26-Feb-2026 06:29:42"
+    },
+    "14": {
+      "time": "17:29:03",
+      "name": "Dennis Oluoch",
+      "total_hours": 9.88,
+      "overtime_hours": 1.88,
+      "is_late": false,
+      "late_note": "36 min late",
+      "checkin_time": "26-Feb-2026 07:36:20"
+    },
+    "139": {
+      "time": "17:29:17",
+      "name": "Elisha Ongoya",
+      "total_hours": 10.1,
+      "overtime_hours": 2.1,
+      "is_late": false,
+      "late_note": "23 min late",
+      "checkin_time": "26-Feb-2026 07:23:26"
+    },
+    "134": {
+      "time": "17:29:26",
+      "name": "Emilly Akinyi",
+      "total_hours": 9.42,
+      "overtime_hours": 1.42,
+      "is_late": true,
+      "late_note": "64 min late",
+      "checkin_time": "26-Feb-2026 08:04:07"
+    },
+    "143": {
+      "time": "19:00:25",
+      "name": "SYLVIA KEMUNTO",
+      "total_hours": 0.53,
+      "overtime_hours": 0,
+      "is_late": true,
+      "late_note": "688 min late",
+      "checkin_time": "26-Feb-2026 18:28:37",
+      "auto_checkout": true
+    },
+    "131": {
+      "time": "19:00:25",
+      "name": "Kev",
+      "total_hours": 9.61,
+      "overtime_hours": 1.61,
+      "is_late": true,
+      "late_note": "143 min late",
+      "checkin_time": "26-Feb-2026 09:23:58",
+      "auto_checkout": true
+    },
+    "137": {
+      "time": "22:14:49",
+      "name": "test new worker",
+      "total_hours": 0.01,
+      "overtime_hours": 0,
+      "is_late": true,
+      "late_note": "914 min late",
+      "checkin_time": "26-Feb-2026 22:14:26"
     }
   }
 }

@@ -1,7 +1,9 @@
 ZK_ID,Name,Check-In,Check-Out,Total Hours,Overtime Hours,Late?,Late Note,Early Checkout?,Auto Checkout?,Status
 141,NEWTON MANYISA MOMANYI,26-Feb-2026 07:47:50,07:49:00,0.02,0,No,47 min late,Yes,No,Complete
-135,Hesbon Musau,26-Feb-2026 06:29:42,---,---,---,No,on time,---,---,Still In
-139,Elisha Ongoya,26-Feb-2026 07:23:26,---,---,---,No,23 min late,---,---,Still In
-14,Dennis Oluoch,26-Feb-2026 07:36:20,---,---,---,No,36 min late,---,---,Still In
-134,Emilly Akinyi,26-Feb-2026 08:04:07,---,---,---,Yes,64 min late,---,---,Still In
-131,Kev,26-Feb-2026 09:23:58,---,---,---,Yes,143 min late,---,---,Still In
+142,Beth Kimani,26-Feb-2026 14:54:50,14:56:31,0.03,0,Yes,474 min late,Yes,No,Complete
+135,Hesbon Musau,26-Feb-2026 06:29:42,17:28:47,10.98,2.98,No,on time,No,No,Complete
+14,Dennis Oluoch,26-Feb-2026 07:36:20,17:29:03,9.88,1.88,No,36 min late,No,No,Complete
+139,Elisha Ongoya,26-Feb-2026 07:23:26,17:29:17,10.1,2.1,No,23 min late,No,No,Complete
+134,Emilly Akinyi,26-Feb-2026 08:04:07,17:29:26,9.42,1.42,Yes,64 min late,No,No,Complete
+143,SYLVIA KEMUNTO,26-Feb-2026 18:28:37,19:00:25,0.53,0,Yes,688 min late,No,Yes,Complete
+131,Kev,26-Feb-2026 09:23:58,19:00:25,9.61,1.61,Yes,143 min late,No,Yes,Complete
