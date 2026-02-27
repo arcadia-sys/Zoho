@@ -1,26 +1,43 @@
 """
-fp_store.py — Fingerprint Template Storage  (v2 — fixed)
-=========================================================
-Handles BOTH template field formats present in your data:
-  • ZK records   → "template_b64"  (base-64 string)
-  • Zoho records → "template"      (hex string)
+fp_store.py  —  Fingerprint Storage + ID Verification
+======================================================
+Ensures the typed Worker ID matches the finger on the scanner.
+Nobody can check in/out for someone else.
 
-Drop this file next to your main attendance script and call
-fp_store.init(zk, zoho_request, auth_headers, ...) once at startup.
+QUICK INTEGRATION
+-----------------
+1. Drop this file next to your main script.
+
+2. After  zk.Init()  add:
+       import fp_store
+       fp_store.init(zk, zoho_request, auth_headers,
+                     API_DOMAIN, APP_OWNER, APP_NAME, WORKERS_REPORT)
+
+3. In  FingerprintGUI._process()  REPLACE the entire block
+   from  "zk.OpenDevice(0)"  down to  "zk.CloseDevice()"  with:
+
+       ok, msg, name = fp_store.verify_id_matches_finger(uid)
+       if not ok:
+           self.log(msg, "err")
+           self._gui(lambda: self._scan_err("BLOCKED"))
+           self._gui(lambda: self._show_flash("✗", "Access Denied", msg, "", RED_DIM))
+           return
+       # identity confirmed — name is the worker's full name
+       full_name = name
+
+4. In  AdminPanel._build()  add the enrolment tab:
+       fp_store.build_enroll_tab(nb, self, find_worker)
+       # where nb is your ttk.Notebook and find_worker is your existing function
 """
 
-import os
-import time
-import sqlite3
-import threading
-import logging
-import base64
+import os, time, sqlite3, base64, threading, logging, tkinter as tk
+from tkinter import ttk
 from datetime import datetime
 from typing import Optional
 
 _log = logging.getLogger("fp_store")
 
-# ── Globals set by init() ─────────────────────────────────────────────────────
+# ── globals filled by init() ──────────────────────────────────────────────────
 _zk             = None
 _zoho_request   = None
 _auth_headers   = None
@@ -29,24 +46,29 @@ _APP_OWNER      = ""
 _APP_NAME       = ""
 _WORKERS_REPORT = "All_Workers"
 
-DB_PATH  = os.path.join(os.path.dirname(os.path.abspath(__file__)), "fp_templates.db")
-_DB_LOCK = threading.Lock()
+DB_PATH         = os.path.join(os.path.dirname(os.path.abspath(__file__)), "fp_templates.db")
+_DB_LOCK        = threading.Lock()
+MATCH_THRESHOLD = 50          # ZKTeco 0-100 score; >= means same finger
 
-# Match score threshold for ZKTeco SDK (0-100)
-MATCH_THRESHOLD = 50
+# colour palette mirrors your main script
+BG="#07090f"; CARD="#0c1018"; CARD2="#10151f"; BORDER="#1c2438"; BORDER2="#243048"
+ACCENT="#3b82f6"; ACCENT_DIM="#172554"; ACCENT2="#60a5fa"
+GREEN="#10b981"; GREEN2="#34d399"; GREEN_DIM="#052e1c"
+RED="#f43f5e";   RED2="#fb7185";   RED_DIM="#4c0519"
+ORANGE="#f59e0b"; ORANGE2="#fbbf24"; ORANGE_DIM="#3d1f00"
+TEAL="#2dd4bf";  TEAL_DIM="#042f2e"
+TEXT="#e2e8f0";  TEXT2="#94a3b8"; MUTED="#3d4f69"; WHITE="#ffffff"
 
 
 # =============================================================================
-# INITIALISATION
+# PUBLIC API
 # =============================================================================
 
 def init(zk_instance, zoho_request_fn, auth_headers_fn,
-         api_domain: str, app_owner: str, app_name: str,
-         workers_report: str = "All_Workers"):
-    """Call once after zk.Init() at app startup."""
+         api_domain, app_owner, app_name, workers_report="All_Workers"):
+    """Call once immediately after zk.Init()."""
     global _zk, _zoho_request, _auth_headers
     global _API_DOMAIN, _APP_OWNER, _APP_NAME, _WORKERS_REPORT
-
     _zk             = zk_instance
     _zoho_request   = zoho_request_fn
     _auth_headers   = auth_headers_fn
@@ -54,241 +76,183 @@ def init(zk_instance, zoho_request_fn, auth_headers_fn,
     _APP_OWNER      = app_owner
     _APP_NAME       = app_name
     _WORKERS_REPORT = workers_report
-
     _create_db()
-    _log.info("fp_store ready — DB: %s", DB_PATH)
+    _log.info("fp_store ready — DB: %s  enrolled: %d", DB_PATH, count_enrolled())
 
 
-# =============================================================================
-# PUBLIC API
-# =============================================================================
+# ── CORE: typed ID must match scanned finger ──────────────────────────────────
 
-def store_template(zk_user_id: str,
-                   zoho_worker_id: str,
-                   worker_name: str,
-                   raw_record: dict) -> bool:
+def verify_id_matches_finger(zk_user_id: str,
+                              timeout_seconds: int = 20) -> tuple:
     """
-    Extract and store a template from a raw Zoho/ZK worker record.
+    THE MAIN GATE.  Call this in _process() instead of the raw scanner block.
 
-    Handles both field formats automatically:
-      • raw_record["template_b64"]  — base-64 encoded  (ZK records)
-      • raw_record["template"]      — hex string        (Zoho records)
+    Flow:
+      1. Look up the stored template for the typed ID.
+         → If not enrolled: BLOCK immediately (no scan needed).
+      2. Open scanner and wait for the worker to place their finger.
+      3. Run ZKTeco DBMatch(live_scan, stored_template).
+      4. If score >= MATCH_THRESHOLD: ALLOW.
+         If score <  MATCH_THRESHOLD: BLOCK — wrong person.
 
-    Parameters
-    ----------
-    zk_user_id     : the numeric ZK / attendance ID  (e.g. "9")
-    zoho_worker_id : the Zoho record ID              (e.g. "4838902000000391493")
-    worker_name    : display name for logs
-    raw_record     : the full worker dict from Zoho or your local cache
-
-    Returns True on success.
+    Returns
+    -------
+    (True,  "",          worker_name)   — identity confirmed, proceed
+    (False, error_msg,   "")            — blocked, show error_msg to worker
     """
-    template_b64 = _extract_template(raw_record)
-    if not template_b64:
-        _log.warning("store_template: no template found for %s (ID=%s)",
-                     worker_name, zk_user_id)
-        return False
+    uid = str(zk_user_id).strip()
 
-    return _save_to_db(zk_user_id, zoho_worker_id, worker_name, template_b64)
+    # ── Step 1: must be enrolled ──────────────────────────────────────────────
+    stored_b64, worker_name = _get_template_and_name(uid)
+    if not stored_b64:
+        msg = (f"Worker ID {uid} has no fingerprint on file.\n"
+               f"Please ask a supervisor to enrol your fingerprint first.")
+        _log.warning("verify: ID %s not enrolled", uid)
+        return False, msg, ""
+
+    # ── Step 2: scanner must be present ──────────────────────────────────────
+    if _zk is None:
+        return False, "Fingerprint system not initialised — contact IT.", ""
+    if _zk.GetDeviceCount() == 0:
+        return False, "Scanner not connected — contact IT support.", ""
+
+    _zk.OpenDevice(0)
+    try:
+        # ── Step 3: capture live scan ─────────────────────────────────────────
+        capture = None
+        for _ in range(timeout_seconds * 5):
+            capture = _zk.AcquireFingerprint()
+            if capture:
+                break
+            time.sleep(0.2)
+
+        if not capture:
+            return False, "Scan timed out — please try again.", ""
+
+        # ── Step 4: compare against stored template ───────────────────────────
+        stored  = base64.b64decode(stored_b64)
+        score   = _zk.DBMatch(capture, stored)
+        matched = score >= MATCH_THRESHOLD
+
+        _log.info("verify ID=%s name=%s score=%d matched=%s",
+                  uid, worker_name, score, matched)
+
+        if matched:
+            return True, "", worker_name
+        else:
+            msg = (f"Fingerprint does not match ID {uid}.\n"
+                   f"Only {worker_name} may check in or out on this ID.\n"
+                   f"(Confidence: {score} — needs {MATCH_THRESHOLD})")
+            return False, msg, ""
+
+    except Exception as exc:
+        _log.exception("verify_id_matches_finger error: %s", exc)
+        return False, f"Scanner error: {exc}", ""
+    finally:
+        try:
+            _zk.CloseDevice()
+        except Exception:
+            pass
 
 
-def store_template_b64(zk_user_id: str,
-                       zoho_worker_id: str,
-                       worker_name: str,
-                       template_b64: str) -> bool:
-    """Store a template you already have in base-64 format."""
-    if not template_b64:
-        return False
-    return _save_to_db(zk_user_id, zoho_worker_id, worker_name, template_b64)
+# ── ENROLMENT ─────────────────────────────────────────────────────────────────
 
-
-def enroll_worker(zoho_worker_id: str,
-                  worker_name: str,
-                  zk_user_id: str,
-                  samples: int = 3,
-                  progress_cb=None) -> tuple:
+def enroll_worker(zk_user_id: str, zoho_worker_id: str, worker_name: str,
+                  samples: int = 3, progress_cb=None) -> tuple:
     """
-    Scan `samples` fingerprints, merge them, then store locally + push to Zoho.
-
-    Returns (success: bool, message: str)
+    Capture `samples` scans, merge them, store locally and push to Zoho.
+    Returns (True, "success") or (False, "error message").
     """
-    def _progress(msg):
+    def _p(msg, tag="info"):
         _log.info("enroll [%s]: %s", worker_name, msg)
         if progress_cb:
-            try:
-                progress_cb(msg)
-            except Exception:
-                pass
+            try: progress_cb(msg, tag)
+            except TypeError:
+                try: progress_cb(msg)
+                except Exception: pass
 
     if _zk is None:
-        return False, "fp_store not initialised — call fp_store.init() first."
+        return False, "fp_store not initialised."
     if _zk.GetDeviceCount() == 0:
         return False, "Scanner not connected."
 
     _zk.OpenDevice(0)
     try:
-        _progress(f"Starting enrollment for {worker_name} — {samples} scans needed")
-        raw_captures = []
+        _p(f"Enrolling {worker_name} — {samples} scans needed", "info")
+        captures = []
 
         for i in range(1, samples + 1):
-            _progress(f"Scan {i}/{samples}: place your finger on the scanner…")
-
+            _p(f"Scan {i}/{samples}: place finger on scanner…", "info")
             capture = None
-            for _ in range(150):          # 30-second timeout per scan
+            for _ in range(150):
                 capture = _zk.AcquireFingerprint()
-                if capture:
-                    break
+                if capture: break
                 time.sleep(0.2)
-
             if not capture:
                 return False, f"Scan {i} timed out — please try again."
-
-            _progress(f"Scan {i} captured ✔  — lift your finger")
-            raw_captures.append(capture)
+            _p(f"Scan {i} captured ✔ — lift finger", "ok")
+            captures.append(capture)
             time.sleep(0.8)
 
-        _progress("Merging scans…")
-        merged = _merge(raw_captures)
+        _p("Merging scans…", "info")
+        merged = _merge(captures)
         if not merged:
-            return False, "Template merge failed — try enrolling again."
+            return False, "Merge failed — please try again."
 
-        template_b64 = base64.b64encode(merged).decode("utf-8")
-
+        template_b64 = base64.b64encode(merged).decode()
         _save_to_db(zk_user_id, zoho_worker_id, worker_name, template_b64)
-        _progress("Saved to local database ✔")
-
+        _p(f"Saved locally ✔", "ok")
         _push_to_zoho_bg(zoho_worker_id, template_b64, worker_name)
-        _progress(f"Enrollment complete for {worker_name} ✔")
+        _p(f"Enrolment complete for {worker_name} ✔", "ok")
         return True, f"{worker_name} enrolled successfully."
 
     except Exception as exc:
         _log.exception("enroll_worker: %s", exc)
-        return False, f"Enrollment error: {exc}"
+        return False, f"Enrolment error: {exc}"
     finally:
-        try:
-            _zk.CloseDevice()
-        except Exception:
-            pass
+        try: _zk.CloseDevice()
+        except Exception: pass
 
 
-def identify_from_scanner(timeout_seconds: int = 30) -> Optional[dict]:
+def load_from_records(records: list) -> tuple:
     """
-    Scan a finger and return the matching worker, or None.
-
-    Returned dict:
-        {"zk_user_id": str, "zoho_worker_id": str,
-         "worker_name": str, "score": int}
+    Bulk-import templates from existing worker dicts.
+    Handles both 'template_b64' (base-64) and 'template' (hex) field formats.
+    Returns (imported, skipped).
     """
-    if _zk is None or _zk.GetDeviceCount() == 0:
-        _log.error("identify_from_scanner: scanner not ready")
-        return None
-
-    _zk.OpenDevice(0)
-    try:
-        capture = None
-        for _ in range(timeout_seconds * 5):
-            capture = _zk.AcquireFingerprint()
-            if capture:
-                break
-            time.sleep(0.2)
-
-        if not capture:
-            _log.warning("identify_from_scanner: timed out")
-            return None
-
-        return _match_1_to_n(capture)
-
-    except Exception as exc:
-        _log.exception("identify_from_scanner: %s", exc)
-        return None
-    finally:
-        try:
-            _zk.CloseDevice()
-        except Exception:
-            pass
+    imported = skipped = 0
+    for rec in records:
+        tmpl = _extract_template(rec)
+        if not tmpl:
+            skipped += 1
+            continue
+        zk_id = str(
+            rec.get("Worker_ID") or rec.get("ZKTeco_User_ID2") or
+            rec.get("fid") or rec.get("zoho_id") or rec.get("ID") or ""
+        ).strip().split(".")[0]
+        if not zk_id or zk_id in ("0", "None", ""):
+            skipped += 1
+            continue
+        zoho_id = str(rec.get("ID") or rec.get("zoho_id") or zk_id)
+        name    = rec.get("Full_Name") or rec.get("worker_name") or f"Worker {zk_id}"
+        _save_to_db(zk_id, zoho_id, name, tmpl)
+        imported += 1
+    _log.info("load_from_records: %d imported, %d skipped", imported, skipped)
+    return imported, skipped
 
 
-def verify_worker(zk_user_id: str,
-                  timeout_seconds: int = 20) -> tuple:
-    """
-    1:1 verify — scan a finger and confirm it matches the stored template
-    for the given worker ID.
-
-    Returns (matched: bool, score: int)
-    """
-    tmpl_b64 = get_template_b64(zk_user_id)
-    if not tmpl_b64:
-        _log.warning("verify_worker: no template for ID %s", zk_user_id)
-        return False, 0
-
-    stored = base64.b64decode(tmpl_b64)
-
-    if _zk is None or _zk.GetDeviceCount() == 0:
-        return False, 0
-
-    _zk.OpenDevice(0)
-    try:
-        capture = None
-        for _ in range(timeout_seconds * 5):
-            capture = _zk.AcquireFingerprint()
-            if capture:
-                break
-            time.sleep(0.2)
-
-        if not capture:
-            return False, 0
-
-        score   = _zk.DBMatch(capture, stored)
-        matched = score >= MATCH_THRESHOLD
-        _log.info("verify_worker [%s]: score=%d matched=%s", zk_user_id, score, matched)
-        return matched, score
-
-    except Exception as exc:
-        _log.exception("verify_worker: %s", exc)
-        return False, 0
-    finally:
-        try:
-            _zk.CloseDevice()
-        except Exception:
-            pass
-
-
-def get_template_b64(zk_user_id: str) -> Optional[str]:
-    """Return the stored base-64 template for a worker, or None."""
-    with _DB_LOCK:
-        conn = _open_db()
-        try:
-            row = conn.execute(
-                "SELECT template_b64 FROM fp_templates WHERE zk_user_id = ?",
-                (str(zk_user_id),)
-            ).fetchone()
-            return row[0] if row else None
-        finally:
-            conn.close()
-
+# ── DATABASE QUERIES ──────────────────────────────────────────────────────────
 
 def is_enrolled(zk_user_id: str) -> bool:
-    return get_template_b64(zk_user_id) is not None
+    return _get_template_and_name(str(zk_user_id))[0] is not None
 
-
-def delete_template(zk_user_id: str) -> bool:
+def count_enrolled() -> int:
     with _DB_LOCK:
         conn = _open_db()
-        try:
-            conn.execute("DELETE FROM fp_templates WHERE zk_user_id = ?",
-                         (str(zk_user_id),))
-            conn.commit()
-            _log.info("Template deleted for ZK ID %s", zk_user_id)
-            return True
-        except Exception as exc:
-            _log.error("delete_template: %s", exc)
-            return False
-        finally:
-            conn.close()
-
+        try:    return conn.execute("SELECT COUNT(*) FROM fp_templates").fetchone()[0]
+        finally: conn.close()
 
 def list_enrolled() -> list:
-    """Return all enrolled workers as a list of dicts (no template data)."""
     with _DB_LOCK:
         conn = _open_db()
         try:
@@ -296,281 +260,395 @@ def list_enrolled() -> list:
                 "SELECT zk_user_id, zoho_worker_id, worker_name, enrolled_at, updated_at "
                 "FROM fp_templates ORDER BY worker_name"
             ).fetchall()
-            return [
-                {
-                    "zk_user_id":     r[0],
-                    "zoho_worker_id": r[1],
-                    "worker_name":    r[2],
-                    "enrolled_at":    r[3],
-                    "updated_at":     r[4],
-                }
-                for r in rows
-            ]
-        finally:
-            conn.close()
+            return [{"zk_user_id": r[0], "zoho_worker_id": r[1], "worker_name": r[2],
+                     "enrolled_at": r[3], "updated_at": r[4]} for r in rows]
+        finally: conn.close()
 
-
-def count_enrolled() -> int:
+def delete_template(zk_user_id: str) -> bool:
     with _DB_LOCK:
         conn = _open_db()
         try:
-            return conn.execute("SELECT COUNT(*) FROM fp_templates").fetchone()[0]
-        finally:
-            conn.close()
+            conn.execute("DELETE FROM fp_templates WHERE zk_user_id=?", (str(zk_user_id),))
+            conn.commit()
+            _log.info("Deleted template for ZK ID %s", zk_user_id)
+            return True
+        except Exception as e:
+            _log.error("delete_template: %s", e); return False
+        finally: conn.close()
 
 
-def sync_from_zoho(progress_cb=None) -> tuple:
+# =============================================================================
+# ADMIN PANEL TAB
+# =============================================================================
+
+def build_enroll_tab(notebook: ttk.Notebook, parent_win: tk.Toplevel,
+                     find_worker_fn=None):
     """
-    Pull all fingerprint templates from Zoho down to the local DB.
-    Handles both 'template_b64' and 'template' field names.
+    Call inside AdminPanel._build() to add a Fingerprints tab.
 
-    Returns (imported: int, skipped: int)
+        fp_store.build_enroll_tab(nb, self, find_worker)
+
+    find_worker_fn is your existing  find_worker(uid)  function.
     """
-    def _progress(msg):
-        _log.info("sync_from_zoho: %s", msg)
-        if progress_cb:
+    tab = tk.Frame(notebook, bg=BG)
+    notebook.add(tab, text="👆  FINGERPRINTS")
+    _EnrollTab(tab, parent_win, find_worker_fn)
+    return tab
+
+
+class _EnrollTab:
+    def __init__(self, parent, win, find_worker_fn):
+        self._win         = win
+        self._find_worker = find_worker_fn
+        self._busy        = False
+        self._build(parent)
+        self._refresh_list()
+
+    def _build(self, parent):
+        # ── header ────────────────────────────────────────────────────────────
+        tk.Frame(parent, bg=TEAL, height=3).pack(fill=tk.X)
+        hdr = tk.Frame(parent, bg=CARD, padx=20, pady=12); hdr.pack(fill=tk.X)
+        lf  = tk.Frame(hdr, bg=CARD); lf.pack(side=tk.LEFT)
+        tk.Label(lf, text="FINGERPRINT ENROLMENT",
+                 font=("Courier", 12, "bold"), bg=CARD, fg=TEAL).pack(anchor="w")
+        tk.Label(lf, text="Workers must be enrolled here before they can clock in or out.",
+                 font=("Courier", 8), bg=CARD, fg=TEXT2).pack(anchor="w", pady=(2,0))
+        self._count_lbl = tk.Label(hdr, text="", font=("Courier", 9, "bold"),
+                                   bg=CARD, fg=TEAL)
+        self._count_lbl.pack(side=tk.RIGHT)
+        tk.Frame(parent, bg=BORDER2, height=1).pack(fill=tk.X)
+
+        # ── two-column body ───────────────────────────────────────────────────
+        body = tk.Frame(parent, bg=BG, padx=20, pady=16)
+        body.pack(fill=tk.BOTH, expand=True)
+        body.columnconfigure(0, weight=1)
+        body.columnconfigure(1, weight=2)
+
+        # LEFT — enrol form
+        left = tk.Frame(body, bg=CARD, highlightbackground=BORDER2,
+                        highlightthickness=1, padx=16, pady=14)
+        left.grid(row=0, column=0, sticky="nsew", padx=(0,12))
+
+        tk.Label(left, text="ENROL WORKER",
+                 font=("Courier", 9, "bold"), bg=CARD, fg=TEAL).pack(anchor="w", pady=(0,10))
+
+        tk.Label(left, text="WORKER ID",
+                 font=("Courier", 7, "bold"), bg=CARD, fg=MUTED).pack(anchor="w")
+        id_frame = tk.Frame(left, bg=TEAL, padx=1, pady=1); id_frame.pack(fill=tk.X, pady=(4,10))
+        id_inner = tk.Frame(id_frame, bg=CARD2); id_inner.pack(fill=tk.X)
+        self._id_var = tk.StringVar()
+        self._id_var.trace_add("write", lambda *_: self._on_id_change())
+        self._id_entry = tk.Entry(id_inner, textvariable=self._id_var,
+                                  font=("Courier", 22, "bold"),
+                                  bg=CARD2, fg=WHITE, insertbackground=TEAL, bd=0)
+        self._id_entry.pack(padx=10, pady=8, fill=tk.X)
+        self._id_entry.focus_set()
+
+        self._name_lbl = tk.Label(left, text="Enter an ID above",
+                                  font=("Courier", 10), bg=CARD, fg=MUTED)
+        self._name_lbl.pack(anchor="w", pady=(0,6))
+
+        self._status_lbl = tk.Label(left, text="", font=("Courier", 8, "bold"),
+                                    bg=CARD, fg=MUTED)
+        self._status_lbl.pack(anchor="w", pady=(0,12))
+
+        # scans selector
+        tk.Label(left, text="NUMBER OF SCANS",
+                 font=("Courier", 7, "bold"), bg=CARD, fg=MUTED).pack(anchor="w")
+        scan_row = tk.Frame(left, bg=CARD); scan_row.pack(anchor="w", pady=(4,14))
+        self._samples = tk.IntVar(value=3)
+        for n in (2, 3, 4):
+            tk.Radiobutton(scan_row, text=str(n), variable=self._samples, value=n,
+                           font=("Courier", 10, "bold"), bg=CARD, fg=TEAL,
+                           selectcolor=CARD2, activebackground=CARD
+                           ).pack(side=tk.LEFT, padx=(0,12))
+
+        # buttons
+        self._btn_enrol = tk.Button(
+            left, text="👆 ENROL (new)",
+            font=("Courier", 10, "bold"), relief=tk.FLAT,
+            bg=TEAL_DIM, fg=TEAL, activebackground=TEAL, activeforeground=BG,
+            cursor="hand2", pady=10, state=tk.DISABLED, command=self._do_enrol)
+        self._btn_enrol.pack(fill=tk.X, pady=(0,6))
+
+        self._btn_reenrol = tk.Button(
+            left, text="🔄 RE-ENROL (replace)",
+            font=("Courier", 9, "bold"), relief=tk.FLAT,
+            bg=ORANGE_DIM, fg=ORANGE2, activebackground=ORANGE, activeforeground=BG,
+            cursor="hand2", pady=8, state=tk.DISABLED, command=self._do_reenrol)
+        self._btn_reenrol.pack(fill=tk.X, pady=(0,6))
+
+        self._btn_delete = tk.Button(
+            left, text="🗑 DELETE TEMPLATE",
+            font=("Courier", 9, "bold"), relief=tk.FLAT,
+            bg=RED_DIM, fg=RED2, activebackground=RED, activeforeground=WHITE,
+            cursor="hand2", pady=8, state=tk.DISABLED, command=self._do_delete)
+        self._btn_delete.pack(fill=tk.X)
+
+        tk.Frame(left, bg=BORDER, height=1).pack(fill=tk.X, pady=12)
+
+        tk.Label(left, text="PROGRESS",
+                 font=("Courier", 7, "bold"), bg=CARD, fg=MUTED).pack(anchor="w")
+        self._log = tk.Text(left, font=("Courier", 8), bg=CARD2, fg=TEXT2,
+                            height=8, relief=tk.FLAT, padx=8, pady=6, state=tk.DISABLED)
+        self._log.pack(fill=tk.X, pady=(4,0))
+        for tag, col in [("ok",GREEN2),("err",RED2),("warn",ORANGE2),("info",ACCENT2)]:
+            self._log.tag_config(tag, foreground=col)
+
+        # RIGHT — enrolled list
+        right = tk.Frame(body, bg=BG); right.grid(row=0, column=1, sticky="nsew")
+        right.rowconfigure(1, weight=1); right.columnconfigure(0, weight=1)
+
+        list_hdr = tk.Frame(right, bg=BG); list_hdr.grid(row=0, column=0, sticky="ew", pady=(0,8))
+        tk.Label(list_hdr, text="ENROLLED WORKERS",
+                 font=("Courier", 9, "bold"), bg=BG, fg=MUTED).pack(side=tk.LEFT)
+        tk.Button(list_hdr, text="↻ REFRESH", font=("Courier", 8, "bold"),
+                  relief=tk.FLAT, bg=BORDER, fg=TEXT2, cursor="hand2",
+                  padx=8, pady=4, command=self._refresh_list
+                  ).pack(side=tk.RIGHT)
+
+        style = ttk.Style()
+        style.configure("FP.Treeview", background=CARD2, foreground=TEXT,
+                        fieldbackground=CARD2, rowheight=30,
+                        font=("Courier", 9), borderwidth=0)
+        style.configure("FP.Treeview.Heading", background=CARD,
+                        foreground=TEAL, font=("Courier", 8, "bold"), relief="flat")
+        style.map("FP.Treeview",
+                  background=[("selected", TEAL_DIM)],
+                  foreground=[("selected", TEAL)])
+
+        self._tree = ttk.Treeview(right, columns=("ID","Name","Enrolled","Updated"),
+                                  show="headings", style="FP.Treeview", selectmode="browse")
+        for col, w, anc in [("ID",70,"center"),("Name",220,"w"),
+                             ("Enrolled",140,"center"),("Updated",140,"center")]:
+            self._tree.heading(col, text=col.upper())
+            self._tree.column(col, width=w, anchor=anc,
+                              stretch=(col == "Name"))
+        self._tree.grid(row=1, column=0, sticky="nsew")
+        self._tree.bind("<<TreeviewSelect>>", self._on_select)
+
+        vsb = ttk.Scrollbar(right, orient="vertical", command=self._tree.yview)
+        self._tree.configure(yscrollcommand=vsb.set)
+        vsb.grid(row=1, column=1, sticky="ns")
+
+    # ── events ────────────────────────────────────────────────────────────────
+
+    def _on_id_change(self):
+        uid = self._id_var.get().strip()
+        if not uid:
+            self._name_lbl.config(text="Enter an ID above", fg=MUTED)
+            self._status_lbl.config(text="")
+            self._sync_buttons(uid=None); return
+
+        enrolled = is_enrolled(uid)
+        self._status_lbl.config(
+            text="● ENROLLED — template on file" if enrolled else "○ NOT YET ENROLLED",
+            fg=GREEN2 if enrolled else ORANGE2)
+        self._sync_buttons(uid=uid)
+
+        if self._find_worker:
+            threading.Thread(target=self._lookup, args=(uid,), daemon=True).start()
+
+    def _lookup(self, uid):
+        try:    w = self._find_worker(uid)
+        except: w = None
+        def _upd():
+            if self._id_var.get().strip() != uid: return
+            if w:
+                self._name_lbl.config(text=w.get("Full_Name", uid), fg=WHITE)
+            else:
+                self._name_lbl.config(text=f"ID {uid} not found in Zoho", fg=RED2)
+        try: self._win.after(0, _upd)
+        except Exception: pass
+
+    def _on_select(self, _=None):
+        sel = self._tree.selection()
+        if sel:
+            self._id_var.set(self._tree.item(sel[0], "values")[0])
+
+    def _sync_buttons(self, uid):
+        if uid and not self._busy:
+            enrolled = is_enrolled(uid)
+            self._btn_enrol.config(
+                state=tk.NORMAL if not enrolled else tk.DISABLED,
+                bg=TEAL_DIM if not enrolled else BORDER,
+                fg=TEAL     if not enrolled else MUTED)
+            self._btn_reenrol.config(
+                state=tk.NORMAL if enrolled else tk.DISABLED,
+                bg=ORANGE_DIM if enrolled else BORDER,
+                fg=ORANGE2    if enrolled else MUTED)
+            self._btn_delete.config(
+                state=tk.NORMAL if enrolled else tk.DISABLED,
+                bg=RED_DIM if enrolled else BORDER,
+                fg=RED2    if enrolled else MUTED)
+        else:
+            for b in (self._btn_enrol, self._btn_reenrol, self._btn_delete):
+                b.config(state=tk.DISABLED, bg=BORDER, fg=MUTED)
+
+    # ── actions ───────────────────────────────────────────────────────────────
+
+    def _resolve(self):
+        """Return (uid, zoho_id, name) from current entry."""
+        uid = self._id_var.get().strip()
+        if not uid:
+            self._plog("Enter a Worker ID first.", "warn"); return None, None, None
+        name = self._name_lbl.cget("text")
+        zoho_id = uid
+        if self._find_worker:
             try:
-                progress_cb(msg)
-            except Exception:
-                pass
+                w = self._find_worker(uid)
+                if w:
+                    name    = w.get("Full_Name", uid)
+                    zoho_id = w.get("ID", uid)
+            except Exception: pass
+        return uid, zoho_id, name
 
-    if not (_zoho_request and _auth_headers and _API_DOMAIN):
-        _progress("fp_store not connected to Zoho — skipping sync.")
-        return 0, 0
+    def _do_enrol(self):
+        uid, zoho_id, name = self._resolve()
+        if not uid: return
+        if is_enrolled(uid):
+            self._plog(f"{name} already enrolled — use Re-Enrol.", "warn"); return
+        self._run(uid, zoho_id, name)
 
-    hdrs = _auth_headers()
-    if not hdrs:
-        _progress("No Zoho token — sync aborted.")
-        return 0, 0
+    def _do_reenrol(self):
+        uid, zoho_id, name = self._resolve()
+        if not uid: return
+        delete_template(uid)
+        self._plog(f"Old template removed for {name}.", "warn")
+        self._run(uid, zoho_id, name)
 
-    url = f"{_API_DOMAIN}/{_APP_OWNER}/{_APP_NAME}/report/{_WORKERS_REPORT}"
-    _progress("Fetching workers from Zoho…")
+    def _do_delete(self):
+        uid, _, name = self._resolve()
+        if not uid: return
+        delete_template(uid)
+        self._plog(f"Template deleted for {name} (ID {uid}).", "warn")
+        self._status_lbl.config(text="○ NOT YET ENROLLED", fg=ORANGE2)
+        self._sync_buttons(uid=uid)
+        self._refresh_list()
 
-    r = _zoho_request("GET", url, headers=hdrs)
-    if not r or r.status_code != 200:
-        _progress(f"Zoho fetch failed: {r.status_code if r else 'timeout'}")
-        return 0, 0
+    def _run(self, uid, zoho_id, name):
+        self._busy = True
+        self._sync_buttons(uid=None)
+        self._plog(f"Starting enrolment for {name}…", "info")
 
-    workers  = r.json().get("data", [])
-    imported = 0
-    skipped  = 0
-    _progress(f"Processing {len(workers)} workers…")
+        def _thread():
+            ok, msg = enroll_worker(
+                zk_user_id=uid, zoho_worker_id=zoho_id,
+                worker_name=name, samples=self._samples.get(),
+                progress_cb=lambda m, t="info": self._schedule(
+                    lambda: self._plog(m, t)))
+            def _done():
+                self._plog(msg, "ok" if ok else "err")
+                self._busy = False
+                self._sync_buttons(uid=uid)
+                self._refresh_list()
+                self._status_lbl.config(
+                    text="● ENROLLED — template on file" if ok else "✗ Enrolment failed",
+                    fg=GREEN2 if ok else RED2)
+            self._schedule(_done)
 
-    for w in workers:
-        # ── Extract template — try both field names ──
-        template_b64 = _extract_template(w)
-        if not template_b64:
-            skipped += 1
-            continue
+        threading.Thread(target=_thread, daemon=True).start()
 
-        # ── Extract IDs ──
-        zk_id  = str(w.get("ZKTeco_User_ID2", w.get("Worker_ID", ""))).strip()
-        # Strip trailing ".0" that Zoho sometimes adds to numeric IDs
-        zk_id  = zk_id.split(".")[0]
-        if not zk_id or zk_id in ("0", "None", ""):
-            skipped += 1
-            continue
+    # ── helpers ───────────────────────────────────────────────────────────────
 
-        zoho_id = str(w.get("ID", w.get("zoho_id", zk_id)))
-        name    = w.get("Full_Name", w.get("worker_name", zoho_id))
+    def _refresh_list(self):
+        self._tree.delete(*self._tree.get_children())
+        for w in list_enrolled():
+            self._tree.insert("", tk.END, values=(
+                w["zk_user_id"], w["worker_name"],
+                w["enrolled_at"][:16], w["updated_at"][:16]))
+        n = count_enrolled()
+        self._count_lbl.config(text=f"{n} worker{'s' if n!=1 else ''} enrolled")
 
-        _save_to_db(zk_id, zoho_id, name, template_b64)
-        imported += 1
+    def _plog(self, msg, tag="info"):
+        self._log.config(state=tk.NORMAL)
+        self._log.insert(tk.END,
+                         f"[{datetime.now().strftime('%H:%M:%S')}] {msg}\n", tag)
+        self._log.see(tk.END)
+        self._log.config(state=tk.DISABLED)
 
-    _progress(f"Sync complete — {imported} stored, {skipped} had no template.")
-    return imported, skipped
-
-
-def load_from_records(records: list) -> tuple:
-    """
-    Bulk-load templates from a list of raw worker dicts
-    (e.g. the data you already showed in the document).
-
-    Each dict must have:
-      • "Worker_ID" or "ZKTeco_User_ID2"
-      • "template_b64"  OR  "template"
-      • optionally "fid", "zoho_id", "Full_Name"
-
-    Returns (imported: int, skipped: int)
-    """
-    imported = 0
-    skipped  = 0
-
-    for rec in records:
-        template_b64 = _extract_template(rec)
-        if not template_b64:
-            skipped += 1
-            continue
-
-        zk_id = str(
-            rec.get("Worker_ID") or
-            rec.get("ZKTeco_User_ID2") or
-            rec.get("fid") or
-            rec.get("zoho_id") or
-            rec.get("ID") or ""
-        ).strip().split(".")[0]
-
-        if not zk_id or zk_id in ("0", "None", ""):
-            skipped += 1
-            continue
-
-        zoho_id = str(rec.get("zoho_id") or rec.get("ID") or zk_id)
-        name    = rec.get("Full_Name") or rec.get("worker_name") or f"Worker {zk_id}"
-
-        _save_to_db(zk_id, zoho_id, name, template_b64)
-        imported += 1
-
-    _log.info("load_from_records: %d imported, %d skipped", imported, skipped)
-    return imported, skipped
+    def _schedule(self, fn):
+        try: self._win.after(0, fn)
+        except Exception: pass
 
 
 # =============================================================================
 # INTERNAL HELPERS
 # =============================================================================
 
-def _extract_template(record: dict) -> Optional[str]:
-    """
-    Pull the template from a worker record regardless of field format.
-
-    Field priority:
-      1. "template_b64"  — already base-64, use directly
-      2. "template"      — hex string from Zoho, convert to base-64
-    """
-    # Format 1: base-64 string (ZK records like your fid 1–11)
-    b64 = record.get("template_b64", "")
-    if b64 and isinstance(b64, str) and len(b64) > 20:
-        # Validate it's real base-64
+def _get_template_and_name(zk_user_id: str):
+    with _DB_LOCK:
+        conn = _open_db()
         try:
-            decoded = base64.b64decode(b64)
-            if len(decoded) > 10:
-                return b64          # already good
-        except Exception:
-            pass
+            row = conn.execute(
+                "SELECT template_b64, worker_name FROM fp_templates WHERE zk_user_id=?",
+                (str(zk_user_id),)).fetchone()
+            return (row[0], row[1]) if row else (None, "")
+        finally: conn.close()
 
-    # Format 2: hex string (Zoho records like zoho_id 23, 25, 26 …)
-    hex_str = record.get("template", "")
-    if hex_str and isinstance(hex_str, str) and len(hex_str) > 20:
+def _extract_template(rec: dict) -> Optional[str]:
+    # base-64 field
+    b64 = rec.get("template_b64", "")
+    if b64 and len(b64) > 20:
         try:
-            raw  = bytes.fromhex(hex_str)
-            b64  = base64.b64encode(raw).decode("utf-8")
-            return b64
-        except Exception:
-            pass
-
+            if len(base64.b64decode(b64)) > 10: return b64
+        except Exception: pass
+    # hex field
+    h = rec.get("template", "")
+    if h and len(h) > 20:
+        try:
+            raw = bytes.fromhex(h)
+            if len(raw) > 10: return base64.b64encode(raw).decode()
+        except Exception: pass
     return None
 
-
-def _save_to_db(zk_user_id: str, zoho_worker_id: str,
-                worker_name: str, template_b64: str) -> bool:
-    """Insert or update a template in SQLite."""
+def _save_to_db(zk_user_id, zoho_worker_id, worker_name, template_b64):
     now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     with _DB_LOCK:
         conn = _open_db()
         try:
             conn.execute("""
                 INSERT INTO fp_templates
-                    (zk_user_id, zoho_worker_id, worker_name,
-                     template_b64, enrolled_at, updated_at)
-                VALUES (?, ?, ?, ?, ?, ?)
+                    (zk_user_id,zoho_worker_id,worker_name,template_b64,enrolled_at,updated_at)
+                VALUES (?,?,?,?,?,?)
                 ON CONFLICT(zk_user_id) DO UPDATE SET
-                    zoho_worker_id = excluded.zoho_worker_id,
-                    worker_name    = excluded.worker_name,
-                    template_b64   = excluded.template_b64,
-                    updated_at     = excluded.updated_at
+                    zoho_worker_id=excluded.zoho_worker_id,
+                    worker_name=excluded.worker_name,
+                    template_b64=excluded.template_b64,
+                    updated_at=excluded.updated_at
             """, (str(zk_user_id), str(zoho_worker_id),
                   str(worker_name), template_b64, now, now))
             conn.commit()
-            _log.info("Stored template: %s (ZK ID: %s)", worker_name, zk_user_id)
+            _log.info("Stored template: %s (ZK %s)", worker_name, zk_user_id)
             return True
-        except Exception as exc:
-            _log.error("_save_to_db error: %s", exc)
-            return False
-        finally:
-            conn.close()
+        except Exception as e:
+            _log.error("_save_to_db: %s", e); return False
+        finally: conn.close()
 
-
-def _match_1_to_n(capture) -> Optional[dict]:
-    """Compare a live capture against all stored templates."""
-    workers = list_enrolled()
-    if not workers:
-        _log.info("_match_1_to_n: no templates enrolled")
-        return None
-
-    best_score  = 0
-    best_worker = None
-
-    with _DB_LOCK:
-        conn = _open_db()
-        try:
-            for w in workers:
-                row = conn.execute(
-                    "SELECT template_b64 FROM fp_templates WHERE zk_user_id = ?",
-                    (w["zk_user_id"],)
-                ).fetchone()
-                if not row:
-                    continue
-                try:
-                    stored = base64.b64decode(row[0])
-                    score  = _zk.DBMatch(capture, stored)
-                    if score > best_score:
-                        best_score  = score
-                        best_worker = w
-                except Exception as exc:
-                    _log.debug("match error [%s]: %s", w["zk_user_id"], exc)
-        finally:
-            conn.close()
-
-    if best_worker and best_score >= MATCH_THRESHOLD:
-        _log.info("Identified: %s score=%d", best_worker["worker_name"], best_score)
-        return {
-            "zk_user_id":     best_worker["zk_user_id"],
-            "zoho_worker_id": best_worker["zoho_worker_id"],
-            "worker_name":    best_worker["worker_name"],
-            "score":          best_score,
-        }
-
-    _log.info("No match (best score=%d, threshold=%d)", best_score, MATCH_THRESHOLD)
-    return None
-
-
-def _merge(raw_captures: list) -> Optional[bytes]:
-    """Merge 2-3 raw fingerprint captures into one template via ZKTeco DBMerge."""
-    if not raw_captures:
-        return None
-    if len(raw_captures) == 1:
-        return raw_captures[0]
+def _merge(captures):
+    if not captures: return None
+    if len(captures) == 1: return captures[0]
     try:
-        t1 = raw_captures[0]
-        t2 = raw_captures[1]
-        t3 = raw_captures[2] if len(raw_captures) >= 3 else raw_captures[1]
+        t1, t2 = captures[0], captures[1]
+        t3 = captures[2] if len(captures) >= 3 else captures[1]
         merged = _zk.DBMerge(t1, t2, t3)
-        return merged if merged else raw_captures[0]
-    except Exception as exc:
-        _log.warning("DBMerge unavailable (%s) — using first capture", exc)
-        return raw_captures[0]
+        return merged if merged else captures[0]
+    except Exception as e:
+        _log.warning("DBMerge failed (%s) — using first capture", e)
+        return captures[0]
 
-
-def _push_to_zoho_bg(zoho_worker_id: str, template_b64: str, worker_name: str):
-    """Upload template to Zoho in a background thread (non-blocking)."""
+def _push_to_zoho_bg(zoho_worker_id, template_b64, worker_name):
     def _run():
-        if not (_zoho_request and _auth_headers and _API_DOMAIN):
-            return
+        if not (_zoho_request and _auth_headers and _API_DOMAIN): return
         hdrs = _auth_headers()
-        if not hdrs:
-            _log.error("_push_to_zoho_bg: no token for %s", worker_name)
-            return
+        if not hdrs: return
         url = (f"{_API_DOMAIN}/{_APP_OWNER}/{_APP_NAME}"
                f"/report/{_WORKERS_REPORT}/{zoho_worker_id}")
         r = _zoho_request("PATCH", url, headers=hdrs,
                           json={"data": {"Fingerprint_Template": template_b64}})
-        if r and r.status_code == 200 and r.json().get("code") == 3000:
-            _log.info("Template uploaded to Zoho: %s ✔", worker_name)
-        else:
-            code = r.status_code if r else "timeout"
-            _log.warning("Zoho upload failed for %s — HTTP %s", worker_name, code)
-
+        ok = r and r.status_code == 200 and r.json().get("code") == 3000
+        _log.info("Zoho push %s: %s", worker_name, "✔" if ok else "failed")
     threading.Thread(target=_run, daemon=True).start()
-
 
 def _create_db():
     with _DB_LOCK:
@@ -584,68 +662,9 @@ def _create_db():
                 enrolled_at     TEXT NOT NULL,
                 updated_at      TEXT NOT NULL
             );
-            CREATE INDEX IF NOT EXISTS idx_zoho_id
-                ON fp_templates(zoho_worker_id);
+            CREATE INDEX IF NOT EXISTS idx_zoho ON fp_templates(zoho_worker_id);
         """)
-        conn.commit()
-        conn.close()
+        conn.commit(); conn.close()
 
-
-def _open_db() -> sqlite3.Connection:
-    conn = sqlite3.connect(DB_PATH, check_same_thread=False)
-    return conn
-
-
-# =============================================================================
-# SELF-TEST
-# =============================================================================
-if __name__ == "__main__":
-    import json
-    logging.basicConfig(level=logging.INFO,
-                        format="%(asctime)s [%(levelname)s] %(message)s")
-
-    # Init without a real scanner
-    class _FakeZK:
-        def GetDeviceCount(self): return 0
-        def DBMatch(self, a, b):  return 0
-
-    init(_FakeZK(), None, None, "", "", "")
-    print("DB:", DB_PATH)
-
-    # The actual data format from your document
-    test_records = [
-        {
-            "fid": 1, "Worker_ID": "9",
-            "template_b64": "TF1TUzIxAAAFHh4ECAUHCc7QAAApH3YBAABkhcMzqR75AKdkwADJAV16cwD8AC5kawA="
-        },
-        {
-            "fid": 2, "Worker_ID": "17",
-            "template_b64": "SuVTUzIxAAADpqkECAUHCc7QAAAvp3YBAABFg0sehaaEAApkpAB3AAvCWgBkAJtkdAA="
-        },
-        {
-            "zoho_id": "23",
-            "template": "4a9353533231000003d0d30408050709ced000002fd1760100"
-                        "0048837d239bd09b000464b800ba00e3b4490089009f641100"
-        }
-    ]
-
-    imported, skipped = load_from_records(test_records)
-    print(f"\nload_from_records: {imported} imported, {skipped} skipped")
-
-    enrolled = list_enrolled()
-    print(f"Enrolled count: {len(enrolled)}")
-    for w in enrolled:
-        tmpl = get_template_b64(w["zk_user_id"])
-        print(f"  ZK {w['zk_user_id']:>4} | {w['worker_name']:<20} | "
-              f"template: {len(tmpl)} chars ✔")
-
-    print(f"\nis_enrolled('9'):  {is_enrolled('9')}")
-    print(f"is_enrolled('99'): {is_enrolled('99')}")
-
-    delete_template("9")
-    print(f"After delete, enrolled: {count_enrolled()}")
-
-    # Clean up test DB
-    import os
-    os.remove(DB_PATH)
-    print("\nAll tests passed ✔")
+def _open_db():
+    return sqlite3.connect(DB_PATH, check_same_thread=False)

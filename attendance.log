@@ -1901,3 +1901,47 @@ pyzkfp._construct.errors_handler.InvalidHandleError: Invalid Handle
 2026-02-26 22:14:49 [INFO] find_worker(137): trying criteria='(ZKTeco_User_ID2 == 137)'
 2026-02-26 22:14:49 [INFO] find_worker(137): found via criteria='(ZKTeco_User_ID2 == 137)'
 2026-02-26 22:14:51 [INFO] CHECKOUT OK: test new worker hours=0.01
+2026-02-26 22:34:29 [INFO] Zoho token refreshed OK
+2026-02-26 22:36:00 [INFO] find_worker(1): trying criteria='(ZKTeco_User_ID2 == 1)'
+2026-02-26 22:36:01 [INFO] find_worker(138): trying criteria='(ZKTeco_User_ID2 == 138)'
+2026-02-26 22:36:02 [ERROR] find_worker(1): request timed out on criteria='(ZKTeco_User_ID2 == 1)'
+2026-02-26 22:36:02 [INFO] find_worker(1): trying criteria='(ZKTeco_User_ID2 == "1")'
+2026-02-26 22:36:02 [INFO] find_worker(1): trying criteria='(Worker_ID == 1)'
+2026-02-26 22:36:03 [ERROR] find_worker(1): request timed out on criteria='(Worker_ID == 1)'
+2026-02-26 22:36:03 [INFO] find_worker(1): trying criteria='(Worker_ID == "1")'
+2026-02-26 22:36:03 [INFO] find_worker(1): trying criteria='(ZKTeco_User_ID2 == "1")'
+2026-02-26 22:36:03 [INFO] find_worker(138): found via criteria='(ZKTeco_User_ID2 == 138)'
+2026-02-26 22:36:04 [INFO] find_worker(1): trying criteria='(Worker_ID == "1")'
+2026-02-26 22:36:04 [WARNING] find_worker(1): all criteria failed — attempting full worker scan
+2026-02-26 22:36:04 [INFO] find_worker(1): full scan returned 15 worker(s)
+2026-02-26 22:36:04 [ERROR] find_worker(1): worker NOT found after all attempts. Verify ZKTeco_User_ID2 / Worker_ID field in Zoho for ID=1
+2026-02-26 22:36:05 [INFO] find_worker(138): trying criteria='(ZKTeco_User_ID2 == 138)'
+2026-02-26 22:36:06 [INFO] find_worker(138): found via criteria='(ZKTeco_User_ID2 == 138)'
+2026-02-26 22:36:06 [INFO] CHECKIN OK: Kevin Msyimi late=True
+2026-02-26 22:36:14 [INFO] find_worker(13): trying criteria='(ZKTeco_User_ID2 == 13)'
+2026-02-26 22:36:15 [ERROR] find_worker(13): request timed out on criteria='(ZKTeco_User_ID2 == 13)'
+2026-02-26 22:36:15 [INFO] find_worker(13): trying criteria='(ZKTeco_User_ID2 == "13")'
+2026-02-26 22:36:15 [INFO] find_worker(137): trying criteria='(ZKTeco_User_ID2 == 137)'
+2026-02-26 22:36:15 [INFO] find_worker(13): trying criteria='(Worker_ID == 13)'
+2026-02-26 22:36:15 [INFO] find_worker(137): found via criteria='(ZKTeco_User_ID2 == 137)'
+2026-02-26 22:36:15 [ERROR] find_worker(13): request timed out on criteria='(Worker_ID == 13)'
+2026-02-26 22:36:15 [INFO] find_worker(13): trying criteria='(Worker_ID == "13")'
+2026-02-26 22:36:16 [INFO] find_worker(13): trying criteria='(ZKTeco_User_ID2 == "13")'
+2026-02-26 22:36:16 [INFO] find_worker(13): trying criteria='(Worker_ID == "13")'
+2026-02-26 22:36:17 [WARNING] find_worker(13): all criteria failed — attempting full worker scan
+2026-02-26 22:36:17 [INFO] find_worker(13): full scan returned 15 worker(s)
+2026-02-26 22:36:17 [ERROR] find_worker(13): worker NOT found after all attempts. Verify ZKTeco_User_ID2 / Worker_ID field in Zoho for ID=13
+2026-02-26 22:36:30 [INFO] find_worker(138): trying criteria='(ZKTeco_User_ID2 == 138)'
+2026-02-26 22:36:30 [INFO] find_worker(138): found via criteria='(ZKTeco_User_ID2 == 138)'
+2026-02-26 22:36:31 [INFO] CHECKOUT OK: Kevin Msyimi hours=0.01
+2026-02-26 22:50:19 [INFO] Zoho token refreshed OK
+2026-02-26 22:50:36 [INFO] find_worker(134): trying criteria='(ZKTeco_User_ID2 == 134)'
+2026-02-26 22:50:39 [INFO] find_worker(134): found via criteria='(ZKTeco_User_ID2 == 134)'
+2026-02-26 22:50:53 [INFO] find_worker(132): trying criteria='(ZKTeco_User_ID2 == 132)'
+2026-02-26 22:50:53 [INFO] find_worker(132): found via criteria='(ZKTeco_User_ID2 == 132)'
+2026-02-26 22:50:59 [INFO] find_worker(132): trying criteria='(ZKTeco_User_ID2 == 132)'
+2026-02-26 22:50:59 [INFO] find_worker(132): found via criteria='(ZKTeco_User_ID2 == 132)'
+2026-02-26 22:51:00 [INFO] CHECKIN OK: V0k3h late=True
+2026-02-26 22:51:08 [INFO] find_worker(132): trying criteria='(ZKTeco_User_ID2 == 132)'
+2026-02-26 22:51:08 [INFO] find_worker(132): found via criteria='(ZKTeco_User_ID2 == 132)'
+2026-02-26 22:51:09 [INFO] CHECKOUT OK: V0k3h hours=0.01
