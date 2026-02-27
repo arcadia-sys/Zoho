@@ -2167,3 +2167,50 @@ pyzkfp._construct.errors_handler.InvalidHandleError: Invalid Handle
 2026-02-27 11:51:16 [INFO] find_worker(135): found via criteria='(ZKTeco_User_ID2 == 135)'
 2026-02-27 12:06:55 [INFO] find_worker(135): trying criteria='(ZKTeco_User_ID2 == 135)'
 2026-02-27 12:06:58 [INFO] find_worker(135): found via criteria='(ZKTeco_User_ID2 == 135)'
+2026-02-27 12:07:30 [INFO] Zoho token refreshed OK
+2026-02-27 12:07:45 [INFO] find_worker(14): trying criteria='(ZKTeco_User_ID2 == 14)'
+2026-02-27 12:07:47 [INFO] find_worker(14): found via criteria='(ZKTeco_User_ID2 == 14)'
+2026-02-27 12:07:51 [INFO] find_worker(14): trying criteria='(ZKTeco_User_ID2 == 14)'
+2026-02-27 12:07:51 [INFO] find_worker(14): found via criteria='(ZKTeco_User_ID2 == 14)'
+2026-02-27 12:07:52 [INFO] CHECKIN OK: Dennis Oluoch late=True
+2026-02-27 12:07:57 [INFO] find_worker(1): trying criteria='(ZKTeco_User_ID2 == 1)'
+2026-02-27 12:07:57 [ERROR] find_worker(1): request timed out on criteria='(ZKTeco_User_ID2 == 1)'
+2026-02-27 12:07:57 [INFO] find_worker(1): trying criteria='(ZKTeco_User_ID2 == "1")'
+2026-02-27 12:07:57 [INFO] find_worker(1): trying criteria='(Worker_ID == 1)'
+2026-02-27 12:07:57 [ERROR] find_worker(1): request timed out on criteria='(Worker_ID == 1)'
+2026-02-27 12:07:57 [INFO] find_worker(1): trying criteria='(Worker_ID == "1")'
+2026-02-27 12:07:58 [INFO] find_worker(1): trying criteria='(ZKTeco_User_ID2 == "1")'
+2026-02-27 12:07:58 [INFO] find_worker(1): trying criteria='(Worker_ID == "1")'
+2026-02-27 12:07:58 [WARNING] find_worker(1): all criteria failed — attempting full worker scan
+2026-02-27 12:07:59 [INFO] find_worker(1): full scan returned 17 worker(s)
+2026-02-27 12:07:59 [ERROR] find_worker(1): worker NOT found after all attempts. Verify ZKTeco_User_ID2 / Worker_ID field in Zoho for ID=1
+2026-02-27 12:08:00 [INFO] find_worker(14): trying criteria='(ZKTeco_User_ID2 == 14)'
+2026-02-27 12:08:00 [INFO] find_worker(14): found via criteria='(ZKTeco_User_ID2 == 14)'
+2026-02-27 12:08:01 [INFO] CHECKOUT OK: Dennis Oluoch hours=0.01
+2026-02-27 12:08:16 [INFO] find_worker(129): trying criteria='(ZKTeco_User_ID2 == 129)'
+2026-02-27 12:08:17 [INFO] find_worker(129): found via criteria='(ZKTeco_User_ID2 == 129)'
+2026-02-27 12:08:19 [INFO] find_worker(129): trying criteria='(ZKTeco_User_ID2 == 129)'
+2026-02-27 12:08:19 [INFO] find_worker(129): found via criteria='(ZKTeco_User_ID2 == 129)'
+2026-02-27 12:08:20 [INFO] CHECKIN OK: Moses kioko late=True
+2026-02-27 12:08:24 [INFO] find_worker(12): trying criteria='(ZKTeco_User_ID2 == 12)'
+2026-02-27 12:08:24 [ERROR] find_worker(12): request timed out on criteria='(ZKTeco_User_ID2 == 12)'
+2026-02-27 12:08:24 [INFO] find_worker(12): trying criteria='(ZKTeco_User_ID2 == "12")'
+2026-02-27 12:08:25 [INFO] find_worker(12): trying criteria='(Worker_ID == 12)'
+2026-02-27 12:08:25 [ERROR] find_worker(12): request timed out on criteria='(Worker_ID == 12)'
+2026-02-27 12:08:25 [INFO] find_worker(12): trying criteria='(Worker_ID == "12")'
+2026-02-27 12:08:25 [INFO] find_worker(12): trying criteria='(ZKTeco_User_ID2 == "12")'
+2026-02-27 12:08:26 [INFO] find_worker(12): trying criteria='(Worker_ID == "12")'
+2026-02-27 12:08:26 [WARNING] find_worker(12): all criteria failed — attempting full worker scan
+2026-02-27 12:08:26 [INFO] find_worker(12): full scan returned 17 worker(s)
+2026-02-27 12:08:26 [ERROR] find_worker(12): worker NOT found after all attempts. Verify ZKTeco_User_ID2 / Worker_ID field in Zoho for ID=12
+2026-02-27 12:08:27 [INFO] find_worker(129): trying criteria='(ZKTeco_User_ID2 == 129)'
+2026-02-27 12:08:27 [INFO] find_worker(129): found via criteria='(ZKTeco_User_ID2 == 129)'
+2026-02-27 12:08:29 [INFO] CHECKOUT OK: Moses kioko hours=0.01
+2026-02-27 12:12:09 [INFO] find_worker(146): trying criteria='(ZKTeco_User_ID2 == 146)'
+2026-02-27 12:12:11 [INFO] find_worker(146): found via criteria='(ZKTeco_User_ID2 == 146)'
+2026-02-27 12:12:18 [INFO] find_worker(146): trying criteria='(ZKTeco_User_ID2 == 146)'
+2026-02-27 12:12:18 [INFO] find_worker(146): found via criteria='(ZKTeco_User_ID2 == 146)'
+2026-02-27 12:12:18 [INFO] CHECKIN OK: Sylvia Mayogi late=True
+2026-02-27 12:13:12 [INFO] find_worker(146): trying criteria='(ZKTeco_User_ID2 == 146)'
+2026-02-27 12:13:14 [INFO] find_worker(146): found via criteria='(ZKTeco_User_ID2 == 146)'
+2026-02-27 12:13:15 [INFO] CHECKOUT OK: Sylvia Mayogi hours=0.02

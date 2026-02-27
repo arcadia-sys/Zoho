@@ -655,4 +655,4 @@
 #         c.commit(); c.close()
 
 # def _open_db():
-#     return sqlite3.connect(DB_PATH, check_same_thread=False)
+# return sqlite3.connect(DB_PATH, check_same_thread=False)
