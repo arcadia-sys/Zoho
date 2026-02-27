@@ -1992,3 +1992,178 @@ pyzkfp._construct.errors_handler.InvalidHandleError: Invalid Handle
 2026-02-27 07:20:12 [INFO] find_worker(139): trying criteria='(ZKTeco_User_ID2 == 139)'
 2026-02-27 07:20:12 [INFO] find_worker(139): found via criteria='(ZKTeco_User_ID2 == 139)'
 2026-02-27 07:20:13 [INFO] CHECKOUT OK: Elisha Ongoya hours=0.01
+2026-02-27 07:43:54 [INFO] Zoho token refreshed OK
+2026-02-27 07:44:05 [INFO] find_worker(135): trying criteria='(ZKTeco_User_ID2 == 135)'
+2026-02-27 07:44:07 [INFO] find_worker(135): found via criteria='(ZKTeco_User_ID2 == 135)'
+2026-02-27 07:44:17 [INFO] find_worker(135): trying criteria='(ZKTeco_User_ID2 == 135)'
+2026-02-27 07:44:17 [INFO] find_worker(135): found via criteria='(ZKTeco_User_ID2 == 135)'
+2026-02-27 07:44:18 [INFO] CHECKIN OK: Hesbon Musau late=False
+2026-02-27 07:44:38 [INFO] find_worker(138): trying criteria='(ZKTeco_User_ID2 == 138)'
+2026-02-27 07:44:38 [INFO] find_worker(138): found via criteria='(ZKTeco_User_ID2 == 138)'
+2026-02-27 07:44:38 [INFO] CHECKIN OK: Kevin Msyimi late=False
+2026-02-27 10:00:26 [INFO] Zoho token refreshed OK
+2026-02-27 10:00:29 [INFO] find_worker(135): trying criteria='(ZKTeco_User_ID2 == 135)'
+2026-02-27 10:00:31 [INFO] find_worker(135): found via criteria='(ZKTeco_User_ID2 == 135)'
+2026-02-27 10:00:34 [INFO] find_worker(132): trying criteria='(ZKTeco_User_ID2 == 132)'
+2026-02-27 10:00:34 [INFO] find_worker(132): found via criteria='(ZKTeco_User_ID2 == 132)'
+2026-02-27 10:00:37 [ERROR] _process error: Invalid Handle
+Traceback (most recent call last):
+  File "C:\Users\Admin\finlanza-tasks\Zoho\fingerprint_gui_full.py", line 9703, in _process
+    capture = zk.AcquireFingerprint()
+              ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python32\Lib\site-packages\pyzkfp\zkfp2.py", line 202, in AcquireFingerprint
+    self._handle_error(ret) # something went wrong => raise error
+    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python32\Lib\site-packages\pyzkfp\zkfp2.py", line 77, in _handle_error
+    raise error_class(error_message)
+pyzkfp._construct.errors_handler.InvalidHandleError: Invalid Handle
+2026-02-27 10:00:54 [ERROR] _process error: Invalid Handle
+Traceback (most recent call last):
+  File "C:\Users\Admin\finlanza-tasks\Zoho\fingerprint_gui_full.py", line 9703, in _process
+    capture = zk.AcquireFingerprint()
+              ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python32\Lib\site-packages\pyzkfp\zkfp2.py", line 202, in AcquireFingerprint
+    self._handle_error(ret) # something went wrong => raise error
+    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python32\Lib\site-packages\pyzkfp\zkfp2.py", line 77, in _handle_error
+    raise error_class(error_message)
+pyzkfp._construct.errors_handler.InvalidHandleError: Invalid Handle
+2026-02-27 10:01:03 [INFO] find_worker(13): trying criteria='(ZKTeco_User_ID2 == 13)'
+2026-02-27 10:01:04 [ERROR] find_worker(13): request timed out on criteria='(ZKTeco_User_ID2 == 13)'
+2026-02-27 10:01:04 [INFO] find_worker(13): trying criteria='(ZKTeco_User_ID2 == "13")'
+2026-02-27 10:01:04 [INFO] find_worker(13): trying criteria='(Worker_ID == 13)'
+2026-02-27 10:01:04 [ERROR] find_worker(13): request timed out on criteria='(Worker_ID == 13)'
+2026-02-27 10:01:04 [INFO] find_worker(13): trying criteria='(Worker_ID == "13")'
+2026-02-27 10:01:05 [INFO] find_worker(13): trying criteria='(ZKTeco_User_ID2 == "13")'
+2026-02-27 10:01:05 [INFO] find_worker(13): trying criteria='(Worker_ID == "13")'
+2026-02-27 10:01:05 [ERROR] _process error: Invalid Handle
+Traceback (most recent call last):
+  File "C:\Users\Admin\finlanza-tasks\Zoho\fingerprint_gui_full.py", line 9703, in _process
+    capture = zk.AcquireFingerprint()
+              ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python32\Lib\site-packages\pyzkfp\zkfp2.py", line 202, in AcquireFingerprint
+    self._handle_error(ret) # something went wrong => raise error
+    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python32\Lib\site-packages\pyzkfp\zkfp2.py", line 77, in _handle_error
+    raise error_class(error_message)
+pyzkfp._construct.errors_handler.InvalidHandleError: Invalid Handle
+2026-02-27 10:01:05 [WARNING] find_worker(13): all criteria failed — attempting full worker scan
+2026-02-27 10:01:06 [INFO] find_worker(13): full scan returned 15 worker(s)
+2026-02-27 10:01:06 [ERROR] find_worker(13): worker NOT found after all attempts. Verify ZKTeco_User_ID2 / Worker_ID field in Zoho for ID=13
+2026-02-27 10:01:28 [INFO] Zoho token refreshed OK
+2026-02-27 10:01:28 [INFO] find_worker(132): trying criteria='(ZKTeco_User_ID2 == 132)'
+2026-02-27 10:01:29 [INFO] find_worker(132): trying criteria='(ZKTeco_User_ID2 == 132)'
+2026-02-27 10:01:29 [INFO] find_worker(132): found via criteria='(ZKTeco_User_ID2 == 132)'
+2026-02-27 10:01:30 [INFO] find_worker(132): found via criteria='(ZKTeco_User_ID2 == 132)'
+2026-02-27 10:01:31 [INFO] CHECKIN OK: V0k3h late=True
+2026-02-27 10:01:43 [INFO] find_worker(132): trying criteria='(ZKTeco_User_ID2 == 132)'
+2026-02-27 10:01:44 [INFO] find_worker(132): found via criteria='(ZKTeco_User_ID2 == 132)'
+2026-02-27 10:01:45 [INFO] CHECKIN OK: V0k3h late=True
+2026-02-27 10:01:46 [INFO] Zoho token refreshed OK
+2026-02-27 10:01:54 [INFO] find_worker(132): trying criteria='(ZKTeco_User_ID2 == 132)'
+2026-02-27 10:01:54 [INFO] find_worker(132): found via criteria='(ZKTeco_User_ID2 == 132)'
+2026-02-27 10:02:05 [INFO] find_worker(132): trying criteria='(ZKTeco_User_ID2 == 132)'
+2026-02-27 10:02:05 [INFO] find_worker(132): found via criteria='(ZKTeco_User_ID2 == 132)'
+2026-02-27 10:02:14 [INFO] find_worker(132): trying criteria='(ZKTeco_User_ID2 == 132)'
+2026-02-27 10:02:15 [INFO] find_worker(132): found via criteria='(ZKTeco_User_ID2 == 132)'
+2026-02-27 10:04:09 [INFO] find_worker(131): trying criteria='(ZKTeco_User_ID2 == 131)'
+2026-02-27 10:04:10 [INFO] find_worker(131): found via criteria='(ZKTeco_User_ID2 == 131)'
+2026-02-27 10:04:12 [INFO] find_worker(131): trying criteria='(ZKTeco_User_ID2 == 131)'
+2026-02-27 10:04:13 [INFO] find_worker(131): found via criteria='(ZKTeco_User_ID2 == 131)'
+2026-02-27 10:04:13 [INFO] CHECKIN OK: Kev late=True
+2026-02-27 10:04:20 [INFO] find_worker(132): trying criteria='(ZKTeco_User_ID2 == 132)'
+2026-02-27 10:04:20 [INFO] find_worker(132): found via criteria='(ZKTeco_User_ID2 == 132)'
+2026-02-27 10:04:30 [INFO] find_worker(131): trying criteria='(ZKTeco_User_ID2 == 131)'
+2026-02-27 10:04:31 [INFO] find_worker(131): found via criteria='(ZKTeco_User_ID2 == 131)'
+2026-02-27 10:04:33 [INFO] find_worker(131): trying criteria='(ZKTeco_User_ID2 == 131)'
+2026-02-27 10:04:33 [INFO] find_worker(131): found via criteria='(ZKTeco_User_ID2 == 131)'
+2026-02-27 10:04:34 [INFO] CHECKIN OK: Kev late=True
+2026-02-27 10:04:41 [INFO] find_worker(131): trying criteria='(ZKTeco_User_ID2 == 131)'
+2026-02-27 10:04:41 [INFO] find_worker(131): found via criteria='(ZKTeco_User_ID2 == 131)'
+2026-02-27 10:06:15 [INFO] Zoho token refreshed OK
+2026-02-27 11:12:04 [INFO] Zoho token refreshed OK
+2026-02-27 11:12:04 [INFO] find_worker(131): trying criteria='(ZKTeco_User_ID2 == 131)'
+2026-02-27 11:12:06 [INFO] find_worker(131): trying criteria='(ZKTeco_User_ID2 == 131)'
+2026-02-27 11:12:06 [INFO] find_worker(131): found via criteria='(ZKTeco_User_ID2 == 131)'
+2026-02-27 11:12:08 [INFO] find_worker(131): found via criteria='(ZKTeco_User_ID2 == 131)'
+2026-02-27 11:13:52 [INFO] find_worker(145): trying criteria='(ZKTeco_User_ID2 == 145)'
+2026-02-27 11:13:54 [INFO] find_worker(145): found via criteria='(ZKTeco_User_ID2 == 145)'
+2026-02-27 11:13:55 [INFO] CHECKIN OK: Kevin Musau late=True
+2026-02-27 11:18:48 [INFO] find_worker(131): trying criteria='(ZKTeco_User_ID2 == 131)'
+2026-02-27 11:18:51 [INFO] find_worker(131): found via criteria='(ZKTeco_User_ID2 == 131)'
+2026-02-27 11:49:06 [INFO] Zoho token refreshed OK
+2026-02-27 11:49:08 [INFO] find_worker(1): trying criteria='(ZKTeco_User_ID2 == 1)'
+2026-02-27 11:49:09 [INFO] find_worker(13): trying criteria='(ZKTeco_User_ID2 == 13)'
+2026-02-27 11:49:09 [ERROR] find_worker(1): request timed out on criteria='(ZKTeco_User_ID2 == 1)'
+2026-02-27 11:49:09 [INFO] find_worker(1): trying criteria='(ZKTeco_User_ID2 == "1")'
+2026-02-27 11:49:10 [INFO] find_worker(1): trying criteria='(Worker_ID == 1)'
+2026-02-27 11:49:10 [ERROR] find_worker(1): request timed out on criteria='(Worker_ID == 1)'
+2026-02-27 11:49:10 [INFO] find_worker(1): trying criteria='(Worker_ID == "1")'
+2026-02-27 11:49:10 [INFO] find_worker(1): trying criteria='(ZKTeco_User_ID2 == "1")'
+2026-02-27 11:49:11 [INFO] find_worker(1): trying criteria='(Worker_ID == "1")'
+2026-02-27 11:49:11 [ERROR] find_worker(13): request timed out on criteria='(ZKTeco_User_ID2 == 13)'
+2026-02-27 11:49:11 [INFO] find_worker(13): trying criteria='(ZKTeco_User_ID2 == "13")'
+2026-02-27 11:49:11 [INFO] find_worker(135): trying criteria='(ZKTeco_User_ID2 == 135)'
+2026-02-27 11:49:11 [WARNING] find_worker(1): all criteria failed — attempting full worker scan
+2026-02-27 11:49:11 [INFO] find_worker(13): trying criteria='(Worker_ID == 13)'
+2026-02-27 11:49:11 [ERROR] find_worker(13): request timed out on criteria='(Worker_ID == 13)'
+2026-02-27 11:49:11 [INFO] find_worker(13): trying criteria='(Worker_ID == "13")'
+2026-02-27 11:49:11 [INFO] find_worker(1): full scan returned 17 worker(s)
+2026-02-27 11:49:11 [ERROR] find_worker(1): worker NOT found after all attempts. Verify ZKTeco_User_ID2 / Worker_ID field in Zoho for ID=1
+2026-02-27 11:49:12 [ERROR] _process error: Invalid Handle
+Traceback (most recent call last):
+  File "C:\Users\Admin\finlanza-tasks\Zoho\fingerprint_gui_full.py", line 9703, in _process
+    capture = zk.AcquireFingerprint()
+              ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python32\Lib\site-packages\pyzkfp\zkfp2.py", line 202, in AcquireFingerprint
+    self._handle_error(ret) # something went wrong => raise error
+    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python32\Lib\site-packages\pyzkfp\zkfp2.py", line 77, in _handle_error
+    raise error_class(error_message)
+pyzkfp._construct.errors_handler.InvalidHandleError: Invalid Handle
+2026-02-27 11:49:12 [INFO] find_worker(13): trying criteria='(ZKTeco_User_ID2 == "13")'
+2026-02-27 11:49:12 [INFO] find_worker(13): trying criteria='(Worker_ID == "13")'
+2026-02-27 11:49:12 [INFO] find_worker(135): found via criteria='(ZKTeco_User_ID2 == 135)'
+2026-02-27 11:49:12 [WARNING] find_worker(13): all criteria failed — attempting full worker scan
+2026-02-27 11:49:13 [INFO] find_worker(13): full scan returned 17 worker(s)
+2026-02-27 11:49:13 [ERROR] find_worker(13): worker NOT found after all attempts. Verify ZKTeco_User_ID2 / Worker_ID field in Zoho for ID=13
+2026-02-27 11:49:26 [ERROR] _process error: Invalid Handle
+Traceback (most recent call last):
+  File "C:\Users\Admin\finlanza-tasks\Zoho\fingerprint_gui_full.py", line 9703, in _process
+    capture = zk.AcquireFingerprint()
+              ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python32\Lib\site-packages\pyzkfp\zkfp2.py", line 202, in AcquireFingerprint
+    self._handle_error(ret) # something went wrong => raise error
+    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python32\Lib\site-packages\pyzkfp\zkfp2.py", line 77, in _handle_error
+    raise error_class(error_message)
+pyzkfp._construct.errors_handler.InvalidHandleError: Invalid Handle
+2026-02-27 11:51:04 [INFO] Zoho token refreshed OK
+2026-02-27 11:51:08 [INFO] find_worker(1342): trying criteria='(ZKTeco_User_ID2 == 1342)'
+2026-02-27 11:51:09 [INFO] find_worker(13): trying criteria='(ZKTeco_User_ID2 == 13)'
+2026-02-27 11:51:10 [ERROR] find_worker(1342): request timed out on criteria='(ZKTeco_User_ID2 == 1342)'
+2026-02-27 11:51:10 [INFO] find_worker(1342): trying criteria='(ZKTeco_User_ID2 == "1342")'
+2026-02-27 11:51:10 [INFO] find_worker(135): trying criteria='(ZKTeco_User_ID2 == 135)'
+2026-02-27 11:51:10 [INFO] find_worker(1342): trying criteria='(Worker_ID == 1342)'
+2026-02-27 11:51:10 [ERROR] find_worker(1342): request timed out on criteria='(Worker_ID == 1342)'
+2026-02-27 11:51:10 [INFO] find_worker(1342): trying criteria='(Worker_ID == "1342")'
+2026-02-27 11:51:10 [ERROR] find_worker(13): request timed out on criteria='(ZKTeco_User_ID2 == 13)'
+2026-02-27 11:51:10 [INFO] find_worker(13): trying criteria='(ZKTeco_User_ID2 == "13")'
+2026-02-27 11:51:11 [INFO] find_worker(1342): trying criteria='(ZKTeco_User_ID2 == "1342")'
+2026-02-27 11:51:11 [INFO] find_worker(13): trying criteria='(Worker_ID == 13)'
+2026-02-27 11:51:11 [INFO] find_worker(1342): trying criteria='(Worker_ID == "1342")'
+2026-02-27 11:51:11 [ERROR] find_worker(13): request timed out on criteria='(Worker_ID == 13)'
+2026-02-27 11:51:11 [INFO] find_worker(13): trying criteria='(Worker_ID == "13")'
+2026-02-27 11:51:11 [INFO] find_worker(135): found via criteria='(ZKTeco_User_ID2 == 135)'
+2026-02-27 11:51:11 [WARNING] find_worker(1342): all criteria failed — attempting full worker scan
+2026-02-27 11:51:11 [INFO] find_worker(13): trying criteria='(ZKTeco_User_ID2 == "13")'
+2026-02-27 11:51:12 [INFO] find_worker(1342): full scan returned 17 worker(s)
+2026-02-27 11:51:12 [ERROR] find_worker(1342): worker NOT found after all attempts. Verify ZKTeco_User_ID2 / Worker_ID field in Zoho for ID=1342
+2026-02-27 11:51:12 [INFO] find_worker(13): trying criteria='(Worker_ID == "13")'
+2026-02-27 11:51:12 [WARNING] find_worker(13): all criteria failed — attempting full worker scan
+2026-02-27 11:51:12 [INFO] find_worker(13): full scan returned 17 worker(s)
+2026-02-27 11:51:12 [ERROR] find_worker(13): worker NOT found after all attempts. Verify ZKTeco_User_ID2 / Worker_ID field in Zoho for ID=13
+2026-02-27 11:51:15 [INFO] find_worker(135): trying criteria='(ZKTeco_User_ID2 == 135)'
+2026-02-27 11:51:16 [INFO] find_worker(135): found via criteria='(ZKTeco_User_ID2 == 135)'
+2026-02-27 12:06:55 [INFO] find_worker(135): trying criteria='(ZKTeco_User_ID2 == 135)'
+2026-02-27 12:06:58 [INFO] find_worker(135): found via criteria='(ZKTeco_User_ID2 == 135)'
