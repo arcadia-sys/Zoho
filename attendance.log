@@ -2325,3 +2325,422 @@ pyzkfp._construct.errors_handler.InvalidHandleError: Invalid Handle
 2026-03-05 17:38:45 [ERROR] Failed to refresh Zoho token after 3 attempts — check REFRESH_TOKEN / CLIENT_ID / CLIENT_SECRET in .env
 2026-03-05 17:38:45 [ERROR] auth_headers: no token available — all Zoho calls will fail
 2026-03-05 17:38:45 [ERROR] find_worker(170): aborting — no valid Zoho token. Check REFRESH_TOKEN / CLIENT_ID / CLIENT_SECRET in .env
+2026-03-06 07:51:17 [ERROR] Token refresh attempt 1 HTTP 200 but error='invalid_client'. Full response: {'error': 'invalid_client'}
+2026-03-06 07:51:17 [ERROR] >>> invalid_client: Your CLIENT_ID or CLIENT_SECRET is wrong, or the OAuth client was deleted/deauthorised in Zoho API Console (https://api-console.zoho.com). Re-generate credentials and update .env.
+2026-03-06 07:52:59 [ERROR] Token refresh attempt 1 HTTP 200 but error='invalid_client'. Full response: {'error': 'invalid_client'}
+2026-03-06 07:52:59 [ERROR] >>> invalid_client: Your CLIENT_ID or CLIENT_SECRET is wrong, or the OAuth client was deleted/deauthorised in Zoho API Console (https://api-console.zoho.com). Re-generate credentials and update .env.
+2026-03-06 07:52:59 [ERROR] auth_headers: no token available — all Zoho calls will fail
+2026-03-06 07:52:59 [ERROR] find_worker(1): aborting — no valid Zoho token. Check REFRESH_TOKEN / CLIENT_ID / CLIENT_SECRET in .env
+2026-03-06 07:53:00 [ERROR] Token refresh attempt 1 HTTP 200 but error='invalid_client'. Full response: {'error': 'invalid_client'}
+2026-03-06 07:53:00 [ERROR] >>> invalid_client: Your CLIENT_ID or CLIENT_SECRET is wrong, or the OAuth client was deleted/deauthorised in Zoho API Console (https://api-console.zoho.com). Re-generate credentials and update .env.
+2026-03-06 07:53:00 [ERROR] auth_headers: no token available — all Zoho calls will fail
+2026-03-06 07:53:00 [ERROR] find_worker(169): aborting — no valid Zoho token. Check REFRESH_TOKEN / CLIENT_ID / CLIENT_SECRET in .env
+2026-03-06 07:58:44 [ERROR] Token refresh attempt 1 HTTP 200 but error='invalid_client'. Full response: {'error': 'invalid_client'}
+2026-03-06 07:58:44 [ERROR] >>> invalid_client: Your CLIENT_ID or CLIENT_SECRET is wrong, or the OAuth client was deleted/deauthorised in Zoho API Console (https://api-console.zoho.com). Re-generate credentials and update .env.
+2026-03-06 07:58:44 [ERROR] auth_headers: no token available — all Zoho calls will fail
+2026-03-06 07:58:44 [ERROR] find_worker(149): aborting — no valid Zoho token. Check REFRESH_TOKEN / CLIENT_ID / CLIENT_SECRET in .env
+2026-03-06 08:05:28 [ERROR] Token refresh attempt 1 HTTP 200 but error='invalid_client'. Full response: {'error': 'invalid_client'}
+2026-03-06 08:05:28 [ERROR] >>> invalid_client: Your CLIENT_ID or CLIENT_SECRET is wrong, or the OAuth client was deleted/deauthorised in Zoho API Console (https://api-console.zoho.com). Re-generate credentials and update .env.
+2026-03-06 08:05:28 [ERROR] auth_headers: no token available — all Zoho calls will fail
+2026-03-06 08:05:28 [ERROR] find_worker(149): aborting — no valid Zoho token. Check REFRESH_TOKEN / CLIENT_ID / CLIENT_SECRET in .env
+2026-03-06 08:05:35 [ERROR] Token refresh attempt 1 HTTP 200 but error='invalid_client'. Full response: {'error': 'invalid_client'}
+2026-03-06 08:05:35 [ERROR] >>> invalid_client: Your CLIENT_ID or CLIENT_SECRET is wrong, or the OAuth client was deleted/deauthorised in Zoho API Console (https://api-console.zoho.com). Re-generate credentials and update .env.
+2026-03-06 08:05:35 [ERROR] auth_headers: no token available — all Zoho calls will fail
+2026-03-06 08:05:35 [ERROR] find_worker(149): aborting — no valid Zoho token. Check REFRESH_TOKEN / CLIENT_ID / CLIENT_SECRET in .env
+2026-03-06 08:05:51 [ERROR] Token refresh attempt 1 HTTP 200 but error='invalid_client'. Full response: {'error': 'invalid_client'}
+2026-03-06 08:05:51 [ERROR] >>> invalid_client: Your CLIENT_ID or CLIENT_SECRET is wrong, or the OAuth client was deleted/deauthorised in Zoho API Console (https://api-console.zoho.com). Re-generate credentials and update .env.
+2026-03-06 08:05:51 [ERROR] auth_headers: no token available — all Zoho calls will fail
+2026-03-06 08:05:51 [ERROR] find_worker(151): aborting — no valid Zoho token. Check REFRESH_TOKEN / CLIENT_ID / CLIENT_SECRET in .env
+2026-03-06 09:19:01 [ERROR] Token refresh attempt 1 HTTP 200 but error='invalid_client'. Full response: {'error': 'invalid_client'}
+2026-03-06 09:19:01 [ERROR] >>> invalid_client: Your CLIENT_ID or CLIENT_SECRET is wrong, or the OAuth client was deleted/deauthorised in Zoho API Console (https://api-console.zoho.com). Re-generate credentials and update .env.
+2026-03-06 09:19:02 [ERROR] Token refresh attempt 1 HTTP 200 but error='invalid_client'. Full response: {'error': 'invalid_client'}
+2026-03-06 09:19:02 [ERROR] >>> invalid_client: Your CLIENT_ID or CLIENT_SECRET is wrong, or the OAuth client was deleted/deauthorised in Zoho API Console (https://api-console.zoho.com). Re-generate credentials and update .env.
+2026-03-06 09:19:02 [ERROR] auth_headers: no token available — all Zoho calls will fail
+2026-03-06 09:19:02 [ERROR] find_worker(149): aborting — no valid Zoho token. Check REFRESH_TOKEN / CLIENT_ID / CLIENT_SECRET in .env
+2026-03-06 09:22:36 [ERROR] Token refresh attempt 1 HTTP 200 but error='invalid_client'. Full response: {'error': 'invalid_client'}
+2026-03-06 09:22:36 [ERROR] >>> invalid_client: Your CLIENT_ID or CLIENT_SECRET is wrong, or the OAuth client was deleted/deauthorised in Zoho API Console (https://api-console.zoho.com). Re-generate credentials and update .env.
+2026-03-06 09:22:37 [ERROR] Token refresh attempt 1 HTTP 200 but error='invalid_client'. Full response: {'error': 'invalid_client'}
+2026-03-06 09:22:37 [ERROR] >>> invalid_client: Your CLIENT_ID or CLIENT_SECRET is wrong, or the OAuth client was deleted/deauthorised in Zoho API Console (https://api-console.zoho.com). Re-generate credentials and update .env.
+2026-03-06 09:22:37 [ERROR] auth_headers: no token available — all Zoho calls will fail
+2026-03-06 09:22:37 [ERROR] find_worker(1): aborting — no valid Zoho token. Check REFRESH_TOKEN / CLIENT_ID / CLIENT_SECRET in .env
+2026-03-06 09:22:38 [ERROR] Token refresh attempt 1 HTTP 200 but error='invalid_client'. Full response: {'error': 'invalid_client'}
+2026-03-06 09:22:38 [ERROR] >>> invalid_client: Your CLIENT_ID or CLIENT_SECRET is wrong, or the OAuth client was deleted/deauthorised in Zoho API Console (https://api-console.zoho.com). Re-generate credentials and update .env.
+2026-03-06 09:22:38 [ERROR] auth_headers: no token available — all Zoho calls will fail
+2026-03-06 09:22:38 [ERROR] find_worker(14): aborting — no valid Zoho token. Check REFRESH_TOKEN / CLIENT_ID / CLIENT_SECRET in .env
+2026-03-06 09:22:38 [ERROR] Token refresh attempt 1 HTTP 200 but error='invalid_client'. Full response: {'error': 'invalid_client'}
+2026-03-06 09:22:38 [ERROR] >>> invalid_client: Your CLIENT_ID or CLIENT_SECRET is wrong, or the OAuth client was deleted/deauthorised in Zoho API Console (https://api-console.zoho.com). Re-generate credentials and update .env.
+2026-03-06 09:22:38 [ERROR] auth_headers: no token available — all Zoho calls will fail
+2026-03-06 09:22:38 [ERROR] find_worker(149): aborting — no valid Zoho token. Check REFRESH_TOKEN / CLIENT_ID / CLIENT_SECRET in .env
+2026-03-06 09:23:15 [ERROR] Token refresh attempt 1 HTTP 200 but error='invalid_client'. Full response: {'error': 'invalid_client'}
+2026-03-06 09:23:15 [ERROR] >>> invalid_client: Your CLIENT_ID or CLIENT_SECRET is wrong, or the OAuth client was deleted/deauthorised in Zoho API Console (https://api-console.zoho.com). Re-generate credentials and update .env.
+2026-03-06 09:23:17 [ERROR] Token refresh attempt 1 HTTP 200 but error='invalid_client'. Full response: {'error': 'invalid_client'}
+2026-03-06 09:23:17 [ERROR] >>> invalid_client: Your CLIENT_ID or CLIENT_SECRET is wrong, or the OAuth client was deleted/deauthorised in Zoho API Console (https://api-console.zoho.com). Re-generate credentials and update .env.
+2026-03-06 09:23:17 [ERROR] auth_headers: no token available — all Zoho calls will fail
+2026-03-06 09:23:17 [ERROR] find_worker(149): aborting — no valid Zoho token. Check REFRESH_TOKEN / CLIENT_ID / CLIENT_SECRET in .env
+2026-03-06 09:25:13 [ERROR] Token refresh attempt 1 HTTP 200 but error='invalid_client'. Full response: {'error': 'invalid_client'}
+2026-03-06 09:25:13 [ERROR] >>> invalid_client: Your CLIENT_ID or CLIENT_SECRET is wrong, or the OAuth client was deleted/deauthorised in Zoho API Console (https://api-console.zoho.com). Re-generate credentials and update .env.
+2026-03-06 09:25:15 [ERROR] Token refresh attempt 1 HTTP 200 but error='invalid_client'. Full response: {'error': 'invalid_client'}
+2026-03-06 09:25:15 [ERROR] >>> invalid_client: Your CLIENT_ID or CLIENT_SECRET is wrong, or the OAuth client was deleted/deauthorised in Zoho API Console (https://api-console.zoho.com). Re-generate credentials and update .env.
+2026-03-06 09:25:15 [ERROR] auth_headers: no token available — all Zoho calls will fail
+2026-03-06 09:25:15 [ERROR] find_worker(14): aborting — no valid Zoho token. Check REFRESH_TOKEN / CLIENT_ID / CLIENT_SECRET in .env
+2026-03-06 09:25:15 [ERROR] Token refresh attempt 1 HTTP 200 but error='invalid_client'. Full response: {'error': 'invalid_client'}
+2026-03-06 09:25:15 [ERROR] >>> invalid_client: Your CLIENT_ID or CLIENT_SECRET is wrong, or the OAuth client was deleted/deauthorised in Zoho API Console (https://api-console.zoho.com). Re-generate credentials and update .env.
+2026-03-06 09:25:15 [ERROR] auth_headers: no token available — all Zoho calls will fail
+2026-03-06 09:25:15 [ERROR] find_worker(149): aborting — no valid Zoho token. Check REFRESH_TOKEN / CLIENT_ID / CLIENT_SECRET in .env
+2026-03-06 09:48:41 [ERROR] Token refresh attempt 1 HTTP 200 but error='invalid_client'. Full response: {'error': 'invalid_client'}
+2026-03-06 09:48:41 [ERROR] >>> invalid_client: Your CLIENT_ID or CLIENT_SECRET is wrong, or the OAuth client was deleted/deauthorised in Zoho API Console (https://api-console.zoho.com). Re-generate credentials and update .env.
+2026-03-06 09:48:42 [ERROR] Token refresh attempt 1 HTTP 200 but error='invalid_client'. Full response: {'error': 'invalid_client'}
+2026-03-06 09:48:42 [ERROR] >>> invalid_client: Your CLIENT_ID or CLIENT_SECRET is wrong, or the OAuth client was deleted/deauthorised in Zoho API Console (https://api-console.zoho.com). Re-generate credentials and update .env.
+2026-03-06 09:48:42 [ERROR] auth_headers: no token available — all Zoho calls will fail
+2026-03-06 09:48:42 [ERROR] find_worker(14): aborting — no valid Zoho token. Check REFRESH_TOKEN / CLIENT_ID / CLIENT_SECRET in .env
+2026-03-06 09:48:44 [ERROR] Token refresh attempt 1 HTTP 200 but error='invalid_client'. Full response: {'error': 'invalid_client'}
+2026-03-06 09:48:44 [ERROR] >>> invalid_client: Your CLIENT_ID or CLIENT_SECRET is wrong, or the OAuth client was deleted/deauthorised in Zoho API Console (https://api-console.zoho.com). Re-generate credentials and update .env.
+2026-03-06 09:48:44 [ERROR] auth_headers: no token available — all Zoho calls will fail
+2026-03-06 09:48:44 [ERROR] find_worker(149): aborting — no valid Zoho token. Check REFRESH_TOKEN / CLIENT_ID / CLIENT_SECRET in .env
+2026-03-06 09:48:52 [ERROR] Token refresh attempt 1 HTTP 200 but error='invalid_client'. Full response: {'error': 'invalid_client'}
+2026-03-06 09:48:52 [ERROR] >>> invalid_client: Your CLIENT_ID or CLIENT_SECRET is wrong, or the OAuth client was deleted/deauthorised in Zoho API Console (https://api-console.zoho.com). Re-generate credentials and update .env.
+2026-03-06 09:48:52 [ERROR] auth_headers: no token available — all Zoho calls will fail
+2026-03-06 09:48:52 [ERROR] find_worker(149): aborting — no valid Zoho token. Check REFRESH_TOKEN / CLIENT_ID / CLIENT_SECRET in .env
+2026-03-06 10:01:05 [ERROR] Token refresh attempt 1 HTTP 200 but error='invalid_client'. Full response: {'error': 'invalid_client'}
+2026-03-06 10:01:05 [ERROR] >>> invalid_client: Your CLIENT_ID or CLIENT_SECRET is wrong, or the OAuth client was deleted/deauthorised in Zoho API Console (https://api-console.zoho.com). Re-generate credentials and update .env.
+2026-03-06 10:01:16 [ERROR] Token refresh attempt 1 HTTP 200 but error='invalid_client'. Full response: {'error': 'invalid_client'}
+2026-03-06 10:01:16 [ERROR] >>> invalid_client: Your CLIENT_ID or CLIENT_SECRET is wrong, or the OAuth client was deleted/deauthorised in Zoho API Console (https://api-console.zoho.com). Re-generate credentials and update .env.
+2026-03-06 10:01:16 [ERROR] auth_headers: no token available — all Zoho calls will fail
+2026-03-06 10:01:16 [ERROR] find_worker(149): aborting — no valid Zoho token. Check REFRESH_TOKEN / CLIENT_ID / CLIENT_SECRET in .env
+2026-03-06 10:01:24 [ERROR] Token refresh attempt 1 HTTP 200 but error='invalid_client'. Full response: {'error': 'invalid_client'}
+2026-03-06 10:01:24 [ERROR] >>> invalid_client: Your CLIENT_ID or CLIENT_SECRET is wrong, or the OAuth client was deleted/deauthorised in Zoho API Console (https://api-console.zoho.com). Re-generate credentials and update .env.
+2026-03-06 10:01:24 [ERROR] auth_headers: no token available — all Zoho calls will fail
+2026-03-06 10:01:24 [ERROR] find_worker(149): aborting — no valid Zoho token. Check REFRESH_TOKEN / CLIENT_ID / CLIENT_SECRET in .env
+2026-03-06 10:03:42 [ERROR] Token refresh attempt 1 HTTP 200 but error='invalid_client'. Full response: {'error': 'invalid_client'}
+2026-03-06 10:03:42 [ERROR] >>> invalid_client: Your CLIENT_ID or CLIENT_SECRET is wrong, or the OAuth client was deleted/deauthorised in Zoho API Console (https://api-console.zoho.com). Re-generate credentials and update .env.
+2026-03-06 10:03:45 [ERROR] Token refresh attempt 1 HTTP 200 but error='invalid_client'. Full response: {'error': 'invalid_client'}
+2026-03-06 10:03:45 [ERROR] >>> invalid_client: Your CLIENT_ID or CLIENT_SECRET is wrong, or the OAuth client was deleted/deauthorised in Zoho API Console (https://api-console.zoho.com). Re-generate credentials and update .env.
+2026-03-06 10:03:45 [ERROR] auth_headers: no token available — all Zoho calls will fail
+2026-03-06 10:03:45 [ERROR] find_worker(14): aborting — no valid Zoho token. Check REFRESH_TOKEN / CLIENT_ID / CLIENT_SECRET in .env
+2026-03-06 10:03:46 [ERROR] Token refresh attempt 1 HTTP 200 but error='invalid_client'. Full response: {'error': 'invalid_client'}
+2026-03-06 10:03:46 [ERROR] >>> invalid_client: Your CLIENT_ID or CLIENT_SECRET is wrong, or the OAuth client was deleted/deauthorised in Zoho API Console (https://api-console.zoho.com). Re-generate credentials and update .env.
+2026-03-06 10:03:46 [ERROR] auth_headers: no token available — all Zoho calls will fail
+2026-03-06 10:03:46 [ERROR] find_worker(149): aborting — no valid Zoho token. Check REFRESH_TOKEN / CLIENT_ID / CLIENT_SECRET in .env
+2026-03-06 10:05:11 [ERROR] Token refresh attempt 1 HTTP 200 but error='invalid_client'. Full response: {'error': 'invalid_client'}
+2026-03-06 10:05:11 [ERROR] >>> invalid_client: Your CLIENT_ID or CLIENT_SECRET is wrong, or the OAuth client was deleted/deauthorised in Zoho API Console (https://api-console.zoho.com). Re-generate credentials and update .env.
+2026-03-06 10:05:11 [ERROR] auth_headers: no token available — all Zoho calls will fail
+2026-03-06 10:05:11 [ERROR] search_workers_by_name: no valid token — cannot search
+2026-03-06 10:05:14 [ERROR] Token refresh attempt 1 HTTP 200 but error='invalid_client'. Full response: {'error': 'invalid_client'}
+2026-03-06 10:05:14 [ERROR] >>> invalid_client: Your CLIENT_ID or CLIENT_SECRET is wrong, or the OAuth client was deleted/deauthorised in Zoho API Console (https://api-console.zoho.com). Re-generate credentials and update .env.
+2026-03-06 10:05:14 [ERROR] auth_headers: no token available — all Zoho calls will fail
+2026-03-06 10:05:14 [ERROR] search_workers_by_name: no valid token — cannot search
+2026-03-06 10:05:15 [ERROR] Token refresh attempt 1 HTTP 200 but error='invalid_client'. Full response: {'error': 'invalid_client'}
+2026-03-06 10:05:15 [ERROR] >>> invalid_client: Your CLIENT_ID or CLIENT_SECRET is wrong, or the OAuth client was deleted/deauthorised in Zoho API Console (https://api-console.zoho.com). Re-generate credentials and update .env.
+2026-03-06 10:05:15 [ERROR] auth_headers: no token available — all Zoho calls will fail
+2026-03-06 10:05:15 [ERROR] search_workers_by_name: no valid token — cannot search
+2026-03-06 10:05:17 [ERROR] Token refresh attempt 1 HTTP 200 but error='invalid_client'. Full response: {'error': 'invalid_client'}
+2026-03-06 10:05:17 [ERROR] >>> invalid_client: Your CLIENT_ID or CLIENT_SECRET is wrong, or the OAuth client was deleted/deauthorised in Zoho API Console (https://api-console.zoho.com). Re-generate credentials and update .env.
+2026-03-06 10:05:17 [ERROR] auth_headers: no token available — all Zoho calls will fail
+2026-03-06 10:05:17 [ERROR] search_workers_by_name: no valid token — cannot search
+2026-03-06 10:05:17 [ERROR] Token refresh attempt 1 HTTP 400: {"error_description":"You have made too many requests continuously. Please try again after some time.","error":"Access Denied","status":"failure"}
+2026-03-06 10:05:21 [ERROR] Token refresh attempt 2 HTTP 400: {"error_description":"You have made too many requests continuously. Please try again after some time.","error":"Access Denied","status":"failure"}
+2026-03-06 10:05:24 [ERROR] Token refresh attempt 3 HTTP 400: {"error_description":"You have made too many requests continuously. Please try again after some time.","error":"Access Denied","status":"failure"}
+2026-03-06 10:05:27 [ERROR] Failed to refresh Zoho token after 3 attempts — check REFRESH_TOKEN / CLIENT_ID / CLIENT_SECRET in .env
+2026-03-06 10:05:27 [ERROR] auth_headers: no token available — all Zoho calls will fail
+2026-03-06 10:05:27 [ERROR] search_workers_by_name: no valid token — cannot search
+2026-03-06 10:05:48 [ERROR] Token refresh attempt 1 HTTP 400: {"error_description":"You have made too many requests continuously. Please try again after some time.","error":"Access Denied","status":"failure"}
+2026-03-06 10:05:51 [ERROR] Token refresh attempt 2 HTTP 400: {"error_description":"You have made too many requests continuously. Please try again after some time.","error":"Access Denied","status":"failure"}
+2026-03-06 10:05:52 [ERROR] Token refresh attempt 1 HTTP 400: {"error_description":"You have made too many requests continuously. Please try again after some time.","error":"Access Denied","status":"failure"}
+2026-03-06 10:05:53 [ERROR] Token refresh attempt 1 HTTP 400: {"error_description":"You have made too many requests continuously. Please try again after some time.","error":"Access Denied","status":"failure"}
+2026-03-06 10:05:54 [ERROR] Token refresh attempt 3 HTTP 400: {"error_description":"You have made too many requests continuously. Please try again after some time.","error":"Access Denied","status":"failure"}
+2026-03-06 10:05:55 [ERROR] Token refresh attempt 2 HTTP 400: {"error_description":"You have made too many requests continuously. Please try again after some time.","error":"Access Denied","status":"failure"}
+2026-03-06 10:05:56 [ERROR] Token refresh attempt 1 HTTP 400: {"error_description":"You have made too many requests continuously. Please try again after some time.","error":"Access Denied","status":"failure"}
+2026-03-06 10:05:56 [ERROR] Token refresh attempt 2 HTTP 400: {"error_description":"You have made too many requests continuously. Please try again after some time.","error":"Access Denied","status":"failure"}
+2026-03-06 10:05:57 [ERROR] Failed to refresh Zoho token after 3 attempts — check REFRESH_TOKEN / CLIENT_ID / CLIENT_SECRET in .env
+2026-03-06 10:05:57 [ERROR] auth_headers: no token available — all Zoho calls will fail
+2026-03-06 10:05:57 [ERROR] search_workers_by_name: no valid token — cannot search
+2026-03-06 10:05:59 [ERROR] Token refresh attempt 3 HTTP 400: {"error_description":"You have made too many requests continuously. Please try again after some time.","error":"Access Denied","status":"failure"}
+2026-03-06 10:06:00 [ERROR] Token refresh attempt 2 HTTP 400: {"error_description":"You have made too many requests continuously. Please try again after some time.","error":"Access Denied","status":"failure"}
+2026-03-06 10:06:00 [ERROR] Token refresh attempt 3 HTTP 400: {"error_description":"You have made too many requests continuously. Please try again after some time.","error":"Access Denied","status":"failure"}
+2026-03-06 10:06:02 [ERROR] Failed to refresh Zoho token after 3 attempts — check REFRESH_TOKEN / CLIENT_ID / CLIENT_SECRET in .env
+2026-03-06 10:06:02 [ERROR] auth_headers: no token available — all Zoho calls will fail
+2026-03-06 10:06:02 [ERROR] search_workers_by_name: no valid token — cannot search
+2026-03-06 10:06:03 [ERROR] Failed to refresh Zoho token after 3 attempts — check REFRESH_TOKEN / CLIENT_ID / CLIENT_SECRET in .env
+2026-03-06 10:06:03 [ERROR] auth_headers: no token available — all Zoho calls will fail
+2026-03-06 10:06:03 [ERROR] search_workers_by_name: no valid token — cannot search
+2026-03-06 10:06:03 [ERROR] Token refresh attempt 3 HTTP 400: {"error_description":"You have made too many requests continuously. Please try again after some time.","error":"Access Denied","status":"failure"}
+2026-03-06 10:06:06 [ERROR] Failed to refresh Zoho token after 3 attempts — check REFRESH_TOKEN / CLIENT_ID / CLIENT_SECRET in .env
+2026-03-06 10:06:06 [ERROR] auth_headers: no token available — all Zoho calls will fail
+2026-03-06 10:06:06 [ERROR] search_workers_by_name: no valid token — cannot search
+2026-03-06 10:06:21 [ERROR] Token refresh attempt 1 HTTP 400: {"error_description":"You have made too many requests continuously. Please try again after some time.","error":"Access Denied","status":"failure"}
+2026-03-06 10:06:22 [ERROR] Token refresh attempt 1 HTTP 400: {"error_description":"You have made too many requests continuously. Please try again after some time.","error":"Access Denied","status":"failure"}
+2026-03-06 10:06:24 [ERROR] Token refresh attempt 2 HTTP 400: {"error_description":"You have made too many requests continuously. Please try again after some time.","error":"Access Denied","status":"failure"}
+2026-03-06 10:06:25 [ERROR] Token refresh attempt 2 HTTP 400: {"error_description":"You have made too many requests continuously. Please try again after some time.","error":"Access Denied","status":"failure"}
+2026-03-06 10:06:27 [ERROR] Token refresh attempt 3 HTTP 400: {"error_description":"You have made too many requests continuously. Please try again after some time.","error":"Access Denied","status":"failure"}
+2026-03-06 10:06:29 [ERROR] Token refresh attempt 3 HTTP 400: {"error_description":"You have made too many requests continuously. Please try again after some time.","error":"Access Denied","status":"failure"}
+2026-03-06 10:06:30 [ERROR] Failed to refresh Zoho token after 3 attempts — check REFRESH_TOKEN / CLIENT_ID / CLIENT_SECRET in .env
+2026-03-06 10:06:30 [ERROR] auth_headers: no token available — all Zoho calls will fail
+2026-03-06 10:06:30 [ERROR] find_worker(1): aborting — no valid Zoho token. Check REFRESH_TOKEN / CLIENT_ID / CLIENT_SECRET in .env
+2026-03-06 10:06:32 [ERROR] Failed to refresh Zoho token after 3 attempts — check REFRESH_TOKEN / CLIENT_ID / CLIENT_SECRET in .env
+2026-03-06 10:06:32 [ERROR] auth_headers: no token available — all Zoho calls will fail
+2026-03-06 10:06:32 [ERROR] find_worker(162): aborting — no valid Zoho token. Check REFRESH_TOKEN / CLIENT_ID / CLIENT_SECRET in .env
+2026-03-06 10:07:25 [ERROR] Token refresh attempt 1 HTTP 400: {"error_description":"You have made too many requests continuously. Please try again after some time.","error":"Access Denied","status":"failure"}
+2026-03-06 10:07:28 [ERROR] Token refresh attempt 2 HTTP 400: {"error_description":"You have made too many requests continuously. Please try again after some time.","error":"Access Denied","status":"failure"}
+2026-03-06 10:07:31 [ERROR] Token refresh attempt 3 HTTP 400: {"error_description":"You have made too many requests continuously. Please try again after some time.","error":"Access Denied","status":"failure"}
+2026-03-06 10:07:34 [ERROR] Failed to refresh Zoho token after 3 attempts — check REFRESH_TOKEN / CLIENT_ID / CLIENT_SECRET in .env
+2026-03-06 10:07:34 [ERROR] auth_headers: no token available — all Zoho calls will fail
+2026-03-06 10:07:34 [ERROR] find_worker(162): aborting — no valid Zoho token. Check REFRESH_TOKEN / CLIENT_ID / CLIENT_SECRET in .env
+2026-03-06 10:07:40 [ERROR] Token refresh attempt 1 HTTP 400: {"error_description":"You have made too many requests continuously. Please try again after some time.","error":"Access Denied","status":"failure"}
+2026-03-06 10:07:43 [ERROR] Token refresh attempt 2 HTTP 400: {"error_description":"You have made too many requests continuously. Please try again after some time.","error":"Access Denied","status":"failure"}
+2026-03-06 10:07:47 [ERROR] Token refresh attempt 3 HTTP 400: {"error_description":"You have made too many requests continuously. Please try again after some time.","error":"Access Denied","status":"failure"}
+2026-03-06 10:07:50 [ERROR] Failed to refresh Zoho token after 3 attempts — check REFRESH_TOKEN / CLIENT_ID / CLIENT_SECRET in .env
+2026-03-06 10:07:50 [ERROR] auth_headers: no token available — all Zoho calls will fail
+2026-03-06 10:07:50 [ERROR] find_worker(162): aborting — no valid Zoho token. Check REFRESH_TOKEN / CLIENT_ID / CLIENT_SECRET in .env
+2026-03-06 10:09:16 [ERROR] Token refresh attempt 1 HTTP 400: {"error_description":"You have made too many requests continuously. Please try again after some time.","error":"Access Denied","status":"failure"}
+2026-03-06 10:09:17 [ERROR] Token refresh attempt 1 HTTP 400: {"error_description":"You have made too many requests continuously. Please try again after some time.","error":"Access Denied","status":"failure"}
+2026-03-06 10:09:19 [ERROR] Token refresh attempt 2 HTTP 400: {"error_description":"You have made too many requests continuously. Please try again after some time.","error":"Access Denied","status":"failure"}
+2026-03-06 10:09:20 [ERROR] Token refresh attempt 2 HTTP 400: {"error_description":"You have made too many requests continuously. Please try again after some time.","error":"Access Denied","status":"failure"}
+2026-03-06 10:09:22 [ERROR] Token refresh attempt 3 HTTP 400: {"error_description":"You have made too many requests continuously. Please try again after some time.","error":"Access Denied","status":"failure"}
+2026-03-06 10:09:24 [ERROR] Token refresh attempt 3 HTTP 400: {"error_description":"You have made too many requests continuously. Please try again after some time.","error":"Access Denied","status":"failure"}
+2026-03-06 10:09:25 [ERROR] Failed to refresh Zoho token after 3 attempts — check REFRESH_TOKEN / CLIENT_ID / CLIENT_SECRET in .env
+2026-03-06 10:09:27 [ERROR] Failed to refresh Zoho token after 3 attempts — check REFRESH_TOKEN / CLIENT_ID / CLIENT_SECRET in .env
+2026-03-06 10:09:27 [ERROR] auth_headers: no token available — all Zoho calls will fail
+2026-03-06 10:09:27 [ERROR] find_worker(162): aborting — no valid Zoho token. Check REFRESH_TOKEN / CLIENT_ID / CLIENT_SECRET in .env
+2026-03-06 10:09:32 [ERROR] Token refresh attempt 1 HTTP 400: {"error_description":"You have made too many requests continuously. Please try again after some time.","error":"Access Denied","status":"failure"}
+2026-03-06 10:09:35 [ERROR] Token refresh attempt 2 HTTP 400: {"error_description":"You have made too many requests continuously. Please try again after some time.","error":"Access Denied","status":"failure"}
+2026-03-06 10:09:38 [ERROR] Token refresh attempt 3 HTTP 400: {"error_description":"You have made too many requests continuously. Please try again after some time.","error":"Access Denied","status":"failure"}
+2026-03-06 10:09:41 [ERROR] Failed to refresh Zoho token after 3 attempts — check REFRESH_TOKEN / CLIENT_ID / CLIENT_SECRET in .env
+2026-03-06 10:09:41 [ERROR] auth_headers: no token available — all Zoho calls will fail
+2026-03-06 10:09:41 [ERROR] find_worker(162): aborting — no valid Zoho token. Check REFRESH_TOKEN / CLIENT_ID / CLIENT_SECRET in .env
+2026-03-06 10:12:55 [ERROR] Token refresh attempt 1 HTTP 200 but error='invalid_client'. Full response: {'error': 'invalid_client'}
+2026-03-06 10:12:55 [ERROR] >>> invalid_client: Your CLIENT_ID or CLIENT_SECRET is wrong, or the OAuth client was deleted/deauthorised in Zoho API Console (https://api-console.zoho.com). Re-generate credentials and update .env.
+2026-03-06 10:12:57 [ERROR] Token refresh attempt 1 HTTP 200 but error='invalid_client'. Full response: {'error': 'invalid_client'}
+2026-03-06 10:12:57 [ERROR] >>> invalid_client: Your CLIENT_ID or CLIENT_SECRET is wrong, or the OAuth client was deleted/deauthorised in Zoho API Console (https://api-console.zoho.com). Re-generate credentials and update .env.
+2026-03-06 10:12:57 [ERROR] auth_headers: no token available — all Zoho calls will fail
+2026-03-06 10:12:57 [ERROR] find_worker(162): aborting — no valid Zoho token. Check REFRESH_TOKEN / CLIENT_ID / CLIENT_SECRET in .env
+2026-03-06 10:15:16 [ERROR] Token refresh attempt 1 HTTP 200 but error='invalid_client'. Full response: {'error': 'invalid_client'}
+2026-03-06 10:15:16 [ERROR] >>> invalid_client: Your CLIENT_ID or CLIENT_SECRET is wrong, or the OAuth client was deleted/deauthorised in Zoho API Console (https://api-console.zoho.com). Re-generate credentials and update .env.
+2026-03-06 10:15:16 [ERROR] Token refresh attempt 1 HTTP 200 but error='invalid_client'. Full response: {'error': 'invalid_client'}
+2026-03-06 10:15:16 [ERROR] >>> invalid_client: Your CLIENT_ID or CLIENT_SECRET is wrong, or the OAuth client was deleted/deauthorised in Zoho API Console (https://api-console.zoho.com). Re-generate credentials and update .env.
+2026-03-06 10:15:16 [ERROR] auth_headers: no token available — all Zoho calls will fail
+2026-03-06 10:15:16 [ERROR] find_worker(14): aborting — no valid Zoho token. Check REFRESH_TOKEN / CLIENT_ID / CLIENT_SECRET in .env
+2026-03-06 10:15:17 [ERROR] Token refresh attempt 1 HTTP 200 but error='invalid_client'. Full response: {'error': 'invalid_client'}
+2026-03-06 10:15:17 [ERROR] >>> invalid_client: Your CLIENT_ID or CLIENT_SECRET is wrong, or the OAuth client was deleted/deauthorised in Zoho API Console (https://api-console.zoho.com). Re-generate credentials and update .env.
+2026-03-06 10:15:17 [ERROR] auth_headers: no token available — all Zoho calls will fail
+2026-03-06 10:15:17 [ERROR] find_worker(149): aborting — no valid Zoho token. Check REFRESH_TOKEN / CLIENT_ID / CLIENT_SECRET in .env
+2026-03-06 10:20:21 [ERROR] Token refresh attempt 1 HTTP 200 but error='invalid_client'. Full response: {'error': 'invalid_client'}
+2026-03-06 10:20:21 [ERROR] >>> invalid_client: Your CLIENT_ID or CLIENT_SECRET is wrong, or the OAuth client was deleted/deauthorised in Zoho API Console (https://api-console.zoho.com). Re-generate credentials and update .env.
+2026-03-06 10:20:22 [ERROR] Token refresh attempt 1 HTTP 200 but error='invalid_client'. Full response: {'error': 'invalid_client'}
+2026-03-06 10:20:22 [ERROR] >>> invalid_client: Your CLIENT_ID or CLIENT_SECRET is wrong, or the OAuth client was deleted/deauthorised in Zoho API Console (https://api-console.zoho.com). Re-generate credentials and update .env.
+2026-03-06 10:20:22 [ERROR] auth_headers: no token available — all Zoho calls will fail
+2026-03-06 10:20:22 [ERROR] find_worker(149): aborting — no valid Zoho token. Check REFRESH_TOKEN / CLIENT_ID / CLIENT_SECRET in .env
+2026-03-06 10:20:27 [ERROR] Token refresh attempt 1 HTTP 200 but error='invalid_client'. Full response: {'error': 'invalid_client'}
+2026-03-06 10:20:27 [ERROR] >>> invalid_client: Your CLIENT_ID or CLIENT_SECRET is wrong, or the OAuth client was deleted/deauthorised in Zoho API Console (https://api-console.zoho.com). Re-generate credentials and update .env.
+2026-03-06 10:20:27 [ERROR] auth_headers: no token available — all Zoho calls will fail
+2026-03-06 10:20:27 [ERROR] find_worker(149): aborting — no valid Zoho token. Check REFRESH_TOKEN / CLIENT_ID / CLIENT_SECRET in .env
+2026-03-06 10:21:29 [ERROR] Token refresh attempt 1 HTTP 200 but error='invalid_client'. Full response: {'error': 'invalid_client'}
+2026-03-06 10:21:29 [ERROR] >>> invalid_client: Your CLIENT_ID or CLIENT_SECRET is wrong, or the OAuth client was deleted/deauthorised in Zoho API Console (https://api-console.zoho.com). Re-generate credentials and update .env.
+2026-03-06 10:21:29 [ERROR] auth_headers: no token available — all Zoho calls will fail
+2026-03-06 10:21:29 [ERROR] find_worker(149): aborting — no valid Zoho token. Check REFRESH_TOKEN / CLIENT_ID / CLIENT_SECRET in .env
+2026-03-06 10:21:29 [ERROR] Token refresh attempt 1 HTTP 200 but error='invalid_client'. Full response: {'error': 'invalid_client'}
+2026-03-06 10:21:29 [ERROR] >>> invalid_client: Your CLIENT_ID or CLIENT_SECRET is wrong, or the OAuth client was deleted/deauthorised in Zoho API Console (https://api-console.zoho.com). Re-generate credentials and update .env.
+2026-03-06 10:21:29 [ERROR] auth_headers: no token available — all Zoho calls will fail
+2026-03-06 10:21:29 [ERROR] find_worker(149): aborting — no valid Zoho token. Check REFRESH_TOKEN / CLIENT_ID / CLIENT_SECRET in .env
+2026-03-06 10:24:41 [ERROR] Token refresh attempt 1 HTTP 200 but error='invalid_client'. Full response: {'error': 'invalid_client'}
+2026-03-06 10:24:41 [ERROR] >>> invalid_client: Your CLIENT_ID or CLIENT_SECRET is wrong, or the OAuth client was deleted/deauthorised in Zoho API Console (https://api-console.zoho.com). Re-generate credentials and update .env.
+2026-03-06 10:25:10 [ERROR] Token refresh attempt 1 HTTP 404: <html><head><title>Zoho Accounts</title><meta name="viewport" content="width=device-width, initial-scale=1.0"><link href="https://static.zohocdn.com/iam/v2/components/css/zohoPuvi.c86bbb480e4a4fbc379fd8e7298bbde5.css" rel="stylesheet" type="text/css" ></head><style>
+body {
+width: 100%;
+margin: 0px;
+
+2026-03-06 10:25:14 [ERROR] Token refresh attempt 2 HTTP 404: <html><head><title>Zoho Accounts</title><meta name="viewport" content="width=device-width, initial-scale=1.0"><link href="https://static.zohocdn.com/iam/v2/components/css/zohoPuvi.c86bbb480e4a4fbc379fd8e7298bbde5.css" rel="stylesheet" type="text/css" ></head><style>
+body {
+width: 100%;
+margin: 0px;
+
+2026-03-06 10:25:18 [ERROR] Token refresh attempt 3 HTTP 404: <html><head><title>Zoho Accounts</title><meta name="viewport" content="width=device-width, initial-scale=1.0"><link href="https://static.zohocdn.com/iam/v2/components/css/zohoPuvi.c86bbb480e4a4fbc379fd8e7298bbde5.css" rel="stylesheet" type="text/css" ></head><style>
+body {
+width: 100%;
+margin: 0px;
+
+2026-03-06 10:25:21 [ERROR] Failed to refresh Zoho token after 3 attempts — check REFRESH_TOKEN / CLIENT_ID / CLIENT_SECRET in .env
+2026-03-06 10:27:06 [ERROR] Token refresh attempt 1 HTTP 200 but error='invalid_client'. Full response: {'error': 'invalid_client'}
+2026-03-06 10:27:07 [ERROR] >>> invalid_client: Your CLIENT_ID or CLIENT_SECRET is wrong, or the OAuth client was deleted/deauthorised in Zoho API Console (https://api-console.zoho.com). Re-generate credentials and update .env.
+2026-03-06 10:33:55 [ERROR] Token refresh attempt 1 HTTP 200 but error='invalid_client'. Full response: {'error': 'invalid_client'}
+2026-03-06 10:33:55 [ERROR] >>> invalid_client: Your CLIENT_ID or CLIENT_SECRET is wrong, or the OAuth client was deleted/deauthorised in Zoho API Console (https://api-console.zoho.com). Re-generate credentials and update .env.
+2026-03-06 10:33:55 [ERROR] auth_headers: no token available — all Zoho calls will fail
+2026-03-06 10:33:55 [ERROR] find_worker(1): aborting — no valid Zoho token. Check REFRESH_TOKEN / CLIENT_ID / CLIENT_SECRET in .env
+2026-03-06 10:33:57 [ERROR] Token refresh attempt 1 HTTP 200 but error='invalid_client'. Full response: {'error': 'invalid_client'}
+2026-03-06 10:33:57 [ERROR] >>> invalid_client: Your CLIENT_ID or CLIENT_SECRET is wrong, or the OAuth client was deleted/deauthorised in Zoho API Console (https://api-console.zoho.com). Re-generate credentials and update .env.
+2026-03-06 10:33:57 [ERROR] auth_headers: no token available — all Zoho calls will fail
+2026-03-06 10:33:57 [ERROR] find_worker(162): aborting — no valid Zoho token. Check REFRESH_TOKEN / CLIENT_ID / CLIENT_SECRET in .env
+2026-03-06 10:34:03 [ERROR] Token refresh attempt 1 HTTP 200 but error='invalid_client'. Full response: {'error': 'invalid_client'}
+2026-03-06 10:34:03 [ERROR] >>> invalid_client: Your CLIENT_ID or CLIENT_SECRET is wrong, or the OAuth client was deleted/deauthorised in Zoho API Console (https://api-console.zoho.com). Re-generate credentials and update .env.
+2026-03-06 10:34:03 [ERROR] auth_headers: no token available — all Zoho calls will fail
+2026-03-06 10:34:03 [ERROR] find_worker(162): aborting — no valid Zoho token. Check REFRESH_TOKEN / CLIENT_ID / CLIENT_SECRET in .env
+2026-03-06 10:34:21 [ERROR] Token refresh attempt 1 HTTP 200 but error='invalid_client'. Full response: {'error': 'invalid_client'}
+2026-03-06 10:34:21 [ERROR] >>> invalid_client: Your CLIENT_ID or CLIENT_SECRET is wrong, or the OAuth client was deleted/deauthorised in Zoho API Console (https://api-console.zoho.com). Re-generate credentials and update .env.
+2026-03-06 10:34:21 [ERROR] auth_headers: no token available — all Zoho calls will fail
+2026-03-06 10:34:21 [ERROR] find_worker(1): aborting — no valid Zoho token. Check REFRESH_TOKEN / CLIENT_ID / CLIENT_SECRET in .env
+2026-03-06 10:34:28 [ERROR] Token refresh attempt 1 HTTP 200 but error='invalid_client'. Full response: {'error': 'invalid_client'}
+2026-03-06 10:34:28 [ERROR] >>> invalid_client: Your CLIENT_ID or CLIENT_SECRET is wrong, or the OAuth client was deleted/deauthorised in Zoho API Console (https://api-console.zoho.com). Re-generate credentials and update .env.
+2026-03-06 10:34:28 [ERROR] auth_headers: no token available — all Zoho calls will fail
+2026-03-06 10:34:28 [ERROR] find_worker(149): aborting — no valid Zoho token. Check REFRESH_TOKEN / CLIENT_ID / CLIENT_SECRET in .env
+2026-03-06 11:01:16 [ERROR] Token refresh attempt 1 HTTP 200 but error='invalid_client'. Full response: {'error': 'invalid_client'}
+2026-03-06 11:01:16 [ERROR] >>> invalid_client: Your CLIENT_ID or CLIENT_SECRET is wrong, or the OAuth client was deleted/deauthorised in Zoho API Console (https://api-console.zoho.com). Re-generate credentials and update .env.
+2026-03-06 11:01:16 [ERROR] auth_headers: no token available — all Zoho calls will fail
+2026-03-06 11:01:16 [ERROR] find_worker(142): aborting — no valid Zoho token. Check REFRESH_TOKEN / CLIENT_ID / CLIENT_SECRET in .env
+2026-03-06 11:01:56 [ERROR] Token refresh attempt 1 HTTP 200 but error='invalid_client'. Full response: {'error': 'invalid_client'}
+2026-03-06 11:01:56 [ERROR] >>> invalid_client: Your CLIENT_ID or CLIENT_SECRET is wrong, or the OAuth client was deleted/deauthorised in Zoho API Console (https://api-console.zoho.com). Re-generate credentials and update .env.
+2026-03-06 11:01:56 [ERROR] auth_headers: no token available — all Zoho calls will fail
+2026-03-06 11:01:56 [ERROR] find_worker(1): aborting — no valid Zoho token. Check REFRESH_TOKEN / CLIENT_ID / CLIENT_SECRET in .env
+2026-03-06 11:01:57 [ERROR] Token refresh attempt 1 HTTP 200 but error='invalid_client'. Full response: {'error': 'invalid_client'}
+2026-03-06 11:01:57 [ERROR] >>> invalid_client: Your CLIENT_ID or CLIENT_SECRET is wrong, or the OAuth client was deleted/deauthorised in Zoho API Console (https://api-console.zoho.com). Re-generate credentials and update .env.
+2026-03-06 11:01:57 [ERROR] auth_headers: no token available — all Zoho calls will fail
+2026-03-06 11:01:57 [ERROR] find_worker(16): aborting — no valid Zoho token. Check REFRESH_TOKEN / CLIENT_ID / CLIENT_SECRET in .env
+2026-03-06 11:02:02 [ERROR] Token refresh attempt 1 HTTP 200 but error='invalid_client'. Full response: {'error': 'invalid_client'}
+2026-03-06 11:02:02 [ERROR] >>> invalid_client: Your CLIENT_ID or CLIENT_SECRET is wrong, or the OAuth client was deleted/deauthorised in Zoho API Console (https://api-console.zoho.com). Re-generate credentials and update .env.
+2026-03-06 11:02:02 [ERROR] auth_headers: no token available — all Zoho calls will fail
+2026-03-06 11:02:02 [ERROR] find_worker(16): aborting — no valid Zoho token. Check REFRESH_TOKEN / CLIENT_ID / CLIENT_SECRET in .env
+2026-03-06 11:02:21 [ERROR] Token refresh attempt 1 HTTP 200 but error='invalid_client'. Full response: {'error': 'invalid_client'}
+2026-03-06 11:02:21 [ERROR] >>> invalid_client: Your CLIENT_ID or CLIENT_SECRET is wrong, or the OAuth client was deleted/deauthorised in Zoho API Console (https://api-console.zoho.com). Re-generate credentials and update .env.
+2026-03-06 11:02:21 [ERROR] auth_headers: no token available — all Zoho calls will fail
+2026-03-06 11:02:21 [ERROR] find_worker(149): aborting — no valid Zoho token. Check REFRESH_TOKEN / CLIENT_ID / CLIENT_SECRET in .env
+2026-03-06 11:02:38 [ERROR] Token refresh attempt 1 HTTP 200 but error='invalid_client'. Full response: {'error': 'invalid_client'}
+2026-03-06 11:02:38 [ERROR] >>> invalid_client: Your CLIENT_ID or CLIENT_SECRET is wrong, or the OAuth client was deleted/deauthorised in Zoho API Console (https://api-console.zoho.com). Re-generate credentials and update .env.
+2026-03-06 11:02:38 [ERROR] auth_headers: no token available — all Zoho calls will fail
+2026-03-06 11:02:38 [ERROR] find_worker(151): aborting — no valid Zoho token. Check REFRESH_TOKEN / CLIENT_ID / CLIENT_SECRET in .env
+2026-03-06 11:02:44 [ERROR] Token refresh attempt 1 HTTP 200 but error='invalid_client'. Full response: {'error': 'invalid_client'}
+2026-03-06 11:02:44 [ERROR] >>> invalid_client: Your CLIENT_ID or CLIENT_SECRET is wrong, or the OAuth client was deleted/deauthorised in Zoho API Console (https://api-console.zoho.com). Re-generate credentials and update .env.
+2026-03-06 11:02:44 [ERROR] auth_headers: no token available — all Zoho calls will fail
+2026-03-06 11:02:44 [ERROR] find_worker(151): aborting — no valid Zoho token. Check REFRESH_TOKEN / CLIENT_ID / CLIENT_SECRET in .env
+2026-03-06 11:02:46 [ERROR] Token refresh attempt 1 HTTP 200 but error='invalid_client'. Full response: {'error': 'invalid_client'}
+2026-03-06 11:02:46 [ERROR] >>> invalid_client: Your CLIENT_ID or CLIENT_SECRET is wrong, or the OAuth client was deleted/deauthorised in Zoho API Console (https://api-console.zoho.com). Re-generate credentials and update .env.
+2026-03-06 11:02:46 [ERROR] auth_headers: no token available — all Zoho calls will fail
+2026-03-06 11:02:46 [ERROR] find_worker(151): aborting — no valid Zoho token. Check REFRESH_TOKEN / CLIENT_ID / CLIENT_SECRET in .env
+2026-03-06 11:04:39 [ERROR] Token refresh attempt 1 HTTP 200 but error='invalid_client'. Full response: {'error': 'invalid_client'}
+2026-03-06 11:04:39 [ERROR] >>> invalid_client: Your CLIENT_ID or CLIENT_SECRET is wrong, or the OAuth client was deleted/deauthorised in Zoho API Console (https://api-console.zoho.com). Re-generate credentials and update .env.
+2026-03-06 11:06:43 [ERROR] Token refresh attempt 1 HTTP 200 but error='invalid_client'. Full response: {'error': 'invalid_client'}
+2026-03-06 11:06:43 [ERROR] >>> invalid_client: Your CLIENT_ID or CLIENT_SECRET is wrong, or the OAuth client was deleted/deauthorised in Zoho API Console (https://api-console.zoho.com). Re-generate credentials and update .env.
+2026-03-06 11:11:07 [ERROR] Token refresh attempt 1 HTTP 200 but error='invalid_client'. Full response: {'error': 'invalid_client'}
+2026-03-06 11:11:07 [ERROR] >>> invalid_client: Your CLIENT_ID or CLIENT_SECRET is wrong, or the OAuth client was deleted/deauthorised in Zoho API Console (https://api-console.zoho.com). Re-generate credentials and update .env.
+2026-03-06 11:11:51 [ERROR] Token refresh attempt 1 HTTP 200 but error='invalid_client'. Full response: {'error': 'invalid_client'}
+2026-03-06 11:11:51 [ERROR] >>> invalid_client: Your CLIENT_ID or CLIENT_SECRET is wrong, or the OAuth client was deleted/deauthorised in Zoho API Console (https://api-console.zoho.com). Re-generate credentials and update .env.
+2026-03-06 11:14:29 [ERROR] Token refresh attempt 1 HTTP 200 but error='invalid_client'. Full response: {'error': 'invalid_client'}
+2026-03-06 11:14:29 [ERROR] >>> invalid_client: Your CLIENT_ID or CLIENT_SECRET is wrong, or the OAuth client was deleted/deauthorised in Zoho API Console (https://api-console.zoho.com). Re-generate credentials and update .env.
+2026-03-06 11:14:35 [ERROR] Token refresh attempt 1 HTTP 200 but error='invalid_client'. Full response: {'error': 'invalid_client'}
+2026-03-06 11:14:35 [ERROR] >>> invalid_client: Your CLIENT_ID or CLIENT_SECRET is wrong, or the OAuth client was deleted/deauthorised in Zoho API Console (https://api-console.zoho.com). Re-generate credentials and update .env.
+2026-03-06 11:14:35 [ERROR] auth_headers: no token available — all Zoho calls will fail
+2026-03-06 11:14:35 [ERROR] find_worker(142): aborting — no valid Zoho token. Check REFRESH_TOKEN / CLIENT_ID / CLIENT_SECRET in .env
+2026-03-06 11:14:40 [ERROR] Token refresh attempt 1 HTTP 200 but error='invalid_client'. Full response: {'error': 'invalid_client'}
+2026-03-06 11:14:40 [ERROR] >>> invalid_client: Your CLIENT_ID or CLIENT_SECRET is wrong, or the OAuth client was deleted/deauthorised in Zoho API Console (https://api-console.zoho.com). Re-generate credentials and update .env.
+2026-03-06 11:14:40 [ERROR] auth_headers: no token available — all Zoho calls will fail
+2026-03-06 11:14:40 [ERROR] find_worker(142): aborting — no valid Zoho token. Check REFRESH_TOKEN / CLIENT_ID / CLIENT_SECRET in .env
+2026-03-06 11:18:17 [ERROR] Token refresh attempt 1 HTTP 200 but error='invalid_client'. Full response: {'error': 'invalid_client'}
+2026-03-06 11:18:17 [ERROR] >>> invalid_client: Your CLIENT_ID or CLIENT_SECRET is wrong, or the OAuth client was deleted/deauthorised in Zoho API Console (https://api-console.zoho.com). Re-generate credentials and update .env.
+2026-03-06 11:18:18 [ERROR] Token refresh attempt 1 HTTP 200 but error='invalid_client'. Full response: {'error': 'invalid_client'}
+2026-03-06 11:18:18 [ERROR] >>> invalid_client: Your CLIENT_ID or CLIENT_SECRET is wrong, or the OAuth client was deleted/deauthorised in Zoho API Console (https://api-console.zoho.com). Re-generate credentials and update .env.
+2026-03-06 11:18:18 [ERROR] auth_headers: no token available — all Zoho calls will fail
+2026-03-06 11:18:18 [ERROR] find_worker(142): aborting — no valid Zoho token. Check REFRESH_TOKEN / CLIENT_ID / CLIENT_SECRET in .env
+2026-03-06 11:18:22 [ERROR] Token refresh attempt 1 HTTP 200 but error='invalid_client'. Full response: {'error': 'invalid_client'}
+2026-03-06 11:18:22 [ERROR] >>> invalid_client: Your CLIENT_ID or CLIENT_SECRET is wrong, or the OAuth client was deleted/deauthorised in Zoho API Console (https://api-console.zoho.com). Re-generate credentials and update .env.
+2026-03-06 11:18:22 [ERROR] auth_headers: no token available — all Zoho calls will fail
+2026-03-06 11:18:22 [ERROR] find_worker(142): aborting — no valid Zoho token. Check REFRESH_TOKEN / CLIENT_ID / CLIENT_SECRET in .env
+2026-03-06 11:23:10 [ERROR] Token refresh attempt 1 HTTP 200 but error='invalid_client'. Full response: {'error': 'invalid_client'}
+2026-03-06 11:23:10 [ERROR] >>> invalid_client: Your CLIENT_ID or CLIENT_SECRET is wrong, or the OAuth client was deleted/deauthorised in Zoho API Console (https://api-console.zoho.com). Re-generate credentials and update .env.
+2026-03-06 11:31:43 [ERROR] Token refresh attempt 1 HTTP 200 but error='invalid_client'. Full response: {'error': 'invalid_client'}
+2026-03-06 11:31:43 [ERROR] >>> invalid_client: Your CLIENT_ID or CLIENT_SECRET is wrong, or the OAuth client was deleted/deauthorised in Zoho API Console (https://api-console.zoho.com). Re-generate credentials and update .env.
+2026-03-06 11:31:43 [ERROR] auth_headers: no token available — all Zoho calls will fail
+2026-03-06 11:31:43 [ERROR] find_worker(6): aborting — no valid Zoho token. Check REFRESH_TOKEN / CLIENT_ID / CLIENT_SECRET in .env
+2026-03-06 11:34:54 [INFO] Zoho token refreshed OK
+2026-03-06 11:35:08 [INFO] find_worker(14): trying criteria='(ZKTeco_User_ID2 == 14)'
+2026-03-06 11:35:09 [INFO] find_worker(142): trying criteria='(ZKTeco_User_ID2 == 142)'
+2026-03-06 11:35:10 [ERROR] find_worker(14): request timed out on criteria='(ZKTeco_User_ID2 == 14)'
+2026-03-06 11:35:10 [INFO] find_worker(14): trying criteria='(ZKTeco_User_ID2 == "14")'
+2026-03-06 11:35:10 [INFO] find_worker(14): trying criteria='(Worker_ID == 14)'
+2026-03-06 11:35:10 [ERROR] find_worker(14): request timed out on criteria='(Worker_ID == 14)'
+2026-03-06 11:35:10 [INFO] find_worker(14): trying criteria='(Worker_ID == "14")'
+2026-03-06 11:35:11 [ERROR] find_worker(142): request timed out on criteria='(ZKTeco_User_ID2 == 142)'
+2026-03-06 11:35:11 [INFO] find_worker(142): trying criteria='(ZKTeco_User_ID2 == "142")'
+2026-03-06 11:35:11 [INFO] find_worker(14): trying criteria='(ZKTeco_User_ID2 == "14")'
+2026-03-06 11:35:11 [INFO] find_worker(142): trying criteria='(Worker_ID == 142)'
+2026-03-06 11:35:11 [INFO] find_worker(14): trying criteria='(Worker_ID == "14")'
+2026-03-06 11:35:11 [ERROR] find_worker(142): request timed out on criteria='(Worker_ID == 142)'
+2026-03-06 11:35:11 [INFO] find_worker(142): trying criteria='(Worker_ID == "142")'
+2026-03-06 11:35:12 [WARNING] find_worker(14): all criteria failed — attempting full worker scan
+2026-03-06 11:35:12 [INFO] find_worker(142): trying criteria='(ZKTeco_User_ID2 == "142")'
+2026-03-06 11:35:12 [INFO] find_worker(14): full scan returned 66 worker(s)
+2026-03-06 11:35:12 [ERROR] find_worker(14): worker NOT found after all attempts. Verify ZKTeco_User_ID2 / Worker_ID field in Zoho for ID=14
+2026-03-06 11:35:12 [INFO] find_worker(142): trying criteria='(Worker_ID == "142")'
+2026-03-06 11:35:12 [WARNING] find_worker(142): all criteria failed — attempting full worker scan
+2026-03-06 11:35:13 [INFO] find_worker(142): full scan returned 66 worker(s)
+2026-03-06 11:35:13 [ERROR] find_worker(142): worker NOT found after all attempts. Verify ZKTeco_User_ID2 / Worker_ID field in Zoho for ID=142
+2026-03-06 11:35:38 [INFO] find_worker(14): trying criteria='(ZKTeco_User_ID2 == 14)'
+2026-03-06 11:35:38 [ERROR] find_worker(14): request timed out on criteria='(ZKTeco_User_ID2 == 14)'
+2026-03-06 11:35:38 [INFO] find_worker(14): trying criteria='(ZKTeco_User_ID2 == "14")'
+2026-03-06 11:35:39 [INFO] find_worker(14): trying criteria='(Worker_ID == 14)'
+2026-03-06 11:35:39 [ERROR] find_worker(14): request timed out on criteria='(Worker_ID == 14)'
+2026-03-06 11:35:39 [INFO] find_worker(14): trying criteria='(Worker_ID == "14")'
+2026-03-06 11:35:39 [INFO] find_worker(14): trying criteria='(ZKTeco_User_ID2 == "14")'
+2026-03-06 11:35:40 [INFO] find_worker(14): trying criteria='(Worker_ID == "14")'
+2026-03-06 11:35:40 [WARNING] find_worker(14): all criteria failed — attempting full worker scan
+2026-03-06 11:35:40 [INFO] find_worker(1): trying criteria='(ZKTeco_User_ID2 == 1)'
+2026-03-06 11:35:40 [INFO] find_worker(14): full scan returned 66 worker(s)
+2026-03-06 11:35:40 [ERROR] find_worker(14): worker NOT found after all attempts. Verify ZKTeco_User_ID2 / Worker_ID field in Zoho for ID=14
+2026-03-06 11:35:41 [ERROR] find_worker(1): request timed out on criteria='(ZKTeco_User_ID2 == 1)'
+2026-03-06 11:35:41 [INFO] find_worker(1): trying criteria='(ZKTeco_User_ID2 == "1")'
+2026-03-06 11:35:41 [INFO] find_worker(1): trying criteria='(Worker_ID == 1)'
+2026-03-06 11:35:41 [INFO] find_worker(14): trying criteria='(ZKTeco_User_ID2 == 14)'
+2026-03-06 11:35:41 [ERROR] find_worker(1): request timed out on criteria='(Worker_ID == 1)'
+2026-03-06 11:35:41 [INFO] find_worker(1): trying criteria='(Worker_ID == "1")'
+2026-03-06 11:35:42 [ERROR] find_worker(14): request timed out on criteria='(ZKTeco_User_ID2 == 14)'
+2026-03-06 11:35:42 [INFO] find_worker(14): trying criteria='(ZKTeco_User_ID2 == "14")'
+2026-03-06 11:35:42 [INFO] find_worker(1): trying criteria='(ZKTeco_User_ID2 == "1")'
+2026-03-06 11:35:42 [INFO] find_worker(14): trying criteria='(Worker_ID == 14)'
+2026-03-06 11:35:42 [INFO] find_worker(149): trying criteria='(ZKTeco_User_ID2 == 149)'
+2026-03-06 11:35:42 [INFO] find_worker(1): trying criteria='(Worker_ID == "1")'
+2026-03-06 11:35:42 [ERROR] find_worker(14): request timed out on criteria='(Worker_ID == 14)'
+2026-03-06 11:35:42 [INFO] find_worker(14): trying criteria='(Worker_ID == "14")'
+2026-03-06 11:35:42 [WARNING] find_worker(1): all criteria failed — attempting full worker scan
+2026-03-06 11:35:43 [INFO] find_worker(14): trying criteria='(ZKTeco_User_ID2 == "14")'
+2026-03-06 11:35:43 [INFO] find_worker(1): full scan returned 66 worker(s)
+2026-03-06 11:35:43 [ERROR] find_worker(1): worker NOT found after all attempts. Verify ZKTeco_User_ID2 / Worker_ID field in Zoho for ID=1
+2026-03-06 11:35:43 [INFO] find_worker(14): trying criteria='(Worker_ID == "14")'
+2026-03-06 11:35:43 [INFO] find_worker(149): found via criteria='(ZKTeco_User_ID2 == 149)'
+2026-03-06 11:35:43 [WARNING] find_worker(14): all criteria failed — attempting full worker scan
+2026-03-06 11:35:44 [INFO] find_worker(14): full scan returned 66 worker(s)
+2026-03-06 11:35:44 [ERROR] find_worker(14): worker NOT found after all attempts. Verify ZKTeco_User_ID2 / Worker_ID field in Zoho for ID=14
+2026-03-06 11:35:56 [INFO] find_worker(171): trying criteria='(ZKTeco_User_ID2 == 171)'
+2026-03-06 11:35:57 [INFO] find_worker(171): found via criteria='(ZKTeco_User_ID2 == 171)'
+2026-03-06 11:36:34 [INFO] find_worker(1): trying criteria='(ZKTeco_User_ID2 == 1)'
+2026-03-06 11:36:35 [ERROR] find_worker(1): request timed out on criteria='(ZKTeco_User_ID2 == 1)'
+2026-03-06 11:36:35 [INFO] find_worker(1): trying criteria='(ZKTeco_User_ID2 == "1")'
+2026-03-06 11:36:35 [INFO] find_worker(1): trying criteria='(Worker_ID == 1)'
+2026-03-06 11:36:36 [ERROR] find_worker(1): request timed out on criteria='(Worker_ID == 1)'
+2026-03-06 11:36:36 [INFO] find_worker(1): trying criteria='(Worker_ID == "1")'
+2026-03-06 11:36:36 [INFO] find_worker(1): trying criteria='(ZKTeco_User_ID2 == "1")'
+2026-03-06 11:36:36 [INFO] find_worker(1): trying criteria='(Worker_ID == "1")'
+2026-03-06 11:36:37 [WARNING] find_worker(1): all criteria failed — attempting full worker scan
+2026-03-06 11:36:37 [INFO] find_worker(1): full scan returned 66 worker(s)
+2026-03-06 11:36:37 [ERROR] find_worker(1): worker NOT found after all attempts. Verify ZKTeco_User_ID2 / Worker_ID field in Zoho for ID=1
+2026-03-06 11:36:48 [INFO] find_worker(171): trying criteria='(ZKTeco_User_ID2 == 171)'
+2026-03-06 11:36:48 [INFO] find_worker(171): found via criteria='(ZKTeco_User_ID2 == 171)'
+2026-03-06 11:36:49 [INFO] CHECKIN OK: BENARD NGOMBO TINGA late=True
+2026-03-06 11:40:11 [INFO] search_workers_by_name: falling back to full worker scan
+2026-03-06 11:40:11 [INFO] search_workers_by_name: full scan returned 66 workers
+2026-03-06 11:40:12 [INFO] search_workers_by_name: falling back to full worker scan
+2026-03-06 11:40:12 [INFO] search_workers_by_name: full scan returned 66 workers
+2026-03-06 11:40:14 [INFO] search_workers_by_name: falling back to full worker scan
+2026-03-06 11:40:14 [INFO] search_workers_by_name: full scan returned 66 workers
+2026-03-06 11:40:16 [INFO] search_workers_by_name: falling back to full worker scan
+2026-03-06 11:40:17 [INFO] search_workers_by_name: full scan returned 66 workers
+2026-03-06 11:40:17 [INFO] search_workers_by_name: falling back to full worker scan
+2026-03-06 11:40:17 [INFO] search_workers_by_name: full scan returned 66 workers
+2026-03-06 11:40:41 [INFO] search_workers_by_name: falling back to full worker scan
+2026-03-06 11:40:41 [INFO] search_workers_by_name: full scan returned 66 workers
+2026-03-06 11:40:42 [INFO] search_workers_by_name: falling back to full worker scan
+2026-03-06 11:40:43 [INFO] search_workers_by_name: full scan returned 66 workers
+2026-03-06 11:40:43 [INFO] search_workers_by_name: falling back to full worker scan
+2026-03-06 11:40:44 [INFO] search_workers_by_name: full scan returned 66 workers
+2026-03-06 11:40:44 [INFO] search_workers_by_name: falling back to full worker scan
+2026-03-06 11:40:45 [INFO] search_workers_by_name: full scan returned 66 workers
+2026-03-06 11:51:36 [INFO] search_workers_by_name: falling back to full worker scan
+2026-03-06 11:51:37 [INFO] search_workers_by_name: full scan returned 66 workers
+2026-03-06 11:51:53 [INFO] find_worker(171): trying criteria='(ZKTeco_User_ID2 == 171)'
+2026-03-06 11:51:54 [INFO] find_worker(171): found via criteria='(ZKTeco_User_ID2 == 171)'
+2026-03-06 11:51:55 [INFO] CHECKOUT OK: BENARD NGOMBO TINGA hours=0.25

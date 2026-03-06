@@ -1,5 +1,15 @@
 {
-  "date": "2026-03-05",
+  "date": "2026-03-06",
   "checked_in": {},
-  "checked_out": {}
+  "checked_out": {
+    "171": {
+      "time": "11:51:54",
+      "name": "BENARD NGOMBO TINGA",
+      "total_hours": 0.25,
+      "overtime_hours": 0,
+      "is_late": true,
+      "late_note": "276 min late",
+      "checkin_time": "06-Mar-2026 11:36:48"
+    }
+  }
 }
